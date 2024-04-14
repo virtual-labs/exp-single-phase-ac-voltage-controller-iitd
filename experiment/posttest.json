@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "Answer the questions given below (refer Fig.2):<br> <center> <img src='images/pos1.png' height='300px'><br><br>Fig. 2. Circuit configuration of AC voltage controller.</center><br><br> 1. What will be the effect on output voltage (rms) on increasing the firing angle from 0o to 180o:",
+      "question": "Answer the questions given below (refer Fig.2):<br> <center> <img src='images/pos1.png' height='300px'><br><br>Fig. 2. Circuit configuration of AC voltage controller.</center><br><br> 1. What will be the effect on output voltage (rms) on increasing the firing angle from 0&#176; to 180&#176;:",
       "answers": {
         "a": "Output voltage will increase",
         "b": "Output voltage will decrease",
@@ -40,7 +40,7 @@
 
     {
       
-      "question": "3. An 180 V, 50 Hz supply voltage is given to an AC voltage controller with resistive load of 100 ohms. What will be the rms current through SCR if the firing angle is 60o?",
+      "question": "3. An 180 V, 50 Hz supply voltage is given to an AC voltage controller with resistive load of 100 ohms. What will be the rms current through SCR if the firing angle is 60&#176;?",
       "answers": {
         "a": "0.89 A",
         "b": "1.14 A",
