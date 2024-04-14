@@ -2,12 +2,12 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Answer the questions given below (refer Fig.2):<br> <center> <img src='images/pos1.png' height='300px'><br><br>Fig. 2. Circuit configuration of AC voltage controller.</center><br><br> 1. What will be the effect on output voltage (rms) on increasing the firing angle from 0o to 180o:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Output voltage will increase",
+        "b": "Output voltage will decrease",
+        "c": "Output voltage will increase upto 90&#176; then starts decreasing.",
+        "d": "Output voltage will decrease upto 90&#176; then starts increasing."
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -15,16 +15,76 @@
         "c": "Explanation 2",
         "d": "Explanation 2"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
+
     {
-      "question": "This is a Sample Question 2?",
+
+      "question": "2. An 180 V, 50 Hz supply voltage is given to an AC voltage controller. What will be the power factor If the firing angle is 60o?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Zero",
+        "b": "Unity",
+        "c": "0.85",
+        "d": "0.9"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+
+    {
+      
+      "question": "3. An 180 V, 50 Hz supply voltage is given to an AC voltage controller with resistive load of 100 ohms. What will be the rms current through SCR if the firing angle is 60o?",
+      "answers": {
+        "a": "0.89 A",
+        "b": "1.14 A",
+        "c": "2.31 A",
+        "d": "1.61 A"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    
+    {
+
+      "question": "4. If firing angle is 60&#176;, and extinction angle is 210&#176; what will be the conduction angle?",
+      "answers": {
+        
+        "a": "270&#176;",
+        "b": "180&#176;",
+        "c": "150&#176;",
+        "d": "90&#176;"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+            
+    {
+
+      "question": "5. What will be the effect on output voltage if both the thyristors are replaced by diodes?",
+      "answers": {
+        "a": "Output voltage will be zero",
+        "b": "Output voltage will be half of the input voltage",
+        "c": "Output voltage will be equal to input voltage",
+        "d": "Output voltage will be double of input voltage"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
