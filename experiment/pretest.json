@@ -58,10 +58,10 @@
     {
       "question": "4. Maximum voltage (Vmax) across SCR at firing angle 30o and 150o will be (Vm is the peak source voltage)",
       "answers": {
-        "a": "Vmax (at 30o) = Vm,                 Vmax (at 150o) = Vm",
-        "b": "Vmax (at 30o) = Vm sin(30o),        Vmax (at 150o) = Vm sin(150o)",
-        "c": "Vmax (at 30o) = Vm sin(30o),        Vmax (at 150o) = Vm",
-        "d": "Vmax (at 30o) = Vm,                 Vmax (at 150o) = Vmsin(150o)"
+        "a": "Vmax (at 30&#176;) = Vm,                 Vmax (at 150o) = Vm",
+        "b": "Vmax (at 30&#176;) = Vm sin(30o),        Vmax (at 150o) = Vm sin(150o)",
+        "c": "Vmax (at 30&#176;) = Vm sin(30o),        Vmax (at 150o) = Vm",
+        "d": "Vmax (at 30&#176;) = Vm,                 Vmax (at 150o) = Vmsin(150o)"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
