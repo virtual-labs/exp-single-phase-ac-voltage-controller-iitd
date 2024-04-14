@@ -20,12 +20,12 @@
     },
       
     {
-      "question": "2. If  SCR-T2 is not conducting even with the gate pulses what will be the effect on output voltage?",
+      "question": "2. If  SCR-T<sub>2</sub> is not conducting even with the gate pulses what will be the effect on output voltage?",
       "answers": {
         "a": "Output voltage will be zero",
         "b": "Output voltage will be controlled in positive half cycle but it will be zero in negative half cycle.",
         "c": "Output voltage will be controlled in negative half cycle but it will be zero in positive half cycle.",
-        "d": "SCR-T1 will operate in both positive and negative half cycles."
+        "d": "SCR-T<sub>1</sub> will operate in both positive and negative half cycles."
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -38,12 +38,12 @@
     },
     
     {
-      "question": "3. An isolation transformer with turns ratio 2:1 is used instead of 1:1. What will be the relation between the source current (IS) and load current (I0).",
+      "question": "3. An isolation transformer with turns ratio 2:1 is used instead of 1:1. What will be the relation between the source current (I<sub>S</sub>) and load current (I<sub>0</sub>).",
       "answers": {
-        "a": "IS  = 2I0",
-        "b": "2IS  = I0",
-        "c": "IS  = I0",
-        "d": "IS  = (I0)2"
+        "a": "I<sub>S</sub>  = 2I<sub>0</sub>",
+        "b": "2I<sub>S</sub>  = I<sub>0</sub>",
+        "c": "I<sub>S</sub>  = I<sub>0</sub>",
+        "d": "I<sub>S</sub>  = (I<sub>0</sub>)2"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -56,12 +56,12 @@
     },
         
     {
-      "question": "4. Maximum voltage (Vmax) across SCR at firing angle 30o and 150o will be (Vm is the peak source voltage)",
+      "question": "4. Maximum voltage (V<sub>max</sub>) across SCR at firing angle 30&#176; and 150&#176; will be (V<sub>m</sub> is the peak source voltage)",
       "answers": {
-        "a": "Vmax (at 30&#176;) = Vm,                 Vmax (at 150o) = Vm",
-        "b": "Vmax (at 30&#176;) = Vm sin(30o),        Vmax (at 150o) = Vm sin(150o)",
-        "c": "Vmax (at 30&#176;) = Vm sin(30o),        Vmax (at 150o) = Vm",
-        "d": "Vmax (at 30&#176;) = Vm,                 Vmax (at 150o) = Vmsin(150o)"
+        "a": "Vmax (at 30&#176;) = V<sub>m</sub>,                 V<sub>max</sub> (at 150&#176;) = V<sub>m</sub>",
+        "b": "Vmax (at 30&#176;) = V<sub>m</sub> sin(30o),        V<sub>max</sub> (at 150&#176;) = V<sub>m</sub> sin(150&#176;)",
+        "c": "Vmax (at 30&#176;) = V<sub>m</sub> sin(30o),        V<sub>max</sub> (at 150&#176;) = V<sub>m</sub>",
+        "d": "Vmax (at 30&#176;) = V<sub>m</sub>,                 V<sub>max</sub> (at 150&#176;) = V<sub>m</sub>sin(150&#176;)"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
