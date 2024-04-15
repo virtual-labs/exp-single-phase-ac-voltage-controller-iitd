@@ -229,11 +229,14 @@ Hence, total harmonic distortion (THD) is given by
 &nbsp;
 </div>
 
+      
+<div style="float: left; width:100%;">
+ 
 **2. AC Voltage controller with R-L Load**
 
 <br>
 The circuit configuration of AC voltage controller with R-L load is shown in Fig. 2b and the corresponding waveforms are given in Fig. 4.
-
+</div>
 
 <center>
   <img src="images/th18.png" height="750px">
