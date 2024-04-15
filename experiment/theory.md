@@ -152,6 +152,11 @@ The ‘rms’ current through SCR is given by
   <br>
       </div>
 <br>
+      
+<div style="float: left; width:100%;">
+&nbsp;
+</div>
+
 <div style="float: left; width:50%;">
   <img src="images/th13.png" height="70px">
       </div>
