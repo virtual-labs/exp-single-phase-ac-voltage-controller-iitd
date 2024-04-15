@@ -97,7 +97,7 @@ and ‘rms’ load current is given by
 <div style="float: left; width:50%;">
   <img src="images/th8.png" height="75px">
       </div>
-<div style="float: right; width:50%; text-align:center;" height="60px">
+<div style="float: right; width:50%; text-align:center;">
     ..(4)
   <br>
       </div>
@@ -112,7 +112,7 @@ The power factor is
 <div style="float: left; width:50%;">
   <img src="images/th9.png" height="60px">
       </div>
-<div style="float: right; width:50%; text-align:center;" height="60px">
+<div style="float: right; width:50%; text-align:center;">
     ..(5)
   <br>
       </div>
