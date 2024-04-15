@@ -57,7 +57,7 @@ Let the source voltage be
 </div>
 <br><br>
 
-<div style="width:100%;"><br>
+<div style="float: left; width:100%;"><br>
 Then the load voltage  is
 <br></div>
 
@@ -70,7 +70,7 @@ Then the load voltage  is
       </div>     
 <br><br>
 
-<div style="width:100%;"><br>
+<div style="float: left; width:100%;"><br>
 Hence the ‘rms’ value of load voltage is:
 <br>
 </div>
@@ -87,7 +87,7 @@ Hence the ‘rms’ value of load voltage is:
 
 <br><br>
 
-<div style="width:100%;"><br>
+<div style="float: left; width:100%;"><br>
 and ‘rms’ load current is given by
 <br>
 </div>
@@ -235,7 +235,9 @@ Fig. 4. Typical waveforms with R-L load (α<90&#176;).
 </center>
 
 <br>
-The load voltage is defined by 
+<div style="float: left; width:100%;"><br>
+The load voltage is defined by
+<br></div>
 <br>
 
 <div style="float: left; width:50%;">
@@ -246,7 +248,9 @@ The load voltage is defined by
   <br>
       </div>
 <br>
+<div style="float: left; width:100%;"><br>
 Applying Kirchhoff’s voltage law
+<br></div>
 <br>
 
 <div style="float: left; width:50%;">
@@ -258,7 +262,9 @@ Applying Kirchhoff’s voltage law
       </div>
 <br>
 <br>
-Solving the above equation 
+<div style="float: left; width:100%;"><br>
+Solving the above equation
+<br></div>
 <br>
 
 <div style="float: left; width:50%;">
@@ -270,7 +276,9 @@ Solving the above equation
       </div>
 <br>
 <br>
+<div style="float: left; width:100%;"><br>
 where
+<br></div>
 <br>
 
 <div style="float: left; width:50%;">
@@ -282,7 +290,9 @@ where
       </div>
 <br>
 <br>
+<div style="float: left; width:100%;"><br>
 And
+<br></div>
 <br>
 
 <div style="float: left; width:50%;">
@@ -294,7 +304,9 @@ And
       </div>
 <br>
 <br>
+<div style="float: left; width:100%;"><br>
 Let
+<br></div>
 <br>
 
 <div style="float: left; width:100%;">
@@ -302,7 +314,9 @@ Let
       </div>
 <br>
 <br>
+<div style="float: left; width:100%;"><br>
 For the given firing angle and R-L load parameters, the extinction angle is given by
+<br></div>
 <br>
 
 <div style="float: left; width:50%;">
@@ -314,7 +328,9 @@ For the given firing angle and R-L load parameters, the extinction angle is give
       </div>
 <br>
 <br>
+<div style="float: left; width:100%;"><br>
 And conduction angle
+<br></div>
 <br>
 
 <div style="float: left; width:50%;">
@@ -326,7 +342,9 @@ And conduction angle
       </div>
 <br>
 <br>
+<div style="float: left; width:100%;"><br>
 The condition to get controlled output is
+<br></div>
 <br>
 
 <div style="float: left; width:50%;">
@@ -338,8 +356,10 @@ The condition to get controlled output is
       </div>
 <br>
 <br>
+<div style="float: left; width:100%;"><br>
 otherwise the load voltage is same as the input voltage.<br>
-The fundamental component of load voltage is 
+The fundamental component of load voltage is
+<br></div>
 <br>
 
 <div style="float: left; width:50%;">
@@ -351,7 +371,9 @@ The fundamental component of load voltage is
       </div>
 <br>
 <br>
+<div style="float: left; width:100%;"><br>
 where
+<br></div>
 <br>
 
 <div style="float: left; width:50%;">
@@ -363,7 +385,9 @@ where
       </div>
 <br>
 <br>
+<div style="float: left; width:100%;"><br>
 and
+<br></div>
 <br>
 
 <div style="float: left; width:50%;">
@@ -375,7 +399,9 @@ and
       </div>
 <br>
 <br>
+<div style="float: left; width:100%;"><br>
 Hence, total harmonic distortion (THD) is given by
+<br></div>
 <br>
 
 <div style="float: left; width:50%;">
