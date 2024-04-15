@@ -107,14 +107,14 @@ and ‘rms’ load current is given by
 &nbsp;
 </div>
 
-<div style="width:100%;"><br>
+<div style="float: left; width:100%;"><br>
 The power factor is
 <br></div>
 
 <br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th9.png" height="60px">
+  <img src="images/th9.png" height="70px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(5)
@@ -135,7 +135,7 @@ The power factor is
       </div>
 <br>
 
-<div style="width:100%;"><br>
+<div style="float: left; width:100%;"><br>
 The ‘rms’ current through SCR is given by
 <br></div>
 <br>
