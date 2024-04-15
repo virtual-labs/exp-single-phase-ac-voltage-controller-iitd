@@ -174,7 +174,6 @@ The ‘rms’ current through SCR is given by
 The fundamental component of load voltage is 
 <br></div>
 
-
 <div style="float: left; width:50%;">
   <img src="images/th14.png" height="75px">
       </div>
@@ -225,6 +224,10 @@ Hence, total harmonic distortion (THD) is given by
       </div>
 <br>
 <br>
+      
+<div style="float: left; width:100%;">
+&nbsp;
+</div>
 
 **2. AC Voltage controller with R-L Load**
 
