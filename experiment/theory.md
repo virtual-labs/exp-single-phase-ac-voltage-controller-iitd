@@ -78,7 +78,7 @@ Hence the ‘rms’ value of load voltage is:
 <br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th7.png" height="25px">
+  <img src="images/th7.png" height="80px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(3)
@@ -95,7 +95,7 @@ and ‘rms’ load current is given by
 <br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th8.png" height="60px">
+  <img src="images/th8.png" height="75px">
       </div>
 <div style="float: right; width:50%; text-align:center;" height="60px">
     ..(4)
