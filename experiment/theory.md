@@ -43,7 +43,7 @@ Fig. 3. Typical waveforms with R-load (α<90&#176;).
 
 </center>
 
-<div style="float: left; width:100%;"><br><br>
+<div style="width:100%;"><br><br>
 Let the source voltage be
 <br>
 </div>
@@ -57,7 +57,7 @@ Let the source voltage be
 </div>
 <br><br>
 
-<div style="float: left; width:100%;"><br><br>
+<div style="width:100%;"><br><br>
 Then the load voltage  is
 <br>
 </div>
