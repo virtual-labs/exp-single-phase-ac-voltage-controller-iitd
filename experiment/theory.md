@@ -43,7 +43,10 @@ Fig. 3. Typical waveforms with R-load (α<90&#176;).
 
 </center>
 
+<div style="float: left; width:100%;"><br><br>
 Let the source voltage be
+<br>
+</div>
 
 <br>
 <div style="float: left; width:50%;">
@@ -54,7 +57,10 @@ Let the source voltage be
 </div>
 <br><br>
 
+<div style="float: left; width:100%;"><br><br>
 Then the load voltage  is
+<br>
+</div>
 
 <br>
 <div style="float: left; width:50%;">
@@ -65,7 +71,11 @@ Then the load voltage  is
       </div>     
 <br><br>
 
+<div style="float: left; width:100%;"><br><br>
 Hence the ‘rms’ value of load voltage is:
+<br>
+</div>
+
 <br>
 
 <div style="float: left; width:50%;">
@@ -77,7 +87,12 @@ Hence the ‘rms’ value of load voltage is:
 </div>
 
 <br><br>
-and ‘rms’ load current is given by 
+
+<div style="float: left; width:100%;"><br><br>
+and ‘rms’ load current is given by
+<br>
+</div>
+ 
 <br>
 
 <div style="float: left; width:50%;">
@@ -89,7 +104,11 @@ and ‘rms’ load current is given by
       </div>
 <br>
 
+<div style="float: left; width:100%;"><br><br>
 The power factor is
+<br>
+</div>
+
 <br>
 
 <div style="float: left; width:50%;">
