@@ -242,7 +242,6 @@ The circuit configuration of AC voltage controller with R-L load is shown in Fig
   <img src="images/th18.png" height="750px">
   
 Fig. 4. Typical waveforms with R-L load (α<90&#176;).
-
 </center>
 
 <br>
