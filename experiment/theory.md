@@ -129,7 +129,128 @@ The ‘rms’ current through SCR is given by
   <br>
       </div>
 <br>
+<br>
+The fundamental component of load voltage is 
+<br>
+
+<div style="float: left; width:50%;">
+  <img src="images/th14.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;" height="60px">
+    ..(9)
+  <br>
+      </div>
+<br>
+where
+<br>
+
+<div style="float: left; width:50%;">
+  <img src="images/th15.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;" height="60px">
+    ..(10)
+  <br>
+      </div>
+<br>
+<br>
+and
+<br>
+
+<div style="float: left; width:50%;">
+  <img src="images/th16.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;" height="60px">
+    ..(11)
+  <br>
+      </div>
+<br>
+<br>
+Hence, total harmonic distortion (THD) is given by
+<br>
+
+<div style="float: left; width:50%;">
+  <img src="images/th17.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;" height="60px">
+    ..(12)
+  <br>
+      </div>
+<br>
+<br>
+
+**2. AC Voltage controller with R-L Load**
+
+<br>
+The circuit configuration of AC voltage controller with R-L load is shown in Fig. 2b and the corresponding waveforms are given in Fig. 4.
 
 
+<center>
+  <img src="images/th18.png" height="750px">
+  
+Fig. 4. Typical waveforms with R-L load (α<90&#176;).
+
+</center>
+
+<br>
+The load voltage is defined by 
+<br>
+
+<div style="float: left; width:50%;">
+  <img src="images/th19.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;" height="60px">
+    ..(13)
+  <br>
+      </div>
+<br>
+Applying Kirchhoff’s voltage law
+<br>
+
+<div style="float: left; width:50%;">
+  <img src="images/th20.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;" height="60px">
+    ..(14)
+  <br>
+      </div>
+<br>
+<br>
+Solving the above equation 
+<br>
+
+<div style="float: left; width:50%;">
+  <img src="images/th21.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;" height="60px">
+    ..(15)
+  <br>
+      </div>
+<br>
+<br>
+where
+<br>
+
+<div style="float: left; width:50%;">
+  <img src="images/th22.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;" height="60px">
+    ..(16)
+  <br>
+      </div>
+<br>
+<br>
+And
+<br>
+
+<div style="float: left; width:50%;">
+  <img src="images/th23.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;" height="60px">
+    ..(17)
+  <br>
+      </div>
+<br>
 --------------------------------------------------------------------------------------- &#176;
+
+
 
