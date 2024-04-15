@@ -43,7 +43,7 @@ Fig. 3. Typical waveforms with R-load (α<90&#176;).
 
 </center>
 
-<div style="width:100%;"><br><br>
+<div style="width:100%;"><br>
 Let the source voltage be
 <br>
 </div>
@@ -57,10 +57,9 @@ Let the source voltage be
 </div>
 <br><br>
 
-<div style="width:100%;"><br><br>
+<div style="width:100%;"><br>
 Then the load voltage  is
-<br>
-</div>
+<br></div>
 
 <br>
 <div style="float: left; width:50%;">
@@ -71,7 +70,7 @@ Then the load voltage  is
       </div>     
 <br><br>
 
-<div style="float: left; width:100%;"><br><br>
+<div style="float: left; width:100%;"><br>
 Hence the ‘rms’ value of load voltage is:
 <br>
 </div>
@@ -88,7 +87,7 @@ Hence the ‘rms’ value of load voltage is:
 
 <br><br>
 
-<div style="float: left; width:100%;"><br><br>
+<div style="float: left; width:100%;"><br>
 and ‘rms’ load current is given by
 <br>
 </div>
@@ -104,10 +103,9 @@ and ‘rms’ load current is given by
       </div>
 <br>
 
-<div style="float: left; width:100%;"><br><br>
+<div style="float: left; width:100%;"><br>
 The power factor is
-<br>
-</div>
+<br></div>
 
 <br>
 
@@ -128,8 +126,9 @@ The power factor is
       </div>
 <br>
 
+<div style="width:100%;"><br>
 The ‘rms’ current through SCR is given by
-
+<br></div>
 <br>
 
 <div style="float: left; width:50%;">
@@ -148,9 +147,10 @@ The ‘rms’ current through SCR is given by
   <br>
       </div>
 <br>
-<br>
+<div style="width:100%;"><br>
 The fundamental component of load voltage is 
-<br>
+<br></div>
+
 
 <div style="float: left; width:50%;">
   <img src="images/th14.png" height="60px">
@@ -159,8 +159,10 @@ The fundamental component of load voltage is
     ..(9)
   <br>
       </div>
-<br>
+
+<div style="width:100%;"><br>
 where
+<br></div>
 <br>
 
 <div style="float: left; width:50%;">
@@ -171,8 +173,10 @@ where
   <br>
       </div>
 <br>
-<br>
+<div style="width:100%;"><br>
 and
+<br></div>
+
 <br>
 
 <div style="float: left; width:50%;">
@@ -183,8 +187,10 @@ and
   <br>
       </div>
 <br>
-<br>
+<div style="width:100%;"><br>
 Hence, total harmonic distortion (THD) is given by
+<br></div>
+
 <br>
 
 <div style="float: left; width:50%;">
