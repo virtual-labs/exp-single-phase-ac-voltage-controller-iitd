@@ -50,7 +50,7 @@ Let the source voltage be
 
 <br>
 <div style="float: left; width:50%;">
-  <img src="images/th5.png" height="25px">
+  <img src="images/th5.png" height="40px">
 </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(1)
@@ -64,7 +64,7 @@ Then the load voltage  is
 
 <br>
 <div style="float: left; width:50%;">
-  <img src="images/th6.png" height="25px">
+  <img src="images/th6.png" height="80px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(2)
