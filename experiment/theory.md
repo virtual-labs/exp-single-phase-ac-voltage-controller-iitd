@@ -1,4 +1,4 @@
-### Theory
+ ### Theory
 
 The circuit configuration of AC voltage controller is given in Fig. 1.
 
@@ -121,6 +121,11 @@ The power factor is
   <br>
       </div>
 <br>
+      
+<div style="float: left; width:100%;">
+&nbsp;
+</div>
+
 <div style="float: left; width:50%;">
   <img src="images/th10.png" height="60px">
       </div>
