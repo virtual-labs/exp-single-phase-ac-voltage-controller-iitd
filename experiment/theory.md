@@ -37,7 +37,7 @@ The circuit configuration of AC voltage controller with R-load is shown in Fig. 
 
 
 <center>
-  <img src="images/th4.png" height="750px">
+  <img src="images/th4.png" height="1000px">
   
 Fig. 3. Typical waveforms with R-load (α<90&#176;).
 
@@ -202,7 +202,7 @@ and
 <br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th16.png" height="70px">
+  <img src="images/th16.png" height="75px">
       </div>
 <div style="float: right; width:50%; text-align:center;" height="60px">
     ..(11)
@@ -216,7 +216,7 @@ Hence, total harmonic distortion (THD) is given by
 <br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th17.png" height="60px">
+  <img src="images/th17.png" height="75px">
       </div>
 <div style="float: right; width:50%; text-align:center;" height="60px">
     ..(12)
@@ -228,7 +228,7 @@ Hence, total harmonic distortion (THD) is given by
 <div style="float: left; width:100%;">
 &nbsp;
 </div>
-
+<br>
       
 <div style="float: left; width:100%;">
  
@@ -239,7 +239,7 @@ The circuit configuration of AC voltage controller with R-L load is shown in Fig
 </div>
 
 <center>
-  <img src="images/th18.png" height="750px">
+  <img src="images/th18.png" height="1000px">
   
 Fig. 4. Typical waveforms with R-L load (α<90&#176;).
 </center>
@@ -251,7 +251,7 @@ The load voltage is defined by
 <br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th19.png" height="60px">
+  <img src="images/th19.png" height="80px">
       </div>
 <div style="float: right; width:50%; text-align:center;" height="60px">
     ..(13)
@@ -264,7 +264,7 @@ Applying Kirchhoff’s voltage law
 <br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th20.png" height="60px">
+  <img src="images/th20.png" height="70px">
       </div>
 <div style="float: right; width:50%; text-align:center;" height="60px">
     ..(14)
@@ -278,7 +278,7 @@ Solving the above equation
 <br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th21.png" height="60px">
+  <img src="images/th21.png" height="95px">
       </div>
 <div style="float: right; width:50%; text-align:center;" height="60px">
     ..(15)
@@ -292,7 +292,7 @@ where
 <br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th22.png" height="60px">
+  <img src="images/th22.png" height="38px">
       </div>
 <div style="float: right; width:50%; text-align:center;" height="60px">
     ..(16)
@@ -306,7 +306,7 @@ And
 <br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th23.png" height="60px">
+  <img src="images/th23.png" height="70px">
       </div>
 <div style="float: right; width:50%; text-align:center;" height="60px">
     ..(17)
@@ -320,7 +320,7 @@ Let
 <br>
 
 <div style="float: left; width:100%;">
-  <img src="images/th24.png" height="60px">
+  <img src="images/th24.png" height="65px">
       </div>
 <br>
 <br>
@@ -330,7 +330,7 @@ For the given firing angle and R-L load parameters, the extinction angle is give
 <br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th25.png" height="60px">
+  <img src="images/th25.png" height="70px">
       </div>
 <div style="float: right; width:50%; text-align:center;" height="60px">
     ..(18)
@@ -344,7 +344,7 @@ And conduction angle
 <br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th26.png" height="60px">
+  <img src="images/th26.png" height="48px">
       </div>
 <div style="float: right; width:50%; text-align:center;" height="60px">
     ..(19)
@@ -358,7 +358,7 @@ The condition to get controlled output is
 <br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th27.png" height="60px">
+  <img src="images/th27.png" height="50px">
       </div>
 <div style="float: right; width:50%; text-align:center;" height="60px">
     ..(20)
@@ -373,7 +373,7 @@ The fundamental component of load voltage is
 <br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th28.png" height="60px">
+  <img src="images/th28.png" height="70px">
       </div>
 <div style="float: right; width:50%; text-align:center;" height="60px">
     ..(21)
@@ -387,7 +387,7 @@ where
 <br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th29.png" height="60px">
+  <img src="images/th29.png" height="75px">
       </div>
 <div style="float: right; width:50%; text-align:center;" height="60px">
     ..(22)
@@ -401,7 +401,7 @@ and
 <br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th30.png" height="60px">
+  <img src="images/th30.png" height="75px">
       </div>
 <div style="float: right; width:50%; text-align:center;" height="60px">
     ..(23)
@@ -415,7 +415,7 @@ Hence, total harmonic distortion (THD) is given by
 <br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th31.png" height="60px">
+  <img src="images/th31.png" height="76px">
       </div>
 <div style="float: right; width:50%; text-align:center;" height="60px">
     ..(24)
