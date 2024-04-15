@@ -70,7 +70,7 @@ Then the load voltage  is
       </div>     
 <br><br>
 
-<div style="float: left; width:100%;"><br>
+<div style="width:100%;"><br>
 Hence the ‘rms’ value of load voltage is:
 <br>
 </div>
@@ -87,7 +87,7 @@ Hence the ‘rms’ value of load voltage is:
 
 <br><br>
 
-<div style="float: left; width:100%;"><br>
+<div style="width:100%;"><br>
 and ‘rms’ load current is given by
 <br>
 </div>
@@ -103,7 +103,7 @@ and ‘rms’ load current is given by
       </div>
 <br>
 
-<div style="float: left; width:100%;"><br>
+<div style="width:100%;"><br>
 The power factor is
 <br></div>
 
