@@ -1,0 +1,235 @@
+
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/btn_plot.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/btn_reset.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_1_circuit.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_1_component_1.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_1_component_2.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_1_connectiion_completed.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_1_frame.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_1_terminal_1.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_1_terminal_2.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_1_text_1.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_1_text_2.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_2_btn_r_load.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_2_btn_r_l_load.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_2_circuit.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_2_graph_empty.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_2_r_load_graph_1.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_2_r_load_graph_2.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_2_r_load_graph_3.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_2_r_l_load_graph_1.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_2_r_l_load_graph_2.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_2_r_l_load_graph_3.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_2_text_for_r_load.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_2_text_for_r_l_load.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_3_circuit.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_3_select_option_1.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_3_select_option_2.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_3_tab_1.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_3_tab_2.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_3_tab_3.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_3_tab_4.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_3_tab_5.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_3_text_load_1.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/part_3_text_load_2.png"
+    />
+    
+
+btn_plot:this.allImgsDom[index++],
+btn_reset:this.allImgsDom[index++],
+part_1_circuit:this.allImgsDom[index++],
+part_1_component_1:this.allImgsDom[index++],
+part_1_component_2:this.allImgsDom[index++],
+part_1_connectiion_completed:this.allImgsDom[index++],
+part_1_frame:this.allImgsDom[index++],
+part_1_terminal_1:this.allImgsDom[index++],
+part_1_terminal_2:this.allImgsDom[index++],
+part_1_text_1:this.allImgsDom[index++],
+part_1_text_2:this.allImgsDom[index++],
+part_2_btn_r_load:this.allImgsDom[index++],
+part_2_btn_r_l_load:this.allImgsDom[index++],
+part_2_circuit:this.allImgsDom[index++],
+part_2_graph_empty:this.allImgsDom[index++],
+part_2_r_load_graph_1:this.allImgsDom[index++],
+part_2_r_load_graph_2:this.allImgsDom[index++],
+part_2_r_load_graph_3:this.allImgsDom[index++],
+part_2_r_l_load_graph_1:this.allImgsDom[index++],
+part_2_r_l_load_graph_2:this.allImgsDom[index++],
+part_2_r_l_load_graph_3:this.allImgsDom[index++],
+part_2_text_for_r_load:this.allImgsDom[index++],
+part_2_text_for_r_l_load:this.allImgsDom[index++],
+part_3_circuit:this.allImgsDom[index++],
+part_3_select_option_1:this.allImgsDom[index++],
+part_3_select_option_2:this.allImgsDom[index++],
+part_3_tab_1:this.allImgsDom[index++],
+part_3_tab_2:this.allImgsDom[index++],
+part_3_tab_3:this.allImgsDom[index++],
+part_3_tab_4:this.allImgsDom[index++],
+part_3_tab_5:this.allImgsDom[index++],
+part_3_text_load_1:this.allImgsDom[index++],
+part_3_text_load_2:this.allImgsDom[index++],
+
+
+btn_plot : new Dom("btn_plot"),
+btn_reset : new Dom("btn_reset"),
+part_1_circuit : new Dom("part_1_circuit"),
+part_1_component_1 : new Dom("part_1_component_1"),
+part_1_component_2 : new Dom("part_1_component_2"),
+part_1_connectiion_completed : new Dom("part_1_connectiion_completed"),
+part_1_frame : new Dom("part_1_frame"),
+part_1_terminal_1 : new Dom("part_1_terminal_1"),
+part_1_terminal_2 : new Dom("part_1_terminal_2"),
+part_1_text_1 : new Dom("part_1_text_1"),
+part_1_text_2 : new Dom("part_1_text_2"),
+part_2_btn_r_load : new Dom("part_2_btn_r_load"),
+part_2_btn_r_l_load : new Dom("part_2_btn_r_l_load"),
+part_2_circuit : new Dom("part_2_circuit"),
+part_2_graph_empty : new Dom("part_2_graph_empty"),
+part_2_r_load_graph_1 : new Dom("part_2_r_load_graph_1"),
+part_2_r_load_graph_2 : new Dom("part_2_r_load_graph_2"),
+part_2_r_load_graph_3 : new Dom("part_2_r_load_graph_3"),
+part_2_r_l_load_graph_1 : new Dom("part_2_r_l_load_graph_1"),
+part_2_r_l_load_graph_2 : new Dom("part_2_r_l_load_graph_2"),
+part_2_r_l_load_graph_3 : new Dom("part_2_r_l_load_graph_3"),
+part_2_text_for_r_load : new Dom("part_2_text_for_r_load"),
+part_2_text_for_r_l_load : new Dom("part_2_text_for_r_l_load"),
+part_3_circuit : new Dom("part_3_circuit"),
+part_3_select_option_1 : new Dom("part_3_select_option_1"),
+part_3_select_option_2 : new Dom("part_3_select_option_2"),
+part_3_tab_1 : new Dom("part_3_tab_1"),
+part_3_tab_2 : new Dom("part_3_tab_2"),
+part_3_tab_3 : new Dom("part_3_tab_3"),
+part_3_tab_4 : new Dom("part_3_tab_4"),
+part_3_tab_5 : new Dom("part_3_tab_5"),
+part_3_text_load_1 : new Dom("part_3_text_load_1"),
+part_3_text_load_2 : new Dom("part_3_text_load_2"),
