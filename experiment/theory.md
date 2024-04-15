@@ -127,9 +127,9 @@ The power factor is
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th10.png" height="60px">
+  <img src="images/th10.png" height="75px">
       </div>
-<div style="float: right; width:50%; text-align:center;" height="60px">
+<div style="float: right; width:50%; text-align:center;">
     ..(6)
   <br>
       </div>
