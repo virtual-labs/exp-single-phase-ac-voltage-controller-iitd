@@ -101,7 +101,11 @@ and ‘rms’ load current is given by
     ..(4)
   <br>
       </div>
-<br>
+<br><br>
+      
+<div style="float: left; width:100%;">
+&nbsp;
+</div>
 
 <div style="width:100%;"><br>
 The power factor is
