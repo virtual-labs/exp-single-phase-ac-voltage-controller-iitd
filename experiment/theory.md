@@ -250,7 +250,96 @@ And
   <br>
       </div>
 <br>
---------------------------------------------------------------------------------------- &#176;
+<br>
+Let
+<br>
 
+<div style="float: left; width:100%;">
+  <img src="images/th24.png" height="60px">
+      </div>
+<br>
+<br>
+For the given firing angle and R-L load parameters, the extinction angle is given by
+<br>
 
+<div style="float: left; width:50%;">
+  <img src="images/th25.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;" height="60px">
+    ..(18)
+  <br>
+      </div>
+<br>
+<br>
+And conduction angle
+<br>
 
+<div style="float: left; width:50%;">
+  <img src="images/th26.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;" height="60px">
+    ..(19)
+  <br>
+      </div>
+<br>
+<br>
+The condition to get controlled output is
+<br>
+
+<div style="float: left; width:50%;">
+  <img src="images/th27.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;" height="60px">
+    ..(20)
+  <br>
+      </div>
+<br>
+<br>
+otherwise the load voltage is same as the input voltage.<br>
+The fundamental component of load voltage is 
+<br>
+
+<div style="float: left; width:50%;">
+  <img src="images/th28.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;" height="60px">
+    ..(21)
+  <br>
+      </div>
+<br>
+<br>
+where
+<br>
+
+<div style="float: left; width:50%;">
+  <img src="images/th29.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;" height="60px">
+    ..(22)
+  <br>
+      </div>
+<br>
+<br>
+and
+<br>
+
+<div style="float: left; width:50%;">
+  <img src="images/th30.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;" height="60px">
+    ..(23)
+  <br>
+      </div>
+<br>
+<br>
+Hence, total harmonic distortion (THD) is given by
+<br>
+
+<div style="float: left; width:50%;">
+  <img src="images/th31.png" height="60px">
+      </div>
+<div style="float: right; width:50%; text-align:center;" height="60px">
+    ..(24)
+  <br>
+      </div>
+<br>
