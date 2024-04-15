@@ -153,13 +153,17 @@ The ‘rms’ current through SCR is given by
       </div>
 <br>
 <div style="float: left; width:50%;">
-  <img src="images/th13.png" height="75px">
+  <img src="images/th13.png" height="70px">
       </div>
 <div style="float: right; width:50%; text-align:center;" height="60px">
     ..(8)
   <br>
       </div>
 <br>
+      
+<div style="float: left; width:100%;">
+&nbsp;
+</div>
 
 <div style="float: left; width:100%;"><br>
 The fundamental component of load voltage is 
@@ -174,34 +178,34 @@ The fundamental component of load voltage is
   <br>
       </div>
 
-<div style="width:100%;"><br>
+<div style="float: left; width:100%;"><br>
 where
 <br></div>
 <br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th15.png" height="60px">
+  <img src="images/th15.png" height="70px">
       </div>
 <div style="float: right; width:50%; text-align:center;" height="60px">
     ..(10)
   <br>
       </div>
 <br>
-<div style="width:100%;"><br>
+<div style="float: left; width:100%;"><br>
 and
 <br></div>
 
 <br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th16.png" height="60px">
+  <img src="images/th16.png" height="70px">
       </div>
 <div style="float: right; width:50%; text-align:center;" height="60px">
     ..(11)
   <br>
       </div>
 <br>
-<div style="width:100%;"><br>
+<div style="float: left; width:100%;"><br>
 Hence, total harmonic distortion (THD) is given by
 <br></div>
 
