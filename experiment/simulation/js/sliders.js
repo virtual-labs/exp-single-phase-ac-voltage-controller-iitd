@@ -1,6 +1,6 @@
 const sliders = {
     slider_R_value: Number(document.querySelector(".slider_R").value),
-    slider_D_value: Number(document.querySelector(".slider_R").value),
+    slider_D_value: Number(document.querySelector(".slider_D").value),
     slider_V_value: 0,
     d: document.querySelector(".d .slider_D"),
     v: document.querySelector(".v .value-box input"),
@@ -63,8 +63,8 @@ const sliders = {
             val = ((slider_D.value * 95) / 109) - 7
             sliderImg.style.left = `${114 + val}px`
 
-            if(Scenes.currentStep == 7){
-                // update the text accroding to value
+            // ! update the text accroding to value
+            if(Scenes.currentStep == 5 || Scenes.currentStep == 7){
                 let betaTempText = Scenes.items.tempTitle41
                 let first = 183.6
                 let second = 194.1
@@ -74,6 +74,18 @@ const sliders = {
                     betaDeg = 180
                 }
                 betaTempText.setContent(betaDeg)
+            }
+            // ! update slider details according to wave form
+            if(Scenes.currentStep == 4){
+                if(slider_D.value==30){
+                    sliderImg.style.left = "114px"
+                }
+                if(slider_D.value==90){
+                    sliderImg.style.left = "185.44px"
+                }
+                if(slider_D.value==150){
+                    sliderImg.style.left = "258px"
+                }
             }
         }
     
@@ -117,6 +129,21 @@ const sliders = {
         this.sliderV()
         this.sliderR()
         this.sliderD()
+    },
+    resetSlidersValue(){
+        document.querySelector(".slider-D-arrow").style.left = "114px"
+        sliders.d.min = "0"
+        sliders.d.max = "180"
+        sliders.d.step = "1"
+        sliders.d.value = 1 
+        document.querySelector(".d .value-box input").value = sliders.d.value
+        document.querySelector(".d .value-box input").readOnly = false
+
+        sliders.r.value = sliders.r.min
+        document.querySelector(".r .value-box input").value = sliders.r.value
+
+        document.querySelector(".slider-V-arrow").style.transform=`rotate(${0}deg)`
+        document.querySelector(".v .value-box input").value = 0
     },
     showAllSliders(){
         let sliders = document.querySelectorAll(".slider .slider-box")

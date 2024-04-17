@@ -96,6 +96,8 @@ const src = {
       part_3_alpha_text: this.allImgsDom[index++],
       part_3_beta_text: this.allImgsDom[index++],
       r_l_load: this.allImgsDom[index++],
+      btn_auto: this.allImgsDom[index++],
+      btn_manual: this.allImgsDom[index++],
       //! EE8 images end here
 
 

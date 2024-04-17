@@ -960,6 +960,8 @@ right_tick_5 : new Dom("right_tick_5"),
 part_3_alpha_text : new Dom("part_3_alpha_text"),
 part_3_beta_text : new Dom("part_3_beta_text"),
 r_l_load : new Dom("r_l_load"),
+btn_auto : new Dom("btn_auto"),
+btn_manual: new Dom("btn_manual"),
 
 
 
@@ -1471,6 +1473,21 @@ concept_development: new Dom(".concept_development"),
 
       let r_load = Scenes.items.part_2_btn_r_load.item
       let r_l_load = Scenes.items.part_2_btn_r_l_load.item
+      
+      // to hide the sliders default value using as a overlay layer
+
+      let sliderOverlayLayer = Scenes.items.tempTitle19.setContent("<pre>30             90            150</pre>").styles({
+        height: "11px",
+        width: "185px",
+        zIndex: "1000",
+        backgroundColor: "rgb(208, 5, 208)",
+      }).set(364,107)
+      let preOfLayer = new Dom(sliderOverlayLayer.item.firstChild)
+      preOfLayer.styles({
+        fontSize: "10px",
+        margin: "0",
+      })
+
 
       let r_load_graph = false;
       let r_l_load_graph = false;
@@ -1572,14 +1589,15 @@ concept_development: new Dom(".concept_development"),
        
       // *  chage the step size of the sliders
       // let dutyRatioSlider = Scenes.items.slider_D.item.children[1].children[0];
-      let dutyRatioSlider = Scenes.items.slider_D.item;
+      let dutyRatioSlider = sliders.d;
       let valueInput = document.querySelector(".d .value-box input")
-      valueInput.readonly = true
-      dutyRatioSlider.min = "0";
-      dutyRatioSlider.max = "180";
-      dutyRatioSlider.step = "1"
-      // dutyRatioSlider.value = "30"
-      // valueInput.value = 30
+      valueInput.readOnly = true
+      dutyRatioSlider.min = "30"
+      dutyRatioSlider.max = "150"
+      dutyRatioSlider.step = "60"
+      dutyRatioSlider.value = 30
+      valueInput.value = 30
+      // 30 90 150
 
       function arrowBlinkForAll(){
         setCC("Change the parameters to see the effect")
@@ -1836,6 +1854,7 @@ concept_development: new Dom(".concept_development"),
       )
       // ! show the slider
       Scenes.items.slider_box.set(0,-50).show("flex")
+      sliders.resetSlidersValue()
       sliders.showAllSliders()
       //!new added for EE8
       Scenes.items.part3_table_three.set(10)
@@ -1871,6 +1890,8 @@ concept_development: new Dom(".concept_development"),
         Dom.setBlinkArrowRed(true,72,0,30, null,-90).play()
         setCC("Set AV input voltage, resistive load and vary the firing angle and record the observations.")
 
+        // reset slider d onclick
+        sliders.d.onclick = ()=>{}
         sliders.v_knob.onclick = ()=>{
           sliders.sliderV()
           sliders.v_knob.click()
@@ -2034,7 +2055,8 @@ concept_development: new Dom(".concept_development"),
           let subtitles = {
             lastButtonFunction: ()=>{
               // todo 
-              setTimeout(() => {
+                Dom.setBlinkArrowRed(-1)
+                setTimeout(() => {
                 setCC("Click 'Next' to go to next step");
                 Dom.setBlinkArrow(true, 790, 544).play();
                 setIsProcessRunning(false);
@@ -2317,6 +2339,8 @@ concept_development: new Dom(".concept_development"),
       );
       // ! show the slider
       Scenes.items.slider_box.set(0,-50).show("flex")
+      sliders.showAllSliders()
+      sliders.resetSlidersValue()
       // setCC("Record  7 reading for different Duty Ratio.")
       
       // ! required item
@@ -2366,11 +2390,13 @@ concept_development: new Dom(".concept_development"),
       let dutyRatioValue = 0
       let resistanceValue = 0
       let inductanceValue = 0
+      let isLoadAndInductanceSelected = false
 
       // ! onclick for load selecting buttons
       Scenes.items.part_3_text_load_1.item.onclick = ()=>{
         inductanceValue = 20
         resistanceValue = 100
+        isLoadAndInductanceSelected = true
         updateValues(vInValue,dutyRatioValue,resistanceValue,inductanceValue)
         betaTempText.setContent(Formulas.r_l_load.betaDeg(values))
         phyTempText.setContent(Formulas.r_l_load.phy(values))
@@ -2387,6 +2413,7 @@ concept_development: new Dom(".concept_development"),
       Scenes.items.part_3_text_load_2.item.onclick = ()=>{
         inductanceValue = 40
         resistanceValue = 50
+        isLoadAndInductanceSelected = true
         updateValues(vInValue,dutyRatioValue,resistanceValue,inductanceValue)
         betaTempText.setContent(Formulas.r_l_load.betaDeg(values))
         phyTempText.setContent(Formulas.r_l_load.phy(values))
@@ -2417,10 +2444,12 @@ concept_development: new Dom(".concept_development"),
         Dom.setBlinkArrowRed(true,72,0,30, null,-90).play()
         setCC("Set AV input voltage, resistive load and vary the firing angle and record the observations.")
 
+        // reset slider d onclick
+        sliders.d.onclick = ()=>{}
         sliders.v_knob.onclick = ()=>{
           sliders.sliderV()
           sliders.v_knob.click()
-          Dom.setBlinkArrowRed(true,515,10,30,null,90).play()
+          Dom.setBlinkArrowRed(true,515,0,30,null,90).play()
           setCC("Select the load parameters")
 
           sliders.r.onclick = ()=>{
@@ -2580,6 +2609,7 @@ concept_development: new Dom(".concept_development"),
           let subtitles = {
             lastButtonFunction: ()=>{
               // todo 
+              Dom.setBlinkArrowRed(-1)
               setTimeout(() => {
                 setCC("Click 'Next' to go to next step");
                 Dom.setBlinkArrow(true, 790, 544).play();
@@ -2722,12 +2752,25 @@ concept_development: new Dom(".concept_development"),
         // reset all the parameters
         // so just simply call this step again
         // sliders.reset()
-        Scenes.steps[5]()
+
+        // reset load parameters
+        Scenes.items.part_3_text_load_1.removeClass("load-active")
+        Scenes.items.part_3_text_load_2.removeClass("load-active")
+        Scenes.items.part_3_text_load_1.removeClass("load-deactive")
+        Scenes.items.part_3_text_load_2.removeClass("load-deactive")
+
+        isLoadAndInductanceSelected = false
+        Scenes.steps[6]()
       }
 
       let currentTableIdx = 0
       // ! onclick for record
       Scenes.items.btn_record.item.onclick = function(){
+        if(!isLoadAndInductanceSelected){
+          Dom.setBlinkArrowRed(true,515,0,30,null,90).play()
+          setCC("Select the load parameters")
+          return  
+        }
         // for arrow system
          if(recordBtnClickIdx > 0 && recordBtnClickIdx < 6){
             Dom.setBlinkArrowRed(true,312,98,null,null,90).play()
@@ -2863,8 +2906,73 @@ concept_development: new Dom(".concept_development"),
       Scenes.items.part_4_bulb_1.set(732, 90, 150).zIndex(2)
       Scenes.items.part_4_bulb_2.set(699, 50, 250)
       Scenes.items.part_4_bulb_3.set(699, 50, 250)
+
+      Scenes.items.btn_auto.set(125, 40, 40)
+      Scenes.items.btn_manual.set(235, 40, 40)
+
+      let sliderValue = {
+        value: 0
+      }
+      let setManual = false
+      let loopedAutoAnime = anime({
+        targets: sliderValue,
+        value: 180,
+        easing: "linear",
+        duration: 5000,
+        loop: true,
+        direction: 'alternate',
+        autoplay: false,
+        round: 10,
+        update:()=>{
+          sliders.d.value = sliderValue.value
+          // * for slider assistance
+          let slider_D = document.querySelector(".slider_D")
+          let sliderImg = document.querySelector(".slider-D-arrow")
+          let sliderValueInput = document.querySelector(".d .value-box input")
+          let val = 0
+          
+          if(true){
+              sliderValueInput.value = slider_D.value 
+          }
+          else{
+              slider_D.value = sliderValueInput.value
+          }
+          val = ((slider_D.value * 95) / 109) - 7
+          sliderImg.style.left = `${114 + val}px`
+
+          // * for glow light
+          let value = sliders.d.value
+          // for all three images
+          if(glowAndDimAll.min <= value && value <= glowAndDimAll.max){
+            let min = glowAndDimAll.min
+            let max = glowAndDimAll.max
+            let ratioValue = 1 - (value - min) / (max - min)
+            let bulbIdx = 0
+            glow[bulbIdx++].img.opacity(ratioValue).scale(ratioValue)
+            glow[bulbIdx++].img.opacity(ratioValue).scale(ratioValue)
+            // for light image scale is not less then 0.6
+            // 40% of 100% so
+            let lightScaleRatio = (ratioValue < 0.6 ? 0.6 : ratioValue)
+
+            console.log(ratioValue)
+            glow[bulbIdx].img.scale(lightScaleRatio)  
+          }
+        }
+      })
+
+      Scenes.items.btn_auto.item.onclick = ()=>{
+        loopedAutoAnime.play()
+      }
+      Scenes.items.btn_manual.item.onclick = ()=>{
+        loopedAutoAnime.pause()
+      }
+      
       let st = {
         transition: "0.1s",
+      }
+      let glowAndDimAll = {
+        min: 0,
+        max: 180,
       }
       let glow = [
         first = { // opacity from 0 to 1
@@ -2889,33 +2997,22 @@ concept_development: new Dom(".concept_development"),
       // oninput function
       function onValueChangeGlowImgs(e){
         let value = sliders.d.value
+        // for all three images
+        if(glowAndDimAll.min <= value && value <= glowAndDimAll.max){
+          let min = glowAndDimAll.min
+          let max = glowAndDimAll.max
+          let ratioValue = 1 - (value - min) / (max - min)
+          let bulbIdx = 0
+          glow[bulbIdx++].img.opacity(ratioValue).scale(ratioValue)
+          glow[bulbIdx++].img.opacity(ratioValue).scale(ratioValue)
+          // for light image scale is not less then 0.6
+          // 40% of 100% so
+          let lightScaleRatio = (ratioValue < 0.6 ? 0.6 : ratioValue)
+
+          console.log(ratioValue)
+          glow[bulbIdx].img.scale(lightScaleRatio)  
+        }
         
-        // formula to show bulb images
-        let bulbIdx = 0
-        if(glow[bulbIdx].min <= value && value <= glow[bulbIdx].max){
-          // val = value / totalValue
-          let opacityVal = 1 - (value - glow[bulbIdx].min) / (glow[bulbIdx].max - glow[bulbIdx].min)
-
-          glow[bulbIdx].img.opacity(opacityVal)
-        }
-
-        bulbIdx = 1
-        if(glow[bulbIdx].min <= value && value <= glow[bulbIdx].max){
-          // val = value / totalValue
-          let opacityVal = 1 - (value - glow[bulbIdx].min) / (glow[bulbIdx].max - glow[bulbIdx].min)
-
-          glow[bulbIdx].img.opacity(opacityVal)
-        }
-
-        bulbIdx = 2
-        if(glow[bulbIdx].min <= value && value <= glow[bulbIdx].max){
-          // val = value / totalValue
-          // 100: because 1 to 0.6
-          let scaleVal = 1 - (value - glow[bulbIdx].min) / 100 
-
-          glow[bulbIdx].img.scale(scaleVal)
-        }
-
         let slider_D = document.querySelector(".slider_D")
         let sliderImg = document.querySelector(".slider-D-arrow")
         let sliderValueInput = document.querySelector(".d .value-box input")
@@ -2925,10 +3022,10 @@ concept_development: new Dom(".concept_development"),
         // slider function  
         e = e instanceof Event
         if(e){
-            sliderValueInput.value = slider_D.value 
+          sliderValueInput.value = slider_D.value 
         }
         else{
-            slider_D.value = sliderValueInput.value
+          slider_D.value = sliderValueInput.value
         }
         val = ((slider_D.value * 95) / 109) - 7
         sliderImg.style.left = `${114 + val}px`
@@ -3554,7 +3651,7 @@ concept_development: new Dom(".concept_development"),
 }
 
 // stepcalling
-Scenes.currentStep = 2
+Scenes.currentStep = 5
 
 Scenes.next()
 // Scenes.steps[3]()
