@@ -665,6 +665,7 @@
 }
 .btn-img{
     transition: 0.05s;
+    z-index: 5000;
 }
 .btn-img:hover{
     filter: brightness(1.1) drop-shadow(1px 1px 1px black); 

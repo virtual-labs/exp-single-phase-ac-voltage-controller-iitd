@@ -151,13 +151,14 @@ const Formulas = {
         },
         z(values){
             // * omega  
+            const L = values.L * Math.pow(10,-3)
             function omega(values){
                 const f = 50
                 let ans = 2 * pie * f
                 return Number(ans).toFixed(4)
             }
             let underRoot = (
-                Math.pow(values.R,2) + Math.pow((omega(values) * values.L),2) 
+                Math.pow(values.R,2) + Math.pow((omega(values) * L),2) 
             )
             let ans = Math.sqrt(underRoot);
             return Number(ans).toFixed(4)

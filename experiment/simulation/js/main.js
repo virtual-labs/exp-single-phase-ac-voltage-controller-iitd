@@ -1492,6 +1492,13 @@ concept_development: new Dom(".concept_development"),
       let r_load_graph = false;
       let r_l_load_graph = false;
 
+      //*onclick for reset button
+      btn_reset.item.onclick = function(){
+        sliders.resetSlidersValue()
+        Scenes.steps[3]()
+
+      }
+      
       function stepTutorial2(){
 
         setCC("Select the R-Load, set firing angle and observe various waveforms.")
@@ -1509,6 +1516,7 @@ concept_development: new Dom(".concept_development"),
           Scenes.items.part_2_circuit_r_load.set(0,-60, 246, 645)
           Scenes.items.part_2_helper.set(168, 24, 145, 111).zIndex(2000)
           r_load_graph = true;
+          r_l_load_graph = false;
         
           sliders.d.onclick = ()=>{
             Scenes.items.part_2_text_for_r_load.hide()
@@ -1531,6 +1539,7 @@ concept_development: new Dom(".concept_development"),
           Scenes.items.part_2_circuit_r_l_load.set(0,-60, 246, 645)
           Scenes.items.part_2_helper.set(163, 24, 145, 109).zIndex(2000)
           r_l_load_graph = true;
+          r_load_graph = false;
 
           sliders.d.onclick = ()=>{
 
@@ -2219,7 +2228,21 @@ concept_development: new Dom(".concept_development"),
               Dom.setBlinkArrowRed(true,622,324,null,null,-90).play()
               setCC("Press the 'Record' Button")
               
-              sliders.sliderD()
+              let slider_D = document.querySelector(".slider_D")
+              let sliderImg = document.querySelector(".slider-D-arrow")
+              let sliderValueInput = document.querySelector(".d .value-box input")
+              let val = 0
+              
+              // slider function  
+              e = e instanceof Event
+              if(e){
+                  sliderValueInput.value = slider_D.value 
+              }
+              else{
+                  slider_D.value = sliderValueInput.value
+              }
+              val = ((slider_D.value * 95) / 109) - 7
+              sliderImg.style.left = `${114 + val}px`
             }
         }else{
           Dom.setBlinkArrowRed(true,622,324,null,null,-90).play()
@@ -2405,6 +2428,8 @@ concept_development: new Dom(".concept_development"),
         Scenes.items.part_3_text_load_2.addClass("load-deactive")
         Scenes.items.part_3_text_load_1.item.onclick = ()=>{}
         Scenes.items.part_3_text_load_2.item.onclick = ()=>{}
+        Scenes.items.part_3_text_load_1.removeClass("btn-img")
+        Scenes.items.part_3_text_load_2.removeClass("btn-img") 
 
         // * show blink arrow
         Dom.setBlinkArrowRed(true,622,324,null,null,-90).play()
@@ -2422,6 +2447,8 @@ concept_development: new Dom(".concept_development"),
         Scenes.items.part_3_text_load_2.addClass("load-active")
         Scenes.items.part_3_text_load_1.item.onclick = ()=>{}
         Scenes.items.part_3_text_load_2.item.onclick = ()=>{}
+        Scenes.items.part_3_text_load_1.removeClass("btn-img")
+        Scenes.items.part_3_text_load_2.removeClass("btn-img") 
 
         // * show blink arrow
         Dom.setBlinkArrowRed(true,622,324,null,null,-90).play()
@@ -2781,7 +2808,21 @@ concept_development: new Dom(".concept_development"),
               Dom.setBlinkArrowRed(true,622,324,null,null,-90).play()
               setCC("Press the 'Record' Button")
               
-              sliders.sliderD()
+              let slider_D = document.querySelector(".slider_D")
+              let sliderImg = document.querySelector(".slider-D-arrow")
+              let sliderValueInput = document.querySelector(".d .value-box input")
+              let val = 0
+              
+              // slider function  
+              e = e instanceof Event
+              if(e){
+                  sliderValueInput.value = slider_D.value 
+              }
+              else{
+                  slider_D.value = sliderValueInput.value
+              }
+              val = ((slider_D.value * 95) / 109) - 7
+              sliderImg.style.left = `${114 + val}px`
             }
         }else{
           Dom.setBlinkArrowRed(true,622,324,null,null,-90).play()
@@ -3651,7 +3692,7 @@ concept_development: new Dom(".concept_development"),
 }
 
 // stepcalling
-Scenes.currentStep = 2
+Scenes.currentStep = 6
 
 Scenes.next()
 // Scenes.steps[3]()
