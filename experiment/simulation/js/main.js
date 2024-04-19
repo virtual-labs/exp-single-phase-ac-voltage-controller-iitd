@@ -1521,6 +1521,9 @@ concept_development: new Dom(".concept_development"),
           sliders.d.onclick = ()=>{
             Scenes.items.part_2_text_for_r_load.hide()
             Scenes.items.part_2_text_for_r_l_load.hide()
+ 
+
+
             setCC("Press the plot button")
             Dom.setBlinkArrowRed(true,160,320,30,30,-90).play()
           }    
@@ -2223,7 +2226,7 @@ concept_development: new Dom(".concept_development"),
             Dom.setBlinkArrowRed(true,312,98,null,null,90).play()
             setCC("Change the value of firing angle")
             
-            sliders.d.oninput = ()=>{
+            sliders.d.oninput = (e)=>{
               // sliders.d.input()
               Dom.setBlinkArrowRed(true,622,324,null,null,-90).play()
               setCC("Press the 'Record' Button")
@@ -2803,7 +2806,7 @@ concept_development: new Dom(".concept_development"),
             Dom.setBlinkArrowRed(true,312,98,null,null,90).play()
             setCC("Change the value of firing angle")
             
-            sliders.d.oninput = ()=>{
+            sliders.d.oninput = (e)=>{
               // sliders.d.input()
               Dom.setBlinkArrowRed(true,622,324,null,null,-90).play()
               setCC("Press the 'Record' Button")
@@ -2935,6 +2938,7 @@ concept_development: new Dom(".concept_development"),
       // to hide previous step
 
      //! Required Items
+     Scenes.items.btn_next.show()
      Scenes.items.slider_box.item.style.scale = "1.1";
      Scenes.items.slider_box.show("flex").set(132, 187);
      sliders.showSlider('d')
@@ -3692,7 +3696,7 @@ concept_development: new Dom(".concept_development"),
 }
 
 // stepcalling
-Scenes.currentStep = 6
+Scenes.currentStep = 2
 
 Scenes.next()
 // Scenes.steps[3]()
