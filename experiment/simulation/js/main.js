@@ -2826,7 +2826,22 @@ concept_development: new Dom(".concept_development"),
               }
               val = ((slider_D.value * 95) / 109) - 7
               sliderImg.style.left = `${114 + val}px`
+
+              // ! update the text accroding to value
+              if(Scenes.currentStep == 5 || Scenes.currentStep == 7){
+                  console.log(34)
+                  let betaTempText = Scenes.items.tempTitle41
+                  let first = 183.6
+                  let second = 194.1
+                  let load_1 = 100
+                  let betaDeg = (values.R == load_1 ? first : second)
+                  if(slider_D.value <= 15){
+                      betaDeg = 180
+                  }
+                  betaTempText.setContent(betaDeg)
+              }
             }
+
         }else{
           Dom.setBlinkArrowRed(true,622,324,null,null,-90).play()
           setCC("Press the 'Record' Button")
