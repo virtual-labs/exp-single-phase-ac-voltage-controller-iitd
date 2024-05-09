@@ -962,6 +962,7 @@ part_3_beta_text : new Dom("part_3_beta_text"),
 r_l_load : new Dom("r_l_load"),
 btn_auto : new Dom("btn_auto"),
 btn_manual: new Dom("btn_manual"),
+slider_v_arrow_application_step: new Dom("slider_v_arrow_application_step"),
 
 
 
@@ -1746,7 +1747,6 @@ concept_development: new Dom(".concept_development"),
       Scenes.items.contentAdderBox.item.innerHTML = ""
 
       Scenes.setStepHeading("Step-3", "");
-      setCC("First select the R-load and proceed for experimentation")
       
       // * remove all previous restrictions
       
@@ -1830,6 +1830,12 @@ concept_development: new Dom(".concept_development"),
       options[1].item.onclick =  opTwo
       // rightTicks[1].item.onclick = opTwo
 
+      if(Scenes.optionsDone[0] == 0 && Scenes.optionsDone[1] == 0){
+        setCC("First select the R-load and proceed for experimentation")
+      }else if(Scenes.optionsDone[0] == 1){
+        setCC("Now select the R L load and proceed for experimentation")
+      }
+
       // ! if all options done then exit
       let exit = true
       for(let i in Scenes.optionsDone){
@@ -1845,7 +1851,7 @@ concept_development: new Dom(".concept_development"),
       if(exit){
         // after complete
         // Dom.setBlinkArrow(true, 790, 408).play();
-        setCC("Simulator Done");
+        setCC("Simulation Done");
         setIsProcessRunning(false);
       }
 
@@ -1900,7 +1906,7 @@ concept_development: new Dom(".concept_development"),
       function stepTutorial2(){
         
         Dom.setBlinkArrowRed(true,72,0,30, null,-90).play()
-        setCC("Set AV input voltage, resistive load and vary the firing angle and record the observations.")
+        setCC("Set AC input voltage, resistive load and vary the firing angle and record the observations.")
 
         // reset slider d onclick
         sliders.d.onclick = ()=>{}
@@ -2472,7 +2478,7 @@ concept_development: new Dom(".concept_development"),
       function stepTutorial2(){
         
         Dom.setBlinkArrowRed(true,72,0,30, null,-90).play()
-        setCC("Set AV input voltage, resistive load and vary the firing angle and record the observations.")
+        setCC("Set AC input voltage, resistive load and vary the firing angle and record the observations.")
 
         // reset slider d onclick
         sliders.d.onclick = ()=>{}
@@ -2957,8 +2963,9 @@ concept_development: new Dom(".concept_development"),
      Scenes.items.slider_box.item.style.scale = "1.1";
      Scenes.items.slider_box.show("flex").set(132, 187);
      sliders.showSlider('d')
-
-     setCC("Chagne the firing angle")
+      Dom.setBlinkArrowRed(true,115,240,30,null,-90).play()
+      setCC("Here AC voltage controller application is demonstrated for illumination control.")
+      setCC("Set the AC voltage and then change the firing angle and see the variation in the light intensity")
       
       Scenes.items.part_4_circuit.set(10, 125, 288).zIndex(1)
       Scenes.items.part_2_helper.set(207, 230, 164, 118).zIndex(2000)
@@ -2969,7 +2976,25 @@ concept_development: new Dom(".concept_development"),
 
       Scenes.items.btn_auto.set(125, 40, 40)
       Scenes.items.btn_manual.set(235, 40, 40)
+      Scenes.items.slider_v_arrow_application_step.set(98,272,80)
 
+      let isVoltageSet = false
+      Scenes.items.slider_v_arrow_application_step.item.onclick = ()=>{
+        anime({
+          targets: Scenes.items.slider_v_arrow_application_step.item,
+          duration: 500,
+          rotate: "329",
+          easing: "linear",
+          complete(){
+            isVoltageSet = true
+            Dom.setBlinkArrowRed(true,150,90,30,null,90).play()
+            // setCC("Click on 'Auto'")
+          }
+        })
+
+        // empty the onclick
+        Scenes.items.slider_v_arrow_application_step.item.onclick = ()=>{}
+      }
       let sliderValue = {
         value: 0
       }
@@ -3014,17 +3039,34 @@ concept_development: new Dom(".concept_development"),
             // 40% of 100% so
             let lightScaleRatio = (ratioValue < 0.6 ? 0.6 : ratioValue)
 
-            console.log(ratioValue)
             glow[bulbIdx].img.scale(lightScaleRatio)  
           }
         }
       })
-
+      
+      function voltageNotSet(){
+        setCC("Please set the ac voltage first !")
+        Dom.setBlinkArrowRed(true,115,240,null,null,-90).play()
+      }
+      let isOneTimeClick = true
       Scenes.items.btn_auto.item.onclick = ()=>{
-        loopedAutoAnime.play()
+        if(isVoltageSet){
+          loopedAutoAnime.play()
+          Dom.setBlinkArrowRed(-1)
+        }else{
+          voltageNotSet()
+        }
       }
       Scenes.items.btn_manual.item.onclick = ()=>{
-        loopedAutoAnime.pause()
+        if(isVoltageSet){
+          loopedAutoAnime.pause()
+          Dom.setBlinkArrowRed(-1)
+          isOneTimeClick = false
+          if(isOneTimeClick)
+            setCC("Change the firing angle")
+        }else{
+          voltageNotSet()
+        }
       }
       
       let st = {
@@ -3095,7 +3137,7 @@ concept_development: new Dom(".concept_development"),
       onValueChangeGlowImgs()
       sliders.d.oninput = (e)=> {
         if(FirstTimeDone == true){
-          setCC("Simulation Done ✅")
+          setCC("Simulation Done")
           setTimeout(() => {
             setCC("Click 'Next' to restart the experiment")
             Dom.setBlinkArrow(true, 790, 555).play()

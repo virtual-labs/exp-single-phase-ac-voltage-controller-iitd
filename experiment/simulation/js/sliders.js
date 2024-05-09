@@ -156,7 +156,7 @@ const sliders = {
         let sliderBox = document.querySelector(".universal-slider")
         sliderBox.style.display = "block"
     },
-    showSlider(sliderName=""){
+    showSlider(sliderName="",second=""){
         this.showAll()
         document.querySelector(".slider-circuit").style.display = "none"
         let sliders = document.querySelectorAll(".slider .slider-box")
@@ -164,6 +164,8 @@ const sliders = {
             ele.style.display = "none"
         })
         document.querySelector(`.slider .${sliderName}`).style.display = "block"
+        if(second!="")
+            document.querySelector(`.slider .${second}`).style.display = "block"
     },
     hideSlider(sliderName=""){
         this.showAll()

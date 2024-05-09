@@ -98,6 +98,7 @@ const src = {
       r_l_load: this.allImgsDom[index++],
       btn_auto: this.allImgsDom[index++],
       btn_manual: this.allImgsDom[index++],
+      slider_v_arrow_application_step: this.allImgsDom[index++],
       //! EE8 images end here
 
 
