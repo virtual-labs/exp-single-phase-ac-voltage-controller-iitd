@@ -2,12 +2,12 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "Answer the questions given below (refer Fig.2):<br> <center> <img src='images/pos1.png' height='300px'><br><br>Fig. 2. Circuit configuration of AC voltage controller.</center><br><br> 1. What will be the effect on output voltage (rms) on increasing the firing angle from 0&#176; to 180&#176;:",
+      "question": "Answer the questions given below (refer Fig.2):<br> <center> <img src='images/pos1.png' height='300px'><br><br>Fig. 2. Circuit configuration of AC voltage controller.</center><br><br> 1. What will be the effect on output voltage (rms) on increasing the firing angle from 0 degree to 180 degree:",
       "answers": {
         "a": "Output voltage will increase",
         "b": "Output voltage will decrease",
-        "c": "Output voltage will increase upto 90&#176; then starts decreasing.",
-        "d": "Output voltage will decrease upto 90&#176; then starts increasing."
+        "c": "Output voltage will increase upto 90 degree then starts decreasing.",
+        "d": "Output voltage will decrease upto 90 degree then starts increasing."
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -21,7 +21,7 @@
 
     {
 
-      "question": "2. An 180 V, 50 Hz supply voltage is given to an AC voltage controller. What will be the power factor If the firing angle is 60o?",
+      "question": "2. An 180 V, 50 Hz supply voltage is given to an AC voltage controller. What will be the power factor If the firing angle is 60 degree?",
       "answers": {
         "a": "Zero",
         "b": "Unity",
@@ -40,7 +40,7 @@
 
     {
       
-      "question": "3. An 180 V, 50 Hz supply voltage is given to an AC voltage controller with resistive load of 100 ohms. What will be the rms current through SCR if the firing angle is 60&#176;?",
+      "question": "3. An 180 V, 50 Hz supply voltage is given to an AC voltage controller with resistive load of 100 ohms. What will be the rms current through SCR if the firing angle is 60 degree?",
       "answers": {
         "a": "0.89 A",
         "b": "1.14 A",
@@ -59,13 +59,13 @@
     
     {
 
-      "question": "4. If firing angle is 60&#176;, and extinction angle is 210&#176; what will be the conduction angle?",
+      "question": "4. If firing angle is 60 degree, and extinction angle is 210 degree what will be the conduction angle?",
       "answers": {
         
-        "a": "270&#176;",
-        "b": "180&#176;",
-        "c": "150&#176;",
-        "d": "90&#176;"
+        "a": "270 degree",
+        "b": "180 degree",
+        "c": "150 degree",
+        "d": "90 degree"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
