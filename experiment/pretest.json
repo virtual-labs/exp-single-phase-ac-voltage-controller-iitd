@@ -56,12 +56,12 @@
     },
         
     {
-      "question": "4. Maximum voltage (V<sub>max</sub>) across SCR at firing angle 30&#176; and 150&#176; will be (V<sub>m</sub> is the peak source voltage)",
+      "question": "4. Maximum voltage (V<sub>max</sub>) across SCR at firing angle 30 degree; and 150 degree; will be (V<sub>m</sub> is the peak source voltage)",
       "answers": {
-        "a": "Vmax (at 30&#176;) = V<sub>m</sub>,                 V<sub>max</sub> (at 150&#176;) = V<sub>m</sub>",
-        "b": "Vmax (at 30&#176;) = V<sub>m</sub> sin(30o),        V<sub>max</sub> (at 150&#176;) = V<sub>m</sub> sin(150&#176;)",
-        "c": "Vmax (at 30&#176;) = V<sub>m</sub> sin(30o),        V<sub>max</sub> (at 150&#176;) = V<sub>m</sub>",
-        "d": "Vmax (at 30&#176;) = V<sub>m</sub>,                 V<sub>max</sub> (at 150&#176;) = V<sub>m</sub>sin(150&#176;)"
+        "a": "Vmax (at 30 degree;) = V<sub>m</sub>,                 V<sub>max</sub> (at 150 degree;) = V<sub>m</sub>",
+        "b": "Vmax (at 30 degree;) = V<sub>m</sub> sin(30o),        V<sub>max</sub> (at 150 degree;) = V<sub>m</sub> sin(150 degree;)",
+        "c": "Vmax (at 30 degree;) = V<sub>m</sub> sin(30o),        V<sub>max</sub> (at 150 degree;) = V<sub>m</sub>",
+        "d": "Vmax (at 30 degree;) = V<sub>m</sub>,                 V<sub>max</sub> (at 150 degree;) = V<sub>m</sub>sin(150 degree;)"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
