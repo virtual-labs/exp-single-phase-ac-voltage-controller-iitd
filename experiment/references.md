@@ -7,3 +7,5 @@
 3. M. H. Rashid, Power Electronics Circuits Devices and Applications, NJ, Englewood Cliffs: Prentice-Hall, 1998.
 
 4. M. H. Rashid, Power Electronics Hand Book, Elsevier, 2007.
+
+5. Images source : www.gettyimages.in
