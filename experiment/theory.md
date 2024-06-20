@@ -278,7 +278,7 @@ Solving the above equation
 <br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th21.png" height="95px">
+  <img src="images/th21.png" height="102px">
       </div>
 <div style="float: right; width:50%; text-align:center;" height="60px">
     ..(15)
