@@ -119,10 +119,10 @@
 
       "question": "7. An AC voltage controller is used to control the voltage applied to a resistive load. The supply voltage is 220 V AC, and the controller operates with a firing angle of 30 degrees. Calculate the input power factor assuming ideal conditions.",
       "answers": {
-        "a": "98.5",
-        "b": "95.3",
-        "c": "92.1",
-        "d": "87.6"
+        "a": "0.985",
+        "b": "0.953",
+        "c": "0.921",
+        "d": "0.876"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
