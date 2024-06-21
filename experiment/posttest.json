@@ -94,6 +94,101 @@
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+            
+    {
+
+      "question": "6. An AC voltage controller is used to control the voltage applied to the resistive load. The supply voltage is 220 V AC and the controller operates with a firing angle of 30 degrees. Calculate the RMS output voltage assuming ideal conditions.",
+      "answers": {
+        "a": "211.30 V",
+        "b": "213.70 V",
+        "c": "205.30 V",
+        "d": "216.80 V"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+            
+    {
+
+      "question": "7. An AC voltage controller is used to control the voltage applied to a resistive load. The supply voltage is 220 V AC, and the controller operates with a firing angle of 30 degrees. Calculate the input power factor assuming ideal conditions.",
+      "answers": {
+        "a": "98.5",
+        "b": "95.3",
+        "c": "92.1",
+        "d": "87.6"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+            
+    {
+
+      "question": "8. A single phase AC voltage controller is controlling the load power demand (R = 5 Ω and L = 15 mH) from 230 V, 50 Hz source. What is the firing angle control range?",
+      "answers": {
+        "a": "(33.3 to 150) degree",
+        "b": "(43.3 to 180) degree",
+        "c": "(43.33 to 150) degree",
+        "d": "(33.3 to 180) degree"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+            
+    {
+
+      "question": "9. A single phase AC voltage controller is controlling the load power demand (R = 5 Ω and L = 15 mH) from 230 V, 50 Hz source. What is the maximum possible value of RMS load current?",
+      "answers": {
+        "a": "30.25 A",
+        "b": "25.24 A",
+        "c": "33.47 A",
+        "d": "42.58 A"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+            
+    {
+
+      "question": "10. A single phase AC voltage controller is controlling the load power demand (R = 5 Ω and L = 15 mH) from 230 V, 50 Hz source. What is the maximum power delivered to the load?",
+      "answers": {
+        "a": "6958.2 W",
+        "b": "5601.2 W",
+        "c": "6472.3 W",
+        "d": "6042.5 W"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
     }
   ]
 }
