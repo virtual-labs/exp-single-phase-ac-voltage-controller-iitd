@@ -1,38 +1,51 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/layout.css" />
-    <link rel="stylesheet" href="./css/progressBar.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/imgs.css" />
-    <link rel="stylesheet" href="./css/scenes.css" />
-    <!-- <link rel="stylesheet" href="table.css" /> -->
-    <link rel="stylesheet" href="./css/quiz.css" />
-    <link rel="stylesheet" href="./css/certificate.css" />
-    <link rel="stylesheet" href="./css/chart.css" />
-    <link rel="stylesheet" href="./css/component_styling.css" />
-    <link rel="stylesheet" href="./css/sliders.css" />
-  </head>
-  <img src="" alt="" />
-  <body>
-    <!-- <body  onmousemove="getCursor(event)"> -->
-    <!-- Mouse Position -->
-    <!-- <div id="demo" style="position: absolute">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Document</title>
+<link href="./css/layout.css" rel="stylesheet"/>
+<link href="./css/progressBar.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+<script crossorigin="anonymous" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<link href="./css/imgs.css" rel="stylesheet"/>
+<link href="./css/scenes.css" rel="stylesheet"/>
+<!-- <link rel="stylesheet" href="table.css" /> -->
+<link href="./css/quiz.css" rel="stylesheet"/>
+<link href="./css/certificate.css" rel="stylesheet"/>
+<link href="./css/chart.css" rel="stylesheet"/>
+<link href="./css/component_styling.css" rel="stylesheet"/>
+<link href="./css/sliders.css" rel="stylesheet"/>
+
+<link href="./toolkit/fix_styling.css" rel="stylesheet"/>
+<link href="./toolkit/toolkit.css" rel="stylesheet"/>
+<link href="./toolkit/main_spinner.css" rel="stylesheet"/>
+<script src="./toolkit/toolkit.js"></script>
+</head>
+<img alt="" src=""/>
+<body>
+<div class="main-spinner">
+<div class="loader">
+<span></span>
+</div>
+<p class="text">For Better User Experience, <span>reset zoom to 100% <br/>(by pressing 'Ctrl + 0')</span> and <span>refresh the page (by pressing 'Ctrl + R')</span></p>
+</div>
+
+<!-- <body  onmousemove="getCursor(event)"> -->
+<!-- Mouse Position -->
+<!-- <div id="demo" style="position: absolute">
       <div id="info"></div>
     </div> -->
-    <div class="main-container">
-      <!-- * Drawer Side Navbar -->
-      <nav id="drawer">
-        <div class="codelab-time-container" style="display: none"></div>
-        <div class="steps">
-          <ol>
-            <!-- <li class=""> 
+<div class="main-container">
+<!-- * Drawer Side Navbar -->
+<nav id="drawer">
+<div class="codelab-time-container" style="display: none"></div>
+<div class="steps">
+<ol>
+<!-- <li class=""> 
               <a>
                 <span class="step">
                   <span>Introduction</span>
@@ -46,1855 +59,1323 @@
                 </span>
               </a>
             </li> -->
-            <!-- <li>
+<!-- <li>
               <a>
                 <span class="step">
                   <span>Concept Development</span>
                 </span>
               </a>
             </li> -->
-            <li>
-              <a>
-                <span class="step">
-                  <span>
+<li>
+<a>
+<span class="step">
+<span>
                     Circuit Formulation.
                   </span>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a>
-                <span class="step">
-                  <span>Voltage and current waveforms of components.</span>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a>
-                <span class="step">
-                  <span>
+</span>
+</a>
+</li>
+<li>
+<a>
+<span class="step">
+<span>Voltage and current waveforms of components.</span>
+</span>
+</a>
+</li>
+<li>
+<a>
+<span class="step">
+<span>
                     Performance Analysis.
                   </span>
-                </span>
-              </a>
-            </li>
-            <!-- <li>
+</span>
+</a>
+</li>
+<li>
               <a>
                 <span class="step">
-                  <span>Placing sheathing on the top of timber beam.</span>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a>
-                <span class="step">
-                  <span
-                    >Placing inner and outer beam with the help of beam forming support (BFS) with extension.</span
-                  >
+                  <span>Application.</span>
                 </span>
               </a>
             </li>
             <li>
               <a>
                 <span class="step">
-                  <span>Making Slab using short prop, aluminum beam and timber beam.</span>
-                </span>
-              </a>
-            </li> -->
-            <!-- <li>
-              <a>
-                <span class="step">
                   <span
-                    >Attaching CT prop with steel waler using Head adapter and
-                    foot adapter</span
+                    >Experimental result.</span
                   >
                 </span>
               </a>
-            </li> -->
-            <!-- <li> 
-              <a>
-                <span class="step">
-                  <span
-                    >Repeat step 2 to step 7 for building remaining sides</span
-                  >
-                </span>
-              </a>
-            </li> -->
-            <!-- <li>
-              <a>
-                <span class="step">
-                  <span>Completed</span>
-                </span>
-              </a>
-            </li> -->
-          </ol>
-        </div>
-      </nav>
-      <div class="right-container">
-        <div class="right-box">
-          <!-- * Progress bar -->
-          <section class="progress-bar">
-            <div class="progressbar">
-              <div class="progress" id="progress"></div>
-              <div
-                class="progress-step progress-step-active"
-                data-tiltle=""
-              ></div>
-              <div class="progress-step" data-title=""></div>
-              <div class="progress-step" data-title=""></div>
-              <!-- <div class="progress-step" data-title=""></div> -->
-              <!-- <div class="progress-step" data-title=""></div> -->
-              <!-- <div class="progress-step" data-title=""></div>
-              <div class="progress-step" data-title=""></div> -->
-              <!-- <div class="progress-step" data-title=""></div> -->
-              <!-- <div class="progress-step" data-title=""></div> -->
-              <!-- <div class="progress-step" data-title=""></div>
-              <div class="progress-step" data-title=""></div>
-              <div class="progress-step" data-title=""></div>
-              <div class="progress-step" data-title=""></div> -->
-            </div>
-          </section>
+            </li>
 
-          <main class="main-window">
-            <!-- transparent layer for question -->
-            <div class="transparent-box"></div>
-            <section class="anime-header">
-              <p style="text-transform: uppercase;position: relative;left: -255px;">AC voltage controller </p>
-              
-              <div class="btn-popup-box">
-                <p class="btn-popup">Procedure</p>
-                <p class="btn-popup">Nomenclature</p>
-                <p class="btn-popup">Mathematical Expressions</p>
-                <img class="btn-popup-window" src="" alt="" >
-                <div class="btn-popup-window blur">
-                </div>
-              </div>
+</ol>
+</div>
+</nav>
+<div class="right-container">
+<div class="right-box">
+<!-- * Progress bar -->
+<section class="progress-bar">
+<div class="progressbar">
+<div class="progress" id="progress"></div>
+<div class="progress-step progress-step-active" data-tiltle=""></div>
+<div class="progress-step" data-title=""></div>
+<div class="progress-step" data-title=""></div>
+<div class="progress-step" data-title=""></div>
+<div class="progress-step" data-title=""></div>
 
-              <img
-                class="btn btn-mute"
-                style="height: 40px; z-index: 5; position: absolute; right: 5px"
-                src="./src/images/template_imgs/speech_off_btn.png"
-                title="Click To Mute"
-              />
-            </section>
-
-
-
-            <!-- * Project Intro Goes Here -->
-            <div class="project-intro">
-              <span class="heading">Objective:</span>
-              <p class="description">To Set the Beam and Slab using Flex System.</p>
-              <span class="heading">Apparatus Materials:</span>
-              <p class="description">
+</div>
+</section>
+<main class="main-window">
+<!-- transparent layer for question -->
+<div class="transparent-box"></div>
+<section class="anime-header">
+<p style="text-transform: uppercase;position: relative;left: -255px;">AC voltage controller </p>
+<div class="btn-popup-box">
+<p class="btn-popup">Procedure</p>
+<p class="btn-popup">Nomenclature</p>
+<p class="btn-popup">Mathematical Expressions</p>
+<img alt="" class="btn-popup-window" src=""/>
+<div class="btn-popup-window blur">
+</div>
+</div>
+<img class="btn btn-mute" src="./src/images/template_imgs/speech_off_btn.png" style="height: 40px; z-index: 5; position: absolute; right: 5px" title="Click To Mute">
+</img></section>
+<!-- * Project Intro Goes Here -->
+<div class="project-intro">
+<span class="heading">Objective:</span>
+<p class="description">To Set the Beam and Slab using Flex System.</p>
+<span class="heading">Apparatus Materials:</span>
+<p class="description">
                 Tripod Stand, CT prop, fourway head, Aluminium Beam, Timber Beam, Plywood Sheathing, Beam Forming support. 
               </p>
-            </div>
-
-            <!-- * Steps Heading Template -->
-            <div class="step-heading">
-              <p class="step-title">Step 1</p>
-              <p class="step-description">
+</div>
+<!-- * Steps Heading Template -->
+<div class="step-heading">
+<p class="step-title">Step 1</p>
+<p class="step-description">
                 Calculation of cross-sectional area:
               </p>
-            
-            </div>
-            
-            <!-- * Content Adder Box -->
-            <ul class="content-adder-box">
-              <!-- <li class="btn content-adder">Footing</li> -->
-            </ul>
-
-            <!-- * Blink Arrow -->
-            <img
-                class="blinkArrow"
-                src="./src/images/template_imgs/blinkArrow.webp"
-              />
-            
-            <section class="anime-main">
-            <!-- <section class="anime-main" onmousemove="getCursor(event)"> -->
-              <!-- * Welcome note About Experiment-->
-              <div class="welcome-box">
-                <img
-                  class="iit-logo"
-                  src="./src/images/iit-delhi-logo.png"
-                  alt=""
-                />
-                <div class="title">
-                  <span>Welcome to</span>
-                  <span>Foundation in Beam Formwork Experiment</span>
-                  <span
-                    >of Formwork Technology in Civil Engineering Virtual
-                    Lab</span
-                  >
-                  <span
-                    >developed by Prof. K. N. Jha, Department of Civil
-                    Engineering, IIT Delhi.</span
-                  >
-                </div>
-                <div class="prof-description">
-                  <img
-                    class="prof-img"
-                    src="./src/images/prof_image_kn_jha.jpeg"
-                    alt="Prof. K. N. Jha Image"
-                  />
-                  <span>Prof. K. N. Jha</span>
-                  <span>IIT Delhi</span>
-                </div>
-              </div>
-
-              <!-- * Student Name section -->
-              <form onsubmit="return false" class="user-input">
-                <p>Enter your name:</p>
-                <input type="text" name="" id="stuName" />
-                <p class="error">Please enter your name before start</p>
-                <input class="btn" id="nameSubmitBtn" type="submit" value="Start"/>
-              </form>
-
-              <!-- * Calculations Table -->
-              <table class="measurements">
-                <tbody>
-                  <tr>
-                    <th class="cell" colspan="2">Calculations:</th>
-                  </tr>
-                  <tr>
-                    <th class="cell" scope="col">Total Length(m)</th>
-                    <td class="cell"></td>
-                  </tr>
-                  <tr>
-                    <th class="cell" scope="col">Weight(kg)</th>
-                    <td class="cell"></td>
-                  </tr>
-                  <tr>
-                    <th class="cell" scope="col">
+</div>
+<!-- * Content Adder Box -->
+<ul class="content-adder-box">
+<!-- <li class="btn content-adder">Footing</li> -->
+</ul>
+<!-- * Blink Arrow -->
+<img class="blinkArrow" src="./src/images/template_imgs/blinkArrow.webp"/>
+<section class="anime-main">
+<!-- <section class="anime-main" onmousemove="getCursor(event)"> -->
+<!-- * Welcome note About Experiment-->
+<div class="welcome-box">
+<img alt="" class="iit-logo" src="./src/images/iit-delhi-logo.png"/>
+<div class="title">
+<span>Welcome to</span>
+<span>Foundation in Beam Formwork Experiment</span>
+<span>of Formwork Technology in Civil Engineering Virtual
+                    Lab</span>
+<span>developed by Prof. K. N. Jha, Department of Civil
+                    Engineering, IIT Delhi.</span>
+</div>
+<div class="prof-description">
+<img alt="Prof. K. N. Jha Image" class="prof-img" src="./src/images/prof_image_kn_jha.jpeg"/>
+<span>Prof. K. N. Jha</span>
+<span>IIT Delhi</span>
+</div>
+</div>
+<!-- * Student Name section -->
+<form class="user-input" onsubmit="return false">
+<p>Enter your name:</p>
+<input id="stuName" name="" type="text"/>
+<p class="error">Please enter your name before start</p>
+<input class="btn" id="nameSubmitBtn" type="submit" value="Start"/>
+</form>
+<!-- * Calculations Table -->
+<table class="measurements">
+<tbody>
+<tr>
+<th class="cell" colspan="2">Calculations:</th>
+</tr>
+<tr>
+<th class="cell" scope="col">Total Length(m)</th>
+<td class="cell"></td>
+</tr>
+<tr>
+<th class="cell" scope="col">Weight(kg)</th>
+<td class="cell"></td>
+</tr>
+<tr>
+<th class="cell" scope="col">
                       Cross-sectional area (mm<sup>2</sup>)
                     </th>
-                    <td class="cell"></td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <!-- * Graphs -->
-              <div class="graph_box graph_box0">
-                <canvas class="graph graph0"></canvas>
-              </div>
-              <div class="graph_box graph_box1">
-                <canvas class="graph graph1"></canvas>
-              </div>
-              <div class="graph_box graph_box2" >
-                <canvas class="graph graph2"></canvas>
-              </div>
-              <div class="graph_box graph_box3" >
-                <canvas class="graph graph3"></canvas>
-              </div>
-              <div class="graph_box graph_box4" >
-                <canvas class="graph graph4"></canvas>
-              </div>
-              <div class="graph_box graph_box5" >
-                <canvas class="graph graph5"></canvas>
-              </div>
-              <div class="graph_box graph_box6" >
-                <canvas class="graph graph6"></canvas>
-              </div>
-              <div class="graph_box graph_box7" >
-                <canvas class="graph graph7"></canvas>
-              </div>
-              <div class="graph_box graph_box8" >
-                <canvas class="graph graph8"></canvas>
-              </div>
-              <div class="graph_box graph_box9" >
-                <canvas class="graph graph9"></canvas>
-              </div>
-              <div class="graph_box graph_box10" >
-                <canvas class="graph graph10"></canvas>
-              </div>
-              <!-- Label for graph -->
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp xLabel"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp yLabel"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp xLabel2"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp yLabel2"
-              ></span>
-              
-              <!-- ! for cicuit formulation -->
-              <!-- Connection Points -->
-              <div class="vertex-box">
-                <p class="vertex" id="vertex1"><span class="text">1</span></p>
-                <p class="vertex" id="vertex2"><span class="text">2</span></p>
-                <p class="vertex" id="vertex3"><span class="text">3</span></p>
-                <p class="vertex" id="vertex4"><span class="text">4</span></p>
-                <p class="vertex" id="vertex5"><span class="text">5</span></p>
-                <p class="vertex" id="vertex6"><span class="text">6</span></p>
-                <p class="vertex" id="vertex7"><span class="text">7</span></p>
-                <p class="vertex" id="vertex8"><span class="text">8</span></p>
-                <p class="vertex" id="vertex9"><span class="text">9</span></p>
-                <p class="vertex" id="vertex10"><span class="text">10</span></p>
-              </div>
-
-              <!-- part 3 first table -->
-              <div class="part3_table_one">
-                <table>
-                  <thead>
-                    <!-- slider -->
-                    <tr>
-                      <th colspan="3" class="table-title">
+<td class="cell"></td>
+</tr>
+</tbody>
+</table>
+<!-- * Graphs -->
+<div class="graph_box graph_box0">
+<canvas class="graph graph0"></canvas>
+</div>
+<div class="graph_box graph_box1">
+<canvas class="graph graph1"></canvas>
+</div>
+<div class="graph_box graph_box2">
+<canvas class="graph graph2"></canvas>
+</div>
+<div class="graph_box graph_box3">
+<canvas class="graph graph3"></canvas>
+</div>
+<div class="graph_box graph_box4">
+<canvas class="graph graph4"></canvas>
+</div>
+<div class="graph_box graph_box5">
+<canvas class="graph graph5"></canvas>
+</div>
+<div class="graph_box graph_box6">
+<canvas class="graph graph6"></canvas>
+</div>
+<div class="graph_box graph_box7">
+<canvas class="graph graph7"></canvas>
+</div>
+<div class="graph_box graph_box8">
+<canvas class="graph graph8"></canvas>
+</div>
+<div class="graph_box graph_box9">
+<canvas class="graph graph9"></canvas>
+</div>
+<div class="graph_box graph_box10">
+<canvas class="graph graph10"></canvas>
+</div>
+<!-- Label for graph -->
+<span class="temp xLabel" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp yLabel" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp xLabel2" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp yLabel2" style="background-color: transparent; font-weight: bold"></span>
+<!-- ! for cicuit formulation -->
+<!-- Connection Points -->
+<div class="vertex-box">
+<p class="vertex" id="vertex1"><span class="text">1</span></p>
+<p class="vertex" id="vertex2"><span class="text">2</span></p>
+<p class="vertex" id="vertex3"><span class="text">3</span></p>
+<p class="vertex" id="vertex4"><span class="text">4</span></p>
+<p class="vertex" id="vertex5"><span class="text">5</span></p>
+<p class="vertex" id="vertex6"><span class="text">6</span></p>
+<p class="vertex" id="vertex7"><span class="text">7</span></p>
+<p class="vertex" id="vertex8"><span class="text">8</span></p>
+<p class="vertex" id="vertex9"><span class="text">9</span></p>
+<p class="vertex" id="vertex10"><span class="text">10</span></p>
+</div>
+<!-- part 3 first table -->
+<div class="part3_table_one">
+<table>
+<thead>
+<!-- slider -->
+<tr>
+<th class="table-title" colspan="3">
                         V<sub>g</sub> = <span class="title">24</span> V
                       </th>
-                    </tr>
-                    <tr>
-                      <th>D</th>
-                      <th>V<sub>0</sub>(V)</th>
-                      <th>M</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>0.1</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.9</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table>
-                  <thead>
-                    <!-- slider -->
-                    <tr>
-                      <th colspan="3" class="table-title">
+</tr>
+<tr>
+<th>D</th>
+<th>V<sub>0</sub>(V)</th>
+<th>M</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.9</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<!-- slider -->
+<tr>
+<th class="table-title" colspan="3">
                         V<sub>g</sub> = <span class="title">48</span> V
                       </th>
-                    </tr>
-                    <tr>
-                      <th>D</th>
-                      <th>V<sub>0</sub>(V)</th>
-                      <th>M</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>0.1</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.9</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table>
-                  <thead>
-                    <!-- slider -->
-                    <tr>
-                      <th colspan="3" class="table-title">
+</tr>
+<tr>
+<th>D</th>
+<th>V<sub>0</sub>(V)</th>
+<th>M</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.9</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<!-- slider -->
+<tr>
+<th class="table-title" colspan="3">
                         V<sub>g</sub> = <span class="title">72</span> V
                       </th>
-                    </tr>
-                    <tr>
-                      <th>D</th>
-                      <th>V<sub>0</sub>(V)</th>
-                      <th>M</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>0.1</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.9</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-
-              </div>
-
-              <!-- part 3 second table -->
-              <div class="part3_table_two">
-                <table>
-                  <thead>
-                    <!-- slider -->
-                    <tr style="border: none;">
-                      <td colspan="3" style="border: none;">
-                        <div class="table-slider deactive">
-                          <div class="labels" style="gap: 30px;">
-                            <span>50𝜴</span>
-                            <span>60𝜴</span>
-                            <span>70𝜴</span>
-                          </div>
-                          <div class="lines">
-                            <span>▌</span>
-                            <span>▌</span>
-                            <span>▌</span>
-                          </div>
-                          <div class="table-slider-box">
-                            <p class="title">R<sub>1</sub></p>
-                            <input type="range" value="50" step="10" min="50" max="70">
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>D</th>
-                      <th>V<sub>0</sub>(V)</th>
-                      <th>M</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>0.1</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.5</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.8</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.84</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.87</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.9</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.93</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-               
-                <table>
-                  <!-- slider -->
-                  <thead>
-                    <tr style="border: none;">
-                      <td colspan="3" style="border: none;">
-                        <div class="table-slider deactive" style="background-color: #009644;">
-                          <div class="labels">
-                            <span>130𝜴</span>
-                            <span>150𝜴</span>
-                            <span>170𝜴</span>
-                          </div>
-                          <div class="lines">
-                            <span>▌</span>
-                            <span>▌</span>
-                            <span>▌</span>
-                          </div>
-                          <div class="table-slider-box">
-                            <p class="title">R<sub>2</sub></p>
-                            <input type="range" value="130" step="20" min="130" max="170">
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>D</th>
-                      <th>V<sub>0</sub>(V)</th>
-                      <th>M</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>0.1</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.5</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.8</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.84</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.87</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.9</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.93</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <table>
-                  <thead>
-                    <!-- slider -->
-                    <tr style="border: none;">
-                      <td colspan="3" style="border: none;">
-                        <div class="table-slider deactive" style="background-color: rgb(40, 40, 255);">
-                          <div class="labels">
-                            <span>275𝜴</span>
-                            <span>300𝜴</span>
-                            <span>325𝜴</span>
-                          </div>
-                          <div class="lines">
-                            <span>▌</span>
-                            <span>▌</span>
-                            <span>▌</span>
-                          </div>
-                          <div class="table-slider-box">
-                            <p class="title">R<sub>3</sub></p>
-                            <input type="range" value="275" step="25" min="275" max="325">
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>D</th>
-                      <th>V<sub>0</sub>(V)</th>
-                      <th>M</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>0.1</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.5</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.8</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.84</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.87</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.9</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>0.93</td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-          <!-- part 3 first table -->
-              <table class="part3_table_three">
-                <thead>
-                  <tr>
-                    <th>S.No.</th>
-                    <th>V<sub>s</sub>(V)</th>
-                    <th>α<sup>0</sup></th>
-                    <th>R</th>
-                    <th>V<sub>0</sub>(V)</th>
-                    <th>I<sub>0</sub>(A)</th>
-                    <th>I<sub>in</sub>(A)</th>
-                    <th>P<sub>0</sub>(W)</th>
-                    <th>PF</th>
-                    <th>V<sub>01</sub></th>
-                    <th>THD</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td></td>
-                    <td>0</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td></td>
-                    <td>170</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td> 
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>7</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <!-- part three table 3__2 -->
-              <table class="part3_table_three part3_table_three_two">
-                <thead>
-                  <tr>
-                    <th>S.No.</th>
-                    <th>V<sub>s</sub>(V)</th>
-                    <th>α<sup>0</sup></th>
-                    <th>R</th>
-                    <th>V<sub>0</sub>(V)</th>
-                    <th>I<sub>0</sub>(A)</th>
-                    <th>I<sub>in</sub>(A)</th>
-                    <th>P<sub>0</sub>(W)</th>
-                    <th>PF</th>
-                    <th>V<sub>01</sub></th>
-                    <th>THD</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td></td>
-                    <td>0</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td></td>
-                    <td>170</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td> 
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>7</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-
-               <!-- part 3 four table -->
-               <table class="part3_table_four">
-                <thead>
-                  <tr>
-                    <th>v<sub>g</sub>(V)</th>
-                    <th>D</th>
-                    <th>R</th>
-                    <th>v<sub>0</sub>(V)</th>
-                    <th>M</th>
-                    <th>I<sub>2</sub>(A)</th>
-                    <th>I<sub>0</sub>(A)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    
-                  </tr>
-                  
-                </tbody>
-              </table>
-
-              <table class="part3_table_four_2">
-                <thead>
-                  <tr>
-                    <th>Component</th>
-                    <th>Voltage Rating (V)</th>
-                    <th>Current Rating (A)</th>
-                    <th>Power (W)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Switch(v<sub>Sw</sub>, i<sub>Sw</sub>)</td>
-                    <td>> v<sub>0</sub> (value)</td>
-                    <td>> i<sub>2</sub> (value)</td>
-                    <td>> P<sub>Sw</sub> (value)</td>
-
-                  </tr>
-                  <tr>
-                    <td>Diode(v<sub>Di</sub>, i<sub>Di</sub>)</td>
-                    <td>> v<sub>0</sub> (value)</td>
-                    <td>> i<sub>2</sub> (value)</td>
-                    <td>> P<sub>Di</sub> (value)</td>
-                  </tr> 
-                  <tr>
-                    <td>Capacitor(v<sub>C</sub>, i<sub>C</sub>)</td>
-                    <td>> v<sub>0</sub> (value)</td>
-                    <td>> (i<sub>2</sub>-i<sub>0</sub>) (value)</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <!-- * Result table -->
-              <!-- removed -->
-
-              <!-- * chart Js Canvas-->
-              <div class="chart">
-                <canvas id="myChart"></canvas>
-              </div>
-                          
-              <!-- * Input box format for in anime questions -->
-              <form onsubmit="return false" class="temp-input"
-                <span class="text1"></span
-                ><input class="input" type="text" name="" id="ipnum" /><span
-                  class="text2"
-                ></span>
-                <p class="error"></p>
-                <input class="submit-btn btn" type="submit" value="Submit" />
-              </form>
-
-              <!-- * Template element -->
-              <div class="utm-button"></div>
-
-              <!-- * Quiz container -->
-              <div class="quiz-container" id="quiz">
-                <div class="quiz-header">
-                  <div class="title">
-                    <h2 id="question">Question text</h2>
-                    <!-- <span id="closeQuiz">X</span> -->
-                  </div>
-                  <ul>
-                    <li>
-                      <input type="radio" id="a" name="answer" class="answer" />
-                      <label id="a_text" for="a">Question</label>
-                    </li>
-                    <li>
-                      <input type="radio" id="b" name="answer" class="answer" />
-                      <label id="b_text" for="b">Question</label>
-                    </li>
-                    <li>
-                      <input type="radio" id="c" name="answer" class="answer" />
-                      <label id="c_text" for="c">Question</label>
-                    </li>
-                    <li>
-                      <input type="radio" id="d" name="answer" class="answer" />
-                      <label id="d_text" for="d">Question</label>
-                    </li>
-                    <li>
-                      <p id="quizAns" style="color: green">India</p>
-                    </li>
-                  </ul>
-                </div>
-                <button id="quizSubmit">Submit</button>
-              </div>
-
-              <!-- * End Certificate Template -->
-              <div class="certificate">
-                <div class="header">
-                  <img src="./src/images/logo.png" alt="" class="logo" />
-                  <span class="title cursive">Certificate of Completion</span>
-                </div>
-                <div class="student-detail">
-                  <div class="row">
-                    <span
-                      style="text-transform: capitalize"
-                      class="bold red"
-                      id="certificateStuName"
-                      >Sneha Jadon</span
-                    >
-                  </div>
-                  <div class="row">
-                    <span class="cursive" style="text-align: center"
-                      >has succesfully performed Virtaul Lab Experiment on
+</tr>
+<tr>
+<th>D</th>
+<th>V<sub>0</sub>(V)</th>
+<th>M</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.9</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- part 3 second table -->
+<div class="part3_table_two">
+<table>
+<thead>
+<!-- slider -->
+<tr style="border: none;">
+<td colspan="3" style="border: none;">
+<div class="table-slider deactive">
+<div class="labels" style="gap: 30px;">
+<span>50𝜴</span>
+<span>60𝜴</span>
+<span>70𝜴</span>
+</div>
+<div class="lines">
+<span>▌</span>
+<span>▌</span>
+<span>▌</span>
+</div>
+<div class="table-slider-box">
+<p class="title">R<sub>1</sub></p>
+<input max="70" min="50" step="10" type="range" value="50"/>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<th>D</th>
+<th>V<sub>0</sub>(V)</th>
+<th>M</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.8</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.84</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.87</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.9</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.93</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<!-- slider -->
+<thead>
+<tr style="border: none;">
+<td colspan="3" style="border: none;">
+<div class="table-slider deactive" style="background-color: #009644;">
+<div class="labels">
+<span>130𝜴</span>
+<span>150𝜴</span>
+<span>170𝜴</span>
+</div>
+<div class="lines">
+<span>▌</span>
+<span>▌</span>
+<span>▌</span>
+</div>
+<div class="table-slider-box">
+<p class="title">R<sub>2</sub></p>
+<input max="170" min="130" step="20" type="range" value="130"/>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<th>D</th>
+<th>V<sub>0</sub>(V)</th>
+<th>M</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.8</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.84</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.87</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.9</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.93</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<!-- slider -->
+<tr style="border: none;">
+<td colspan="3" style="border: none;">
+<div class="table-slider deactive" style="background-color: rgb(40, 40, 255);">
+<div class="labels">
+<span>275𝜴</span>
+<span>300𝜴</span>
+<span>325𝜴</span>
+</div>
+<div class="lines">
+<span>▌</span>
+<span>▌</span>
+<span>▌</span>
+</div>
+<div class="table-slider-box">
+<p class="title">R<sub>3</sub></p>
+<input max="325" min="275" step="25" type="range" value="275"/>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<th>D</th>
+<th>V<sub>0</sub>(V)</th>
+<th>M</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.8</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.84</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.87</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.9</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.93</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- part 3 first table -->
+<table class="part3_table_three">
+<thead>
+<tr>
+<th>S.No.</th>
+<th>V<sub>s</sub>(V)</th>
+<th>α<sup>0</sup></th>
+<th>R</th>
+<th>V<sub>0</sub>(V)</th>
+<th>I<sub>0</sub>(A)</th>
+<th>I<sub>in</sub>(A)</th>
+<th>P<sub>0</sub>(W)</th>
+<th>PF</th>
+<th>V<sub>01</sub></th>
+<th>THD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td>170</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- part three table 3__2 -->
+<table class="part3_table_three part3_table_three_two">
+<thead>
+<tr>
+<th>S.No.</th>
+<th>V<sub>s</sub>(V)</th>
+<th>α<sup>0</sup></th>
+<th>R</th>
+<th>V<sub>0</sub>(V)</th>
+<th>I<sub>0</sub>(A)</th>
+<th>I<sub>in</sub>(A)</th>
+<th>P<sub>0</sub>(W)</th>
+<th>PF</th>
+<th>V<sub>01</sub></th>
+<th>THD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td>170</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- part 3 four table -->
+<table class="part3_table_four">
+<thead>
+<tr>
+<th>v<sub>g</sub>(V)</th>
+<th>D</th>
+<th>R</th>
+<th>v<sub>0</sub>(V)</th>
+<th>M</th>
+<th>I<sub>2</sub>(A)</th>
+<th>I<sub>0</sub>(A)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="part3_table_four_2">
+<thead>
+<tr>
+<th>Component</th>
+<th>Voltage Rating (V)</th>
+<th>Current Rating (A)</th>
+<th>Power (W)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Switch(v<sub>Sw</sub>, i<sub>Sw</sub>)</td>
+<td>&gt; v<sub>0</sub> (value)</td>
+<td>&gt; i<sub>2</sub> (value)</td>
+<td>&gt; P<sub>Sw</sub> (value)</td>
+</tr>
+<tr>
+<td>Diode(v<sub>Di</sub>, i<sub>Di</sub>)</td>
+<td>&gt; v<sub>0</sub> (value)</td>
+<td>&gt; i<sub>2</sub> (value)</td>
+<td>&gt; P<sub>Di</sub> (value)</td>
+</tr>
+<tr>
+<td>Capacitor(v<sub>C</sub>, i<sub>C</sub>)</td>
+<td>&gt; v<sub>0</sub> (value)</td>
+<td>&gt; (i<sub>2</sub>-i<sub>0</sub>) (value)</td>
+</tr>
+</tbody>
+</table>
+<!-- * Result table -->
+<!-- removed -->
+<!-- * chart Js Canvas-->
+<div class="chart">
+<canvas id="myChart"></canvas>
+</div>
+<!-- * Input box format for in anime questions -->
+<form class="temp-input" onsubmit="return false">
+<span class="text1"></span><input class="input" id="ipnum" name="" type="text"><span class="text2"></span>
+<p class="error"></p>
+<input class="submit-btn btn" type="submit" value="Submit">
+</input></input></form>
+<!-- * Template element -->
+<div class="utm-button"></div>
+<!-- * Quiz container -->
+<div class="quiz-container" id="quiz">
+<div class="quiz-header">
+<div class="title">
+<h2 id="question">Question text</h2>
+<!-- <span id="closeQuiz">X</span> -->
+</div>
+<ul>
+<li>
+<input class="answer" id="a" name="answer" type="radio">
+<label for="a" id="a_text">Question</label>
+</input></li>
+<li>
+<input class="answer" id="b" name="answer" type="radio"/>
+<label for="b" id="b_text">Question</label>
+</li>
+<li>
+<input class="answer" id="c" name="answer" type="radio"/>
+<label for="c" id="c_text">Question</label>
+</li>
+<li>
+<input class="answer" id="d" name="answer" type="radio"/>
+<label for="d" id="d_text">Question</label>
+</li>
+<li>
+<p id="quizAns" style="color: green">India</p>
+</li>
+</ul>
+</div>
+<button id="quizSubmit">Submit</button>
+</div>
+<!-- * End Certificate Template -->
+<div class="certificate">
+<div class="header">
+<img alt="" class="logo" src="./src/images/logo.png"/>
+<span class="title cursive">Certificate of Completion</span>
+</div>
+<div class="student-detail">
+<div class="row">
+<span class="bold red" id="certificateStuName" style="text-transform: capitalize">Sneha Jadon</span>
+</div>
+<div class="row">
+<span class="cursive" style="text-align: center">has succesfully performed Virtaul Lab Experiment on
                     </span>
-                    <span
-                      style="font-size: 1.5rem; text-transform: capitalize"
-                      class="bold sans red"
-                      >Foundation in foamwork</span
-                    >
-                  </div>
-                  <div class="">
-                    <!-- <span class="cursive">and secured</span>
+<span class="bold sans red" style="font-size: 1.5rem; text-transform: capitalize">Foundation in foamwork</span>
+</div>
+<div class="">
+<!-- <span class="cursive">and secured</span>
                     <span class="bold sans" id="quizScore">0</span>
                     <span class="bold sans">/5 Marks</span>
                     <span class="cursive">at</span> -->
-                    <span class="bold sans" id="certificateDate"
-                      >Date 10-10-2023</span
-                    >
-                  </div>
-                  <div class="row">
-                    <span class="cursive"
-                      >which is developed by
+<span class="bold sans" id="certificateDate">Date 10-10-2023</span>
+</div>
+<div class="row">
+<span class="cursive">which is developed by
                       <span class="bold sans">VIRTUAL LABS - IIT Delhi</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- * Slider Box -->
-              <!-- <div class="slider-box" style="z-index: 1000"> -->
-              <div class="universal-slider" style="z-index: 1000">
-                <img class="slider-circuit" src="./src/images/sliders/slider_circuit.png" alt="">
-                <div class="slider">
-                  <img type="range" class="slider_V">
-                  <div class="v slider-box">
-                    <img src="./src/images/sliders/slider_V_arrow.png" class="slider-V-arrow slider-v-r1">
-                    <div class="value-box">
-                      <input type="text" value="0" readonly>
-                      <span>V</span>
-                    </div>
-                  </div>    
-                  <div class="d slider-box">
-                    <input type="range" class="slider_D range-slider" step="1" min="0" max="180" value="1">
-                    <img src="./src/images/sliders/slider_D_blank.png" class="slider-D-arrow">
-                    <img src="./src/images/sliders/slider_D_body.png" alt="" class="slider-D-body">
-                    <div class="value-box">
-                      <!-- <span>0</span> -->
-                      <input type="text" value="1" min="1" max="180" >
-                    </div>
-                  </div>
-                  <div class="r slider-box">
-                    <input type="range" class="slider_R" step="1" min="50" max="500" value="50">
-                    <img src="./src/images/sliders/slider_R_arrow.png" class="slider-R-arrow">
-                    <img src="./src/images/sliders/slider_R_back.png" alt="" class="slider-R-back">
-                    <div class="value-box">
-                      <input type="text" value="50"  min="50" max="500" onfocusout="">
-                      <span>𝜴</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- </div> -->
-
-              <!-- ! Delte Reset Buttons -->
-              <!-- * Button template -->
-              <div class="btn btn-reset">
+</span>
+</div>
+</div>
+</div>
+<!-- * Slider Box -->
+<!-- <div class="slider-box" style="z-index: 1000"> -->
+<div class="universal-slider" style="z-index: 1000">
+<img alt="" class="slider-circuit" src="./src/images/sliders/slider_circuit.png"/>
+<div class="slider">
+<img class="slider_V" type="range"/>
+<div class="v slider-box">
+<img class="slider-V-arrow slider-v-r1" src="./src/images/sliders/slider_V_arrow.png"/>
+<div class="value-box">
+<input readonly="" type="text" value="0"/>
+<span>V</span>
+</div>
+</div>
+<div class="d slider-box">
+<input class="slider_D range-slider" max="180" min="0" step="1" type="range" value="1"/>
+<img class="slider-D-arrow" src="./src/images/sliders/slider_D_blank.png"/>
+<img alt="" class="slider-D-body" src="./src/images/sliders/slider_D_body.png"/>
+<div class="value-box">
+<!-- <span>0</span> -->
+<input max="180" min="1" type="text" value="1"/>
+</div>
+</div>
+<div class="r slider-box">
+<input class="slider_R" max="500" min="50" step="1" type="range" value="50"/>
+<img class="slider-R-arrow" src="./src/images/sliders/slider_R_arrow.png"/>
+<img alt="" class="slider-R-back" src="./src/images/sliders/slider_R_back.png"/>
+<div class="value-box">
+<input max="500" min="50" onfocusout="" type="text" value="50"/>
+<span>𝜴</span>
+</div>
+</div>
+</div>
+</div>
+<!-- </div> -->
+<!-- ! Delte Reset Buttons -->
+<!-- * Button template -->
+<div class="btn btn-reset">
                 Reset                
               </div>
-              <div class="btn btn-delete">
+<div class="btn btn-delete">
                 Delete
               </div>
-              <div class="btn btn-check-connections">
+<div class="btn btn-check-connections">
                 Check Connections
               </div>
-              <div class="btn btn-circuit-diagram" style="z-index: 2001;">
+<div class="btn btn-circuit-diagram" style="z-index: 2001;">
                 Circuit Diagram
               </div>
-              <div class="btn btn-connections" id="reset-connections" >
+<div class="btn btn-connections" id="reset-connections">
                 Reset                
               </div>
-              
-
-               <!--! transparent html element  -->
-
-               <button id="overPlayerNextBtn" class="btn-transparent btn btn-disabled" disabled>
+<!--! transparent html element  -->
+<button class="btn-transparent btn btn-disabled" disabled="" id="overPlayerNextBtn">
                 Next
               </button>
-       
-              <!-- ! Conecpt Development -->
-              <iframe class="concept_development" src="./iframes/index.html" width="1200" height="700"  frameborder="0"></iframe>
-
-              <!-- * Images that is used in all steps -->
-              <!-- * class main-window-imgs -->
-              <!-- ! Example ->
+<!-- ! Conecpt Development -->
+<iframe class="concept_development" frameborder="0" height="700" src="./iframes/index.html" width="1200"></iframe>
+<!-- * Images that is used in all steps -->
+<!-- * class main-window-imgs -->
+<!-- ! Example ->
               <!-- ! template images->
 
                   <!-- ! Red blink arrow -->
-              <img
-                class="blinkArrowRed"
-                src="./src/images/template_imgs/blinkArrowRed.png"
-              />
-              
-              <img
-                class="main-window-imgs"
-                src="./src/images/template_imgs/arrow.png"
-                title="arrow"
-                alt="arrow"
-              />
-
-              <img
-                class="main-window-imgs"
-                src="./src/images/template_imgs/blinkArrow.webp"
-              />
-
-              <img
-                class="main-window-imgs"
-                src="./src/images/template_imgs/laerrow.png"
-                title="laerrow"
-                alt="laerrow"
-              />
-
-              <img
-                class="main-window-imgs"
-                src="./src/images/template_imgs/laerrow2.png"
-                title="laerrow2"
-                alt="laerrow2"
-              />
-
-              <img
-                class="main-window-imgs"
-                src="./src/images/template_imgs/logo.png"
-                title="logo"
-                alt="logo"
-              />
-
-              <img
-                class="main-window-imgs"
-                src="./src/images/template_imgs/man.png"
-                title="man"
-                alt="man"
-              />
-
-              <img
-                class="main-window-imgs"
-                src="./src/images/template_imgs/measurearrow.png"
-                title="measurearrow"
-                alt="measurearrow"
-              />
-
-              <img
-                class="main-window-imgs"
-                src="./src/images/template_imgs/measurearrow2.png"
-                title="measurearrow2"
-                alt="measurearrow2"
-              />
-
-              <img
-                class="main-window-imgs"
-                src="./src/images/template_imgs/redsize.png"
-                title="redsize"
-                alt="redsize"
-              />
-
-              <img
-                class="main-window-imgs"
-                src="./src/images/template_imgs/speech_off_btn.png"
-                title="speech_off_btn"
-                alt="speech_off_btn"
-              />
-
-              <img
-                class="main-window-imgs"
-                src="./src/images/template_imgs/speech_on_btn.png"
-                title="speech_on_btn"
-                alt="speech_on_btn"
-              />
-
-              <img
-                class="main-window-imgs"
-                src="./src/images/template_imgs/talk_cloud.png"
-                title="talk_cloud"
-                alt="talk_cloud"
-              />
-              <img
-                class="main-window-imgs"
-                src="./src/images/template_imgs/iit-delhi-logo.png"
-                title="iit-delhi-logo"
-                alt="iit-delhi-logo"
-              />
+<img class="blinkArrowRed" src="./src/images/template_imgs/blinkArrowRed.png">
+<img alt="arrow" class="main-window-imgs" src="./src/images/template_imgs/arrow.png" title="arrow">
+<img class="main-window-imgs" src="./src/images/template_imgs/blinkArrow.webp">
+<img alt="laerrow" class="main-window-imgs" src="./src/images/template_imgs/laerrow.png" title="laerrow">
+<img alt="laerrow2" class="main-window-imgs" src="./src/images/template_imgs/laerrow2.png" title="laerrow2">
+<img alt="logo" class="main-window-imgs" src="./src/images/template_imgs/logo.png" title="logo">
+<img alt="man" class="main-window-imgs" src="./src/images/template_imgs/man.png" title="man">
+<img alt="measurearrow" class="main-window-imgs" src="./src/images/template_imgs/measurearrow.png" title="measurearrow"/>
+<img alt="measurearrow2" class="main-window-imgs" src="./src/images/template_imgs/measurearrow2.png" title="measurearrow2"/>
+<img alt="redsize" class="main-window-imgs" src="./src/images/template_imgs/redsize.png" title="redsize"/>
+<img alt="speech_off_btn" class="main-window-imgs" src="./src/images/template_imgs/speech_off_btn.png" title="speech_off_btn"/>
+<img alt="speech_on_btn" class="main-window-imgs" src="./src/images/template_imgs/speech_on_btn.png" title="speech_on_btn"/>
+<img alt="talk_cloud" class="main-window-imgs" src="./src/images/template_imgs/talk_cloud.png" title="talk_cloud"/>
+<img alt="iit-delhi-logo" class="main-window-imgs" src="./src/images/template_imgs/iit-delhi-logo.png" title="iit-delhi-logo"/>
 <!-- ! Template images end here -->
+<!-- ! Procedure formula Nomenclature images -->
+<img alt="formulas_component_stress.png" class="main-window-imgs" src="./src/images/formulas_component_stress.png"/>
+<img alt="formulas_efficiency.png" class="main-window-imgs" src="./src/images/formulas_efficiency.png"/>
+<img alt="formulas_ideal.png" class="main-window-imgs" src="./src/images/formulas_ideal.png"/>
+<img alt="formulas_nomenclautre.png" class="main-window-imgs" src="./src/images/formulas_nomenclautre.png"/>
+<img alt="formulas_non_ideal.png" class="main-window-imgs" src="./src/images/formulas_non_ideal.png"/>
+<img alt="formulas_procedure.png" class="main-window-imgs" src="./src/images/formulas_procedure.png"/>
+<img alt="formulas_universal.png" class="main-window-imgs" src="./src/images/formulas_universal.png"/>
+<!-- ! Procedure formula Nomenclature images end -->
+<!--! EE8 images added -->
+<img class="main-window-imgs btn-img" src="./src/images/EE8/btn_plot.png"/>
+<img class="main-window-imgs btn-img" src="./src/images/EE8/btn_reset.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_1_circuit.png"/>
+<!-- to copy image -->
+<img class="main-window-imgs" src="./src/images/EE8/part_1_component_1.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_1_component_1.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_1_component_1.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_1_component_2.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_1_component_2.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_1_component_2.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_1_connectiion_completed.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_1_frame.png"/>
+<img class="main-window-imgs pointer" src="./src/images/EE8/part_1_terminal_1.png"/>
+<img class="main-window-imgs pointer" src="./src/images/EE8/part_1_terminal_2.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_1_text_1.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_1_text_2.png"/>
+<img class="main-window-imgs btn-img" src="./src/images/EE8/part_2_btn_r_load.png"/>
+<img class="main-window-imgs btn-img" src="./src/images/EE8/part_2_btn_r_l_load.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_2_circuit.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_2_graph_empty.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_2_r_load_graph_1.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_2_r_load_graph_2.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_2_r_load_graph_3.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_2_r_l_load_graph_1.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_2_r_l_load_graph_2.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_2_r_l_load_graph_3.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_2_text_for_r_load.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_2_text_for_r_l_load.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_3_circuit.png"/>
+<img class="main-window-imgs btn-img" src="./src/images/EE8/part_3_select_option_1.png"/>
+<img class="main-window-imgs btn-img" src="./src/images/EE8/part_3_select_option_2.png"/>
+<img class="main-window-imgs btn_graph_tab btn-img" src="./src/images/EE8/part_3_tab_1.png"/>
+<img class="main-window-imgs btn_graph_tab btn-img" src="./src/images/EE8/part_3_tab_2.png"/>
+<img class="main-window-imgs btn_graph_tab btn-img" src="./src/images/EE8/part_3_tab_3.png"/>
+<img class="main-window-imgs btn_graph_tab btn-img" src="./src/images/EE8/part_3_tab_4.png"/>
+<img class="main-window-imgs btn_graph_tab btn-img" src="./src/images/EE8/part_3_tab_5.png"/>
+<img class="main-window-imgs btn-img" src="./src/images/EE8/part_3_text_load_1.png"/>
+<img class="main-window-imgs btn-img" src="./src/images/EE8/part_3_text_load_2.png"/>
+<img class="main-window-imgs btn-img" src="./src/images/EE8/btn_record.png"/>
+<img class="main-window-imgs btn-img" src="./src/images/EE8/btn_delete.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_1_text_3.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_2_helper.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_2_circuit_r_load.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_2_circuit_r_l_load.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_4_circuit.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_4_bulb_1.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_4_bulb_2.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_4_bulb_3.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_4_text.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/right_tick.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/right_tick.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/right_tick.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/right_tick.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/right_tick.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_3_alpha_text.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/part_3_beta_text.png"/>
+<img class="main-window-imgs" src="./src/images/EE8/r_l_load.png"/>
+<img class="main-window-imgs btn-img" src="./src/images/EE8/btn_auto.png"/>
+<img class="main-window-imgs btn-img" src="./src/images/EE8/btn_manual.png"/>
+<img class="main-window-imgs btn-img" src="./src/images/sliders/slider_V_arrow.png"/>
+<img class="main-window-imgs btn-img" src="./src/images/EE8/btn_hint.png"/>
+<img class="main-window-imgs btn-img" src="./src/images/EE8/hint_box.png"/>
 
-    <!-- ! Procedure formula Nomenclature images -->
-    <img
-    class="main-window-imgs"
-    src="./src/images/formulas_component_stress.png"
-    alt="formulas_component_stress.png"
-    />
+<!-- ! new images -->
+<img
+class="main-window-imgs"
+src="./src/images/EE8/new/beta_line_blinking.png"
+/>
 
-    <img
-        class="main-window-imgs"
-        src="./src/images/formulas_efficiency.png"
-        alt="formulas_efficiency.png"
-    />
+<img
+class="main-window-imgs "
+src="./src/images/EE8/new/bnt_click.png"
+/>
 
-    <img
-        class="main-window-imgs"
-        src="./src/images/formulas_ideal.png"
-        alt="formulas_ideal.png"
-    />
+<img
+class="main-window-imgs btn-img"
+src="./src/images/EE8/new/btn_firing_angle.png"
+/>
 
-    <img
-        class="main-window-imgs"
-        src="./src/images/formulas_nomenclautre.png"
-        alt="formulas_nomenclautre.png"
-    />
+<img
+class="main-window-imgs btn-img"
+src="./src/images/EE8/new/btn_input_voltage.png"
+/>
 
-    <img
-        class="main-window-imgs"
-        src="./src/images/formulas_non_ideal.png"
-        alt="formulas_non_ideal.png"
-    />
+<img
+class="main-window-imgs btn-img"
+src="./src/images/EE8/new/btn_load_inductance.png"
+/>
 
-    <img
-        class="main-window-imgs"
-        src="./src/images/formulas_procedure.png"
-        alt="formulas_procedure.png"
-    />
+<img
+class="main-window-imgs btn-img"
+src="./src/images/EE8/new/btn_load_resistance.png"
+/>
 
-    <img
-        class="main-window-imgs"
-        src="./src/images/formulas_universal.png"
-        alt="formulas_universal.png"
-    />
-    <!-- ! Procedure formula Nomenclature images end -->
+<img
+class="main-window-imgs"
+src="./src/images/EE8/new/components_rl_load.png"
+/>
 
-    <!--! EE8 images added -->
+<img
+class="main-window-imgs"
+src="./src/images/EE8/new/components_r_load.png"
+/>
 
-    <img
-    class="main-window-imgs btn-img"
-    src="./src/images/EE8/btn_plot.png"
-    />
+<img
+class="main-window-imgs"
+src="./src/images/EE8/new/rl_load_click_1.png"
+/>
 
-    <img
-        class="main-window-imgs btn-img"
-        src="./src/images/EE8/btn_reset.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_1_circuit.png"
-    />
+<img
+class="main-window-imgs"
+src="./src/images/EE8/new/rl_load_click_2.png"
+/>
 
-    <!-- to copy image -->
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_1_component_1.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_1_component_1.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_1_component_1.png"
-    />
+<img
+class="main-window-imgs"
+src="./src/images/EE8/new/rl_load_click_3.png"
+/>
 
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_1_component_2.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_1_component_2.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_1_component_2.png"
-    />
+<img
+class="main-window-imgs"
+src="./src/images/EE8/new/rl_load_click_4.png"
+/>
 
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_1_connectiion_completed.png"
-    />
+<img
+class="main-window-imgs"
+src="./src/images/EE8/new/r_load_click_1.png"
+/>
 
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_1_frame.png"
-    />
+<img
+class="main-window-imgs"
+src="./src/images/EE8/new/r_load_click_2.png"
+/>
 
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_1_terminal_1.png"
-    />
+<img
+class="main-window-imgs"
+src="./src/images/EE8/new/r_load_click_3.png"
+/>
 
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_1_terminal_2.png"
-    />
+<img
+class="main-window-imgs"
+src="./src/images/EE8/new/r_load_click_4.png"
+/>
 
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_1_text_1.png"
-    />
+<img
+class="main-window-imgs"
+src="./src/images/EE8/new/val_a.png"
+/>
 
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_1_text_2.png"
-    />
+<img
+class="main-window-imgs"
+src="./src/images/EE8/new/val_l.png"
+/>
 
-    <img
-        class="main-window-imgs btn-img"
-        src="./src/images/EE8/part_2_btn_r_load.png"
-    />
+<img
+class="main-window-imgs"
+src="./src/images/EE8/new/val_r.png"
+/>
 
-    <img
-        class="main-window-imgs btn-img"
-        src="./src/images/EE8/part_2_btn_r_l_load.png"
-    />
+<img
+class="main-window-imgs"
+src="./src/images/EE8/new/val_v.png"
+/>
 
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_2_circuit.png"
-    />
-
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_2_graph_empty.png"
-    />
-
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_2_r_load_graph_1.png"
-    />
-
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_2_r_load_graph_2.png"
-    />
-
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_2_r_load_graph_3.png"
-    />
-
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_2_r_l_load_graph_1.png"
-    />
-
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_2_r_l_load_graph_2.png"
-    />
-
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_2_r_l_load_graph_3.png"
-    />
-
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_2_text_for_r_load.png"
-    />
-
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_2_text_for_r_l_load.png"
-    />
-
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_3_circuit.png"
-    />
-
-    <img
-        class="main-window-imgs btn-img"
-        src="./src/images/EE8/part_3_select_option_1.png"
-    />
-
-    <img
-        class="main-window-imgs btn-img"
-        src="./src/images/EE8/part_3_select_option_2.png"
-    />
-
-    <img
-        class="main-window-imgs btn_graph_tab btn-img"
-        src="./src/images/EE8/part_3_tab_1.png"
-    />
-
-    <img
-        class="main-window-imgs btn_graph_tab btn-img"
-        src="./src/images/EE8/part_3_tab_2.png"
-    />
-
-    <img
-        class="main-window-imgs btn_graph_tab btn-img"
-        src="./src/images/EE8/part_3_tab_3.png"
-    />
-
-    <img
-        class="main-window-imgs btn_graph_tab btn-img"
-        src="./src/images/EE8/part_3_tab_4.png"
-    />
-
-    <img
-        class="main-window-imgs btn_graph_tab btn-img"
-        src="./src/images/EE8/part_3_tab_5.png"
-    />
-
-    <img
-        class="main-window-imgs btn-img"
-        src="./src/images/EE8/part_3_text_load_1.png"
-    />
-
-    <img
-        class="main-window-imgs btn-img"
-        src="./src/images/EE8/part_3_text_load_2.png"
-    />
-    <img
-        class="main-window-imgs btn-img"
-        src="./src/images/EE8/btn_record.png"
-    />
-    <img
-        class="main-window-imgs btn-img"
-        src="./src/images/EE8/btn_delete.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_1_text_3.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_2_helper.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_2_circuit_r_load.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_2_circuit_r_l_load.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_4_circuit.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_4_bulb_1.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_4_bulb_2.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_4_bulb_3.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_4_text.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/right_tick.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/right_tick.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/right_tick.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/right_tick.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/right_tick.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_3_alpha_text.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_3_beta_text.png"
-    />
-    <img
-        class="main-window-imgs"
-        src="./src/images/EE8/r_l_load.png"
-    />
-    <img
-        class="main-window-imgs btn-img"
-        src="./src/images/EE8/btn_auto.png"
-    />
-    <img
-        class="main-window-imgs btn-img"
-        src="./src/images/EE8/btn_manual.png"
-    />
-    <img
-        class="main-window-imgs btn-img"
-        src="./src/images/sliders/slider_V_arrow.png"
-    />
-
+<img
+class="main-window-imgs"
+src="./src/images/EE8/new/circle.png"
+/>
 <!-- ! EE8images end here -->
+<!-- * Videos -->
+<!-- <video muted class="main-window-videos" src="./src/videos/yoke_front_to_back.mp4"></video> -->
+<video class="main-window-videos" muted="" src="./src/videos/bfs_installation.mp4"></video>
+<!-- * Video Box -->
+<div class="video-box">
+<video autoplay="" class="video" muted="" src=""></video>
+<div class="controls" title="Click to Restart">
+<span class="title">Title</span>
+<button class="btn restart">
+<img alt="" src="./src/images/template_imgs/restart_btn.png"/>
+</button>
+</div>
+</div>
+<!-- * Question mark box -->
+<div class="qs qs1">?</div>
+<div class="qs qs2">?</div>
+<div class="qs qs3">?</div>
+<div class="qs qs4">?</div>
+<div class="qs qs5">?</div>
+<div class="qs qs6">?</div>
+<!-- * Image Box -->
+<div class="image-box">
+<img alt="" class="image" src=""/>
+<p class="title">Image Box</p>
+</div>
+<!-- * Temp texts for showing some text in anime -->
+<span class="temp-text" style="background-color:white; height: fit-content; font-size: large; border-radius: 5px; width: 120px; font-weight: bolder"></span>
+<span class="temp temp-text2" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title1" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title2" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title3" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title4" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title5" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title6" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title7" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title8" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title9" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title10" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title11" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title12" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title13" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title14" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title15" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title16" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title17" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title18" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title19" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title20" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title21" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title22" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title23" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title24" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title25" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title26" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title27" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title28" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title29" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title30" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title31" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title32" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title33" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title34" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title35" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title36" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title37" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title38" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title39" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title40" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title41" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title42" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title43" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title44" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title45" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title46" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title47" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title48" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title49" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title50" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title51" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title52" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title53" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title54" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title55" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title56" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title57" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title58" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title59" style="background-color: transparent; font-weight: bold"></span>
+<span class="temp temp-title60" style="background-color: transparent; font-weight: bold"></span>
+</img></img></img></img></img></img></img></section>
+<!-- * Anime Footer -->
+<section class="anime-footer">
+<btn class="btn btn-back" style="display: none;">Back</btn>
+<!-- * Bottom Subtitles Div -->
+<div class="steps-subtitle" style="margin-left: 20px;">
+<!-- <p class="user-name">Hey👋 Sneha</p> -->
+<p class="subtitle" id="subtitle" style="text-align: center; font-size: 1.3em; "></p>
+</div>
+<btn class="btn btn-next">Next</btn>
+<btn class="btn btn-save" style="position: absolute; right: 90px; bottom: 5px">Download</btn>
+</section>
+</main>
+</div>
+</div>
 
-
-              <!-- * Videos -->
-              <!-- <video muted class="main-window-videos" src="./src/videos/yoke_front_to_back.mp4"></video> -->
-              <video muted class="main-window-videos" src="./src/videos/bfs_installation.mp4"></video>
-
-              <!-- * Video Box -->
-              <div class="video-box">
-                <video muted class="video" src="" autoplay></video>
-                <div class="controls" title="Click to Restart">
-                  <span class="title">Title</span>
-                  <button class="btn restart">
-                    <img src="./src/images/template_imgs/restart_btn.png" alt="" />
-                  </button>
-                </div>
-              </div>
-
-              <!-- * Question mark box -->
-              <div class="qs qs1">?</div>
-              <div class="qs qs2">?</div>
-              <div class="qs qs3">?</div>
-              <div class="qs qs4">?</div>
-              <div class="qs qs5">?</div>
-              <div class="qs qs6">?</div>
-
-              <!-- * Image Box -->
-              <div class="image-box">
-                <img class="image" src="" alt="">
-                <p class="title">Image Box</p>
-              </div>
-
-             <!-- * Temp texts for showing some text in anime -->
-              <span
-                style="background-color:white; height: fit-content; font-size: large; border-radius: 5px; width: 120px; font-weight: bolder"
-                class="temp-text"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-text2"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title1"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title2"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title3"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title4"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title5"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title6"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title7"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title8"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title9"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title10"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title11"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title12"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title13"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title14"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title15"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title16"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title17"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title18"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title19"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title20"
-              ></span>
-              <span
-                style="background-color: transparent; font-weight: bold"
-                class="temp temp-title21"
-              ></span>
-              <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title22"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title23"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title24"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title25"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title26"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title27"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title28"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title29"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title30"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title31"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title32"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title33"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title34"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title35"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title36"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title37"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title38"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title39"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title40"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title41"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title42"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title43"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title44"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title45"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title46"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title47"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title48"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title49"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title50"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title51"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title52"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title53"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title54"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title55"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title56"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title57"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title58"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title59"
-            ></span>
-            <span
-              style="background-color: transparent; font-weight: bold"
-              class="temp temp-title60"
-            ></span>
-            </section>
-
-            <!-- * Anime Footer -->
-            <section class="anime-footer">
-              <btn style="display: none;" class="btn btn-back">Back</btn>
-              <!-- * Bottom Subtitles Div -->
-              <div style="margin-left: 120px;" class="steps-subtitle">
-                <!-- <p class="user-name">Hey👋 Sneha</p> -->
-                <p style="text-align: center; font-size: 1.3em; " class="subtitle" id="subtitle"></p>
-              </div>
-              <btn class="btn btn-next" >Next</btn>
-              <btn
-                class="btn btn-save"
-                style="position: absolute; right: 90px; bottom: 5px"
-                >Download</btn
-              >
-            </section>
-          </main>
-        </div>
-      </div>
-    </div>
-
-
-    <script src="./js/Anime.js"></script>
-    <script src="./js/src.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
-    <script src="./js/progressBar.js"></script>
-    <script src="./js/layout.js"></script>
-    <script src="./js/formulas.js"></script>
-    <script src="./js/sliders.js"></script>
-    <script src="./js/jsplumb.js"></script>
-    <script src="./js/cables.js"></script>
-    <script src="./js/main.js"></script>
-  </body>
+<div class="toolkit">
+<div class="btn-group">
+<!-- <button class="btn mute">
+                <img class="btn-mute btn-logo"
+                    src="./src/images/template_imgs/speech_off_btn.png"
+                    title="Click To Mute"
+                />
+            </button> -->
+<button class="btn btn-download-pdf" title="Download">
+<span class="title">Download</span>
+<img alt="" class="btn-logo" src="./toolkit/btn_download.png"/>
+</button>
+</div>
+<img class="blinkArrowYellow" src="./toolkit/setBlinkArrowYellow.png"/>
+</div>
+</div>
+<script src="./js/Anime.js"></script>
+<script src="./js/src.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+<script src="./js/progressBar.js"></script>
+<script src="./js/layout.js"></script>
+<script src="./js/formulas.js"></script>
+<script src="./js/sliders.js"></script>
+<script src="./js/jsplumb.js"></script>
+<script src="./js/cables.js"></script>
+<script src="./js/main.js"></script>
+</body>
 </html>
-
-
-

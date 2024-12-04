@@ -1,235 +1,144 @@
 
      <img
         class="main-window-imgs"
-        src="./src/images/EE8/btn_plot.png"
+        src="./src/images/EE8/new/beta_line_blinking.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/EE8/btn_reset.png"
+        src="./src/images/EE8/new/bnt_click.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/EE8/part_1_circuit.png"
+        src="./src/images/EE8/new/btn_firing_angle.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/EE8/part_1_component_1.png"
+        src="./src/images/EE8/new/btn_input_voltage.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/EE8/part_1_component_2.png"
+        src="./src/images/EE8/new/btn_load_inductance.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/EE8/part_1_connectiion_completed.png"
+        src="./src/images/EE8/new/btn_load_resistance.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/EE8/part_1_frame.png"
+        src="./src/images/EE8/new/components_rl_load.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/EE8/part_1_terminal_1.png"
+        src="./src/images/EE8/new/components_r_load.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/EE8/part_1_terminal_2.png"
+        src="./src/images/EE8/new/rl_load_click_1.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/EE8/part_1_text_1.png"
+        src="./src/images/EE8/new/rl_load_click_2.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/EE8/part_1_text_2.png"
+        src="./src/images/EE8/new/rl_load_click_3.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/EE8/part_2_btn_r_load.png"
+        src="./src/images/EE8/new/rl_load_click_4.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/EE8/part_2_btn_r_l_load.png"
+        src="./src/images/EE8/new/r_load_click_1.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/EE8/part_2_circuit.png"
+        src="./src/images/EE8/new/r_load_click_2.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/EE8/part_2_graph_empty.png"
+        src="./src/images/EE8/new/r_load_click_3.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/EE8/part_2_r_load_graph_1.png"
+        src="./src/images/EE8/new/r_load_click_4.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/EE8/part_2_r_load_graph_2.png"
+        src="./src/images/EE8/new/val_a.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/EE8/part_2_r_load_graph_3.png"
+        src="./src/images/EE8/new/val_l.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/EE8/part_2_r_l_load_graph_1.png"
+        src="./src/images/EE8/new/val_r.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/EE8/part_2_r_l_load_graph_2.png"
-    />
-    
-     <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_2_r_l_load_graph_3.png"
-    />
-    
-     <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_2_text_for_r_load.png"
-    />
-    
-     <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_2_text_for_r_l_load.png"
-    />
-    
-     <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_3_circuit.png"
-    />
-    
-     <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_3_select_option_1.png"
-    />
-    
-     <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_3_select_option_2.png"
-    />
-    
-     <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_3_tab_1.png"
-    />
-    
-     <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_3_tab_2.png"
-    />
-    
-     <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_3_tab_3.png"
-    />
-    
-     <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_3_tab_4.png"
-    />
-    
-     <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_3_tab_5.png"
-    />
-    
-     <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_3_text_load_1.png"
-    />
-    
-     <img
-        class="main-window-imgs"
-        src="./src/images/EE8/part_3_text_load_2.png"
+        src="./src/images/EE8/new/val_v.png"
     />
     
 
-btn_plot:this.allImgsDom[index++],
-btn_reset:this.allImgsDom[index++],
-part_1_circuit:this.allImgsDom[index++],
-part_1_component_1:this.allImgsDom[index++],
-part_1_component_2:this.allImgsDom[index++],
-part_1_connectiion_completed:this.allImgsDom[index++],
-part_1_frame:this.allImgsDom[index++],
-part_1_terminal_1:this.allImgsDom[index++],
-part_1_terminal_2:this.allImgsDom[index++],
-part_1_text_1:this.allImgsDom[index++],
-part_1_text_2:this.allImgsDom[index++],
-part_2_btn_r_load:this.allImgsDom[index++],
-part_2_btn_r_l_load:this.allImgsDom[index++],
-part_2_circuit:this.allImgsDom[index++],
-part_2_graph_empty:this.allImgsDom[index++],
-part_2_r_load_graph_1:this.allImgsDom[index++],
-part_2_r_load_graph_2:this.allImgsDom[index++],
-part_2_r_load_graph_3:this.allImgsDom[index++],
-part_2_r_l_load_graph_1:this.allImgsDom[index++],
-part_2_r_l_load_graph_2:this.allImgsDom[index++],
-part_2_r_l_load_graph_3:this.allImgsDom[index++],
-part_2_text_for_r_load:this.allImgsDom[index++],
-part_2_text_for_r_l_load:this.allImgsDom[index++],
-part_3_circuit:this.allImgsDom[index++],
-part_3_select_option_1:this.allImgsDom[index++],
-part_3_select_option_2:this.allImgsDom[index++],
-part_3_tab_1:this.allImgsDom[index++],
-part_3_tab_2:this.allImgsDom[index++],
-part_3_tab_3:this.allImgsDom[index++],
-part_3_tab_4:this.allImgsDom[index++],
-part_3_tab_5:this.allImgsDom[index++],
-part_3_text_load_1:this.allImgsDom[index++],
-part_3_text_load_2:this.allImgsDom[index++],
+beta_line_blinking:this.allImgsDom[index++],
+bnt_click:this.allImgsDom[index++],
+btn_firing_angle:this.allImgsDom[index++],
+btn_input_voltage:this.allImgsDom[index++],
+btn_load_inductance:this.allImgsDom[index++],
+btn_load_resistance:this.allImgsDom[index++],
+components_rl_load:this.allImgsDom[index++],
+components_r_load:this.allImgsDom[index++],
+rl_load_click_1:this.allImgsDom[index++],
+rl_load_click_2:this.allImgsDom[index++],
+rl_load_click_3:this.allImgsDom[index++],
+rl_load_click_4:this.allImgsDom[index++],
+r_load_click_1:this.allImgsDom[index++],
+r_load_click_2:this.allImgsDom[index++],
+r_load_click_3:this.allImgsDom[index++],
+r_load_click_4:this.allImgsDom[index++],
+val_a:this.allImgsDom[index++],
+val_l:this.allImgsDom[index++],
+val_r:this.allImgsDom[index++],
+val_v:this.allImgsDom[index++],
 
 
-btn_plot : new Dom("btn_plot"),
-btn_reset : new Dom("btn_reset"),
-part_1_circuit : new Dom("part_1_circuit"),
-part_1_component_1 : new Dom("part_1_component_1"),
-part_1_component_2 : new Dom("part_1_component_2"),
-part_1_connectiion_completed : new Dom("part_1_connectiion_completed"),
-part_1_frame : new Dom("part_1_frame"),
-part_1_terminal_1 : new Dom("part_1_terminal_1"),
-part_1_terminal_2 : new Dom("part_1_terminal_2"),
-part_1_text_1 : new Dom("part_1_text_1"),
-part_1_text_2 : new Dom("part_1_text_2"),
-part_2_btn_r_load : new Dom("part_2_btn_r_load"),
-part_2_btn_r_l_load : new Dom("part_2_btn_r_l_load"),
-part_2_circuit : new Dom("part_2_circuit"),
-part_2_graph_empty : new Dom("part_2_graph_empty"),
-part_2_r_load_graph_1 : new Dom("part_2_r_load_graph_1"),
-part_2_r_load_graph_2 : new Dom("part_2_r_load_graph_2"),
-part_2_r_load_graph_3 : new Dom("part_2_r_load_graph_3"),
-part_2_r_l_load_graph_1 : new Dom("part_2_r_l_load_graph_1"),
-part_2_r_l_load_graph_2 : new Dom("part_2_r_l_load_graph_2"),
-part_2_r_l_load_graph_3 : new Dom("part_2_r_l_load_graph_3"),
-part_2_text_for_r_load : new Dom("part_2_text_for_r_load"),
-part_2_text_for_r_l_load : new Dom("part_2_text_for_r_l_load"),
-part_3_circuit : new Dom("part_3_circuit"),
-part_3_select_option_1 : new Dom("part_3_select_option_1"),
-part_3_select_option_2 : new Dom("part_3_select_option_2"),
-part_3_tab_1 : new Dom("part_3_tab_1"),
-part_3_tab_2 : new Dom("part_3_tab_2"),
-part_3_tab_3 : new Dom("part_3_tab_3"),
-part_3_tab_4 : new Dom("part_3_tab_4"),
-part_3_tab_5 : new Dom("part_3_tab_5"),
-part_3_text_load_1 : new Dom("part_3_text_load_1"),
-part_3_text_load_2 : new Dom("part_3_text_load_2"),
+beta_line_blinking : new Dom("beta_line_blinking"),
+bnt_click : new Dom("bnt_click"),
+btn_firing_angle : new Dom("btn_firing_angle"),
+btn_input_voltage : new Dom("btn_input_voltage"),
+btn_load_inductance : new Dom("btn_load_inductance"),
+btn_load_resistance : new Dom("btn_load_resistance"),
+components_rl_load : new Dom("components_rl_load"),
+components_r_load : new Dom("components_r_load"),
+rl_load_click_1 : new Dom("rl_load_click_1"),
+rl_load_click_2 : new Dom("rl_load_click_2"),
+rl_load_click_3 : new Dom("rl_load_click_3"),
+rl_load_click_4 : new Dom("rl_load_click_4"),
+r_load_click_1 : new Dom("r_load_click_1"),
+r_load_click_2 : new Dom("r_load_click_2"),
+r_load_click_3 : new Dom("r_load_click_3"),
+r_load_click_4 : new Dom("r_load_click_4"),
+val_a : new Dom("val_a"),
+val_l : new Dom("val_l"),
+val_r : new Dom("val_r"),
+val_v : new Dom("val_v"),

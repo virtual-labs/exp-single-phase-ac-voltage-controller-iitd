@@ -262,6 +262,11 @@ function toggleNextBtn(){
   let nextBtn = document.querySelector(".btn-next")
   nextBtn.classList.toggle("btn-deactive")
 }
+const cancelSpeech = ()=>{
+  window.speechSynthesis.cancel()
+  ccQueue = []
+}
+
 const setIsProcessRunning = (value) => {
   // calling toggle the next
   if(value != isRunning){
@@ -270,6 +275,7 @@ const setIsProcessRunning = (value) => {
 
   isRunning = value;
   if(value){
+    cancelSpeech()
     Dom.hideAll()
   }
 };
@@ -324,13 +330,16 @@ let student_name = "";
 const 
 
 
-textToSpeach = (text) => {
-  // if(isMute){
-  //   return;
-  // }
+textToSpeach = (text,speak=true) => {
+  // for filter <sub></sub>
+  text = text.replaceAll("<sub>"," ").replaceAll("</sub>"," ")
   let utterance = new SpeechSynthesisUtterance();
   utterance.text = text;
   utterance.voice = window.speechSynthesis.getVoices()[0];
+  if(isMute || !speak){
+    utterance.volume = 0
+    utterance.rate = 10
+  }
   window.speechSynthesis.speak(utterance);
   return utterance;
 };
@@ -339,7 +348,7 @@ textToSpeach = (text) => {
 let ccQueue = [];
 // for subtitile
 let ccObj = null;
-function setCC(text = null, speed = 25) {
+function setCC(text = null, speed = 25, speak = true) {
   if (ccObj != null) {
     ccObj.destroy();
   }
@@ -350,14 +359,14 @@ function setCC(text = null, speed = 25) {
     strings: ["", ...ccQueue],
     typeSpeed: speed,
     onStringTyped(){
-      ccQueue.shift();
+      ccQueue.shift()
       // if(ccQueue.length != 0){
-      //   setCC(ccQueue.shift())
+      //   setCC(ccQueue.shift())`
       // }
     }
   });
-  if (!isMute) textToSpeach(text);
-  return ccDom;
+  let utterance = textToSpeach(text,speak)
+  return utterance
 }
    
 
@@ -963,6 +972,32 @@ r_l_load : new Dom("r_l_load"),
 btn_auto : new Dom("btn_auto"),
 btn_manual: new Dom("btn_manual"),
 slider_v_arrow_application_step: new Dom("slider_v_arrow_application_step"),
+btn_hint: new Dom("btn_hint"),
+hint_box: new Dom("hint_box"),
+
+//! new 
+beta_line_blinking : new Dom("beta_line_blinking"),
+bnt_click : new Dom("bnt_click"),
+btn_firing_angle : new Dom("btn_firing_angle"),
+btn_input_voltage : new Dom("btn_input_voltage"),
+btn_load_inductance : new Dom("btn_load_inductance"),
+btn_load_resistance : new Dom("btn_load_resistance"),
+components_rl_load : new Dom("components_rl_load"),
+components_r_load : new Dom("components_r_load"),
+rl_load_click_1 : new Dom("rl_load_click_1"),
+rl_load_click_2 : new Dom("rl_load_click_2"),
+rl_load_click_3 : new Dom("rl_load_click_3"),
+rl_load_click_4 : new Dom("rl_load_click_4"),
+r_load_click_1 : new Dom("r_load_click_1"),
+r_load_click_2 : new Dom("r_load_click_2"),
+r_load_click_3 : new Dom("r_load_click_3"),
+r_load_click_4 : new Dom("r_load_click_4"),
+val_a : new Dom("val_a"),
+val_l : new Dom("val_l"),
+val_r : new Dom("val_r"),
+val_v : new Dom("val_v"),
+circle : new Dom("circle"),
+
 
 
 
@@ -1236,6 +1271,18 @@ concept_development: new Dom(".concept_development"),
       Scenes.items.part_1_text_2.set(600, -25, 125, 340).hide()
       Scenes.items.part_1_text_3.set(629, -15, 112, 276).hide()
       Scenes.items.part_1_connectiion_completed.set(620, -15, 92, 300).hide() 
+      
+      //! hint button code
+      Scenes.items.btn_hint.set(808 + 55, 24 +  4 + 36 + 28, 36).zIndex(10)
+      Scenes.items.hint_box.set(188 + 55, 24 +  52 + 28, 322).zIndex(1000).hide()
+
+      let hint_btn = Scenes.items.btn_hint;
+      hint_btn.item.onmouseenter = ()=>{
+        Scenes.items.hint_box.show()
+      }
+      hint_btn.item.onmouseout = ()=>{
+        Scenes.items.hint_box.hide()
+      }
       
       Dom.setBlinkArrowRed(true, 545, -12,30,null).play()
       setCC("Select suitable thyristor for the circuit to control the voltage during the positive half cycle.")
@@ -1815,12 +1862,14 @@ concept_development: new Dom(".concept_development"),
         
         Scenes.optionsDone[0]=1;
         Scenes.forMathematicalExpressionBtn = 1
+        Scenes.currentStep = 6
         Scenes.steps[0+5]()
       }
       const opTwo = ()=>{
       
         Scenes.optionsDone[1]=1;
         Scenes.forMathematicalExpressionBtn = 2
+        Scenes.currentStep = 7
         Scenes.steps[1+5]()
       }
 
@@ -2144,6 +2193,9 @@ concept_development: new Dom(".concept_development"),
               let yLabel = Scenes.items.chart.label[idx].y
               Scenes.items.yLabel.setContent(yLabel)
               Scenes.items.xLabel.setContent(dataLabelX)
+
+              // ! download button anime
+              Download.playDownloadButtonAnime()
             }
           })
         }
@@ -2714,6 +2766,9 @@ concept_development: new Dom(".concept_development"),
               let yLabel = Scenes.items.chart.label[idx+graphIdx].y
               Scenes.items.yLabel.setContent(yLabel)
               Scenes.items.xLabel.setContent(dataLabelX)
+
+              // ! download button anime
+              Download.playDownloadButtonAnime()
             }
           })
         }
@@ -3137,14 +3192,13 @@ concept_development: new Dom(".concept_development"),
       onValueChangeGlowImgs()
       sliders.d.oninput = (e)=> {
         if(FirstTimeDone == true){
-          setCC("Simulation Done")
           setTimeout(() => {
-            setCC("Click 'Next' to restart the experiment")
+            setCC("Click 'Next' to got to next step")
             Dom.setBlinkArrow(true, 790, 555).play()
             setIsProcessRunning(false)
-            nextBtn.onclick = ()=>{
-              location.reload()
-            }
+            // nextBtn.onclick = ()=>{
+            //   location.reload()
+            // }
           }, 5000)
           FirstTimeDone = false
         }
@@ -3153,573 +3207,439 @@ concept_development: new Dom(".concept_development"),
       
       return true
     }),
-    // (step6 = function () {
-    //   setIsProcessRunning(true);
- 
-    //   Scenes.setStepHeading(
-    //     "",
-    //     "Efficiency Plot."
-    //   )
-    //   // setCC("Record 7 reading for different Load Resistances (R0)")
-    //     // ! show the slider
-    //   Scenes.items.slider_box.set(-65,-60)
-    //   Scenes.items.btn_next.show()
 
-    //   //! Required Items
-    //   // Scenes.items.circuit_full_3.set(230,-50,150)
-    //   // Scenes.items.part_3_option_3.set(-30, 155)
-    //    Scenes.items.part3_table_three.show()
-    //   //  Scenes.items.right_tick_1.set(-5,175)
-    //   Scenes.items.record_btn.set(770,220,70)
-    //   Scenes.items.btn_delete.set(785,290)
-    //   Scenes.items.btn_reset.set(787,350)
-    //   Scenes.items.part3_table_three.set(20)
-    //    let table = Scenes.items.part3_table_three.item
-    //    let valuesToMatch = []
-    //     // * index to handle records
-    //   let recordBtnClickIdx = (table.tBodies[0].rows[6].cells[4].innerHTML==""?0:7)
-      
+    //! R LOAD  Waveforms section 
+    (step7 = function () {
+      setIsProcessRunning(true);
+      // to hide previous step
 
+     //! Required Items
+     Scenes.items.btn_next.show()
+     Scenes.items.slider_box.hide()
 
-    //    // ! graph
-    //   Scenes.items.graph4.set(null,null,220,355)
-    //   let ctx = Scenes.items.graph4.item
-      
-    //   // let xLabel = "Output Power (Po)"
-    //   let xLabel = ""
-    //   let yLabel = "Efficiency (%)"
-    //   function plotGraph(data,label,xLabel,yLabel,beginAtZero=false){
-    //     let x = new Chart(ctx, {
-    //       type: "scatter",
-    //       plugins: [{
-    //         afterDraw: chart => {
-    //           var ctx = chart.chart.ctx;
-    //           ctx.save();
-    //           ctx.textAlign = 'center';
-    //           ctx.font = '18px Arial';
-    //           ctx.fillStyle = 'black';
-    //           ctx.fillText('Output Power (P )', chart.chart.width / 2, chart.chart.height - 24);
-    //           ctx.textAlign = 'left';
-    //           ctx.font = '10px Arial';
-    //           ctx.fillText('0', chart.chart.width - 119, chart.chart.height - 12);
-    //           ctx.restore();
-    //         },
-            
-    //       }],
-    //       data: {
-    //         datasets: [
-    //             {
-    //               label: label,
-    //               fill: false,
-    //               borderColor: "red",
-    //               backgroundColor: "red",
-    //               data: data,
-    //             },
-    //         ],
-    //       },
-    //       options: {
-    //         scales: {
-    //           yAxes: [
-    //             {
-    //               scaleLabel: {
-    //                 display: true,
-    //                 labelString: yLabel,
-    //                 fontColor: 'black',
-    //                 fontSize: 17,
+     //r load click
+     let arrowIdx = 0;
+     let arrows = [
+      ()=>{
+        Dom.setBlinkArrowRed(true, 669, 73, 30,null,180).play();
+        arrowIdx++
+      },
+      ()=>{
+        Dom.setBlinkArrowRed(true, 669, 164, 30,null,180).play();
+        arrowIdx++
+      },
+      ()=>{
+        Dom.setBlinkArrowRed(true, 669, 256, 30,null,180).play();
+        arrowIdx++
+      }, 
+      ()=>{
+        Dom.setBlinkArrowRed(-1)
+      }
+     ]
+
+     arrows[arrowIdx]()
+     setCC("To View the experimental waveforms select the parameters.")
+     Scenes.items.components_r_load.set(0, -24, 462)
+
+     let btns = [
+       Scenes.items.btn_input_voltage.set(719, 159 - 92, 47).zIndex(1), 
+       Scenes.items.btn_load_resistance.set(719, 159, 47).zIndex(1),
+       Scenes.items.btn_firing_angle.set(719, 159 + 92, 47).zIndex(1)
+     ]
+     
+     let vals = [
+       Scenes.items.val_v.set(719, 35 + 159 - 92, 47).zIndex(1).hide(), 
+       Scenes.items.val_r.set(719, 35 + 159, 47).zIndex(1).hide(), 
+       Scenes.items.val_a.set(719, 35 + 159 + 92, 47).zIndex(1).hide()
+     ]
+
+     let optionsClick = [0, 0, 0]
+     let btn_see_waveforms = Scenes.items.bnt_click.set(600, 374, 43).zIndex(1)
+
+     btns.forEach((btn, idx)=>{
+      btn.item.onclick = ()=>{
+        arrows[arrowIdx]()
+        vals[idx].show()
+        optionsClick[idx] = 1
+        if(optionsClick.indexOf(0) == -1){
+          Scenes.items.circle.set(580, 346, 93)
+          btn_see_waveforms.item.classList.add("btn-img")
+          let scaleBtn = anime({
+           targets: Scenes.items.bnt_click.item,
+           scale: [1, 1.1],
+           duration: 1000,
+           easing: "linear",
+           loop: true
+          })
+          btn_see_waveforms.item.onclick = ()=>{
+            scaleBtn.reset()
+            waveformShow()
+          }
+        } 
+      }
+     })
   
-    //               },
-    //               ticks: { 
-    //                 beginAtZero:beginAtZero,
-    //                 fontColor: 'black',
-    //                 fontSize: 14,
-    //               }
-    //             },
-    //           ],
-    //           xAxes: [
-    //             {
-    //               scaleLabel: {
-    //                 display: true,
-    //                 labelString: xLabel,
-    //                 fontColor: 'black',
-    //                 fontSize: 17,
-    //               },
-    //               ticks: { 
-    //                 beginAtZero:beginAtZero,
-    //                 fontColor: 'black',
-    //                 fontSize: 14,
-    //               }
-    //             },
-    //           ],
-    //         },
-    //       },
-    //     })
-    //   }
+     let scenes = [
+       Scenes.items.r_load_click_1.set(15, -30, 444).hide(),
+       Scenes.items.r_load_click_2.set(15, -30, 444).hide(),
+       Scenes.items.r_load_click_3.set(15, -30, 444).hide(),
+       Scenes.items.r_load_click_4.set(15, -30, 444).hide(),
+     ]
 
-    //   // let slidersBox = document.querySelectorAll(".slider")
-    //   // let slidersBox = document.querySelectorAll(".range-slider__range")
-    //   function stepTutorial2(){
+     let waveformShow = ()=>{
+      vals.forEach((_, idx)=>{
+        btns[idx].hide()
+        vals[idx].hide()
+      })
+     Scenes.items.circle.set(580, 346, 93).hide()
+      Scenes.items.bnt_click.hide()
+      Scenes.items.components_r_load.hide()
 
-    //     Dom.setBlinkArrowRed(true,50,-50,30,30,-90).play()
-    //     setCC("Select the value of V<sub>g</sub>")
+      Dom.setBlinkArrowRed(true, 555, 80,30,null,0).play();
+      
+      scenes[0].show()
+      setCC("The experimental waveforms discussion is given here. AC supply voltage of 100 Volt is given to the AC voltage controller.")
 
-    //     sliders.vImg.onclick = ()=>{
-    //       sliderV()
-    //       sliders.vImg.click()
-    //       Dom.setBlinkArrowRed(true,215,110,null,null,90).play()
-    //       setCC("Set the value of D",5)
+      setTimeout(()=>{
+        // setCC("Click 'Next' to go to next step");
+        Dom.setBlinkArrow(true, 790, 415).play();
+        setIsProcessRunning(false);
+      }, 6000)
+     }
 
-    //       sliders.d.onclick = ()=>{
-    //         Dom.setBlinkArrowRed(true,560,20).play()
-    //         setCC("Set the value of R")
+      return true
+    }),
 
-    //         sliders.r.onclick = ()=>{
-    //           Dom.setBlinkArrowRed(true,894,226).play()
-    //           setCC("Press Record")
+    //! R LOAD  CLICK 2
+    (step8 = function () {
+      setIsProcessRunning(true);
 
-    //           sliders.clearOnclick()
-    //         }
-    //       }
-    //     }
-    //   }
-    //   if(recordBtnClickIdx == 0){
-    //     stepTutorial2()
-    //   }
+     //! Required Items
+     Scenes.items.btn_next.show()
+     Scenes.items.slider_box.hide()
+      // to hide previous step
+      Scenes.items.r_load_click_2.set(15, -30, 444)
+      Dom.setBlinkArrowRed(true, 555, 80 + 80,30,null,0).play();
+
+      setCC("Voltage across load is equal to AC input voltage when thyristors are in ON-state and it is close to zero when thyristors are in OFF-state.")
+
+      setTimeout(()=>{
+        // setCC("Click 'Next' to go to next step");
+        Dom.setBlinkArrow(true, 790, 415).play();
+        setIsProcessRunning(false);
+      }, 7000)
+
+     //! Required Items
+
+
+      return true
+    }),
+
+    //! R LOAD  CLICK 3
+    (step9 = function () {
+      setIsProcessRunning(true);
 
       
-    //   function setDataToGraph(){
-    //     let graphData = []
-    //     var rows = table.tBodies[0].rows
-    //     let n = 7
-    //     for(let i=0;i<n;i++){
-    //       graphData.push(
-    //         {
-    //           x: rows[i].cells[9].innerHTML,
-    //           y: rows[i].cells[10].innerHTML
-    //         }
-    //       )
-    //     }
-    //     plotGraph(graphData,"Efficiency","",yLabel)
-    //     Scenes.items.graph4.set(null,null,220,355)
-    //   }
-    //   // ! ------------> If data already present plot the graph
-    //   if(table.tBodies[0].rows[6].cells[2].innerHTML !== ""){
-    //     setIsProcessRunning(false)
-    //     Scenes.currentStep = 4
+     //! Required Items
+     Scenes.items.btn_next.show()
+     Scenes.items.slider_box.hide()
 
-    //     recordBtnClickIdx = 7
-    //     let rows = table.tBodies[0].rows
-    //     let n=7
-    //     // * to get old values from table for matching
-    //     for(let i=0;i<n;i++){
-    //       let val = rows[i].cells[2].innerHTML
-    //       valuesToMatch.push(Number(val))
-    //     }
-    //   }else{
-    //     // ! Please note this when plot the graph then show the graph ... 
-    //     plotGraph([{}],"Efficiency","",yLabel,true) 
-    //     Scenes.items.graph4.set(null,null,220,355)
-    //     disableSlider("reset")
-    //   }
+      // to hide previous step
+      Scenes.items.r_load_click_3.set(15, -30, 444)
+      Dom.setBlinkArrowRed(true, 555, 80+80+80,30,null,0).play();
 
-    //   // // ! adding data set
-    //   // graph.addDataset(
-    //   //   "Efficiency",
-    //   //   "red",
-    //   //   []
-    //   // )
-       
+      setCC("Here, the load is resistive nature and hence its current waveform follows the load voltage waveform.")
 
-    //    //!onclick for delete btn
-    //    Scenes.items.btn_delete.item.onclick =  function(){
-    //     if(recordBtnClickIdx == 0 || recordBtnClickIdx > 8){
-    //       return
-    //     }
-    //     let row = table.tBodies[0].rows
-    //     let n=11
-        
-    //     for(let i=1;i<n;i++){
-    //       row[recordBtnClickIdx-1].cells[i].innerHTML = "" ;
-    //     }
-    //     recordBtnClickIdx = recordBtnClickIdx-1
-    //     if(recordBtnClickIdx==0){
-    //       disableSlider("reset")
-    //     }
-    //     valuesToMatch.pop()
-    //   }
+      setTimeout(()=>{
+        // setCC("Click 'Next' to go to next step");
+        Dom.setBlinkArrow(true, 790, 415).play();
+        setIsProcessRunning(false);
+      }, 6000)
 
-    //   //! onclick for reset 
-    //   Scenes.items.btn_reset.item.onclick = function(){
-    //     var rows = table.tBodies[0].rows
-    //     let n=7
-    //     let m=11
+     //! Required Items
+
+
+      return true
+    }),
+
+    //! R LOAD  CLICK 4
+    (step10 = function () {
+      setIsProcessRunning(true);
+      // to hide previous step
+
+      
+     //! Required Items
+     Scenes.items.btn_next.show()
+     Scenes.items.slider_box.hide()
+     
+      Scenes.items.r_load_click_4.set(15, -30, 444)
+      Dom.setBlinkArrowRed(true, 555, 80+80+80+80,30,null,0).play();
+
+      setCC("Voltage across thyristor is equal to AC input voltage when thyristors are in OFF-state and it is close to zero when thyristors are in ON-state.")
+
+      setTimeout(()=>{
+        // setCC("Click 'Next' to go to next step");
+        Dom.setBlinkArrow(true, 790, 415).play();
+        setIsProcessRunning(false);
+      }, 8000)
+
+     //! Required Items
+
+      return true
+    }),
+
+    //! RL LOAD  Waveforms section 
+    (step11 = function () {
+      setIsProcessRunning(true);
+      // to hide previous step
+
+     //! Required Items
+     Scenes.items.btn_next.show()
+     Scenes.items.slider_box.hide()
+
+     let arrowIdx = 0;
+     let arrows = [
+      ()=>{
+        Dom.setBlinkArrowRed(true, 648, 67, 30,null,180).play();
+        arrowIdx++
+      },
+      ()=>{
+        Dom.setBlinkArrowRed(true, 648, 153, 30,null,180).play();
+        arrowIdx++
+      },
+      ()=>{
+        Dom.setBlinkArrowRed(true, 648, 237, 30,null,180).play();
+        arrowIdx++
+      }, 
+      ()=>{
+        Dom.setBlinkArrowRed(true, 648, 322, 30,null,180).play();
+        arrowIdx++
+      }, 
+      ()=>{
+        Dom.setBlinkArrowRed(-1)
+      }
+     ]
+     arrows[arrowIdx]()
+
+     //* Required items
+      setCC("To View the experimental waveforms select the parameters.")
+
+      Scenes.items.circle.set(322, 346, 98).hide()
+      Scenes.items.components_rl_load.set(0, -24, 462)
+      Scenes.items.beta_line_blinking.set(104, 134, 196).zIndex(1).hide()
+
+     let btns = [
+       Scenes.items.btn_input_voltage.set(697, 133 - 70, 45).zIndex(1), 
+       Scenes.items.btn_load_resistance.set(697, 15+133, 45).zIndex(1),
+       Scenes.items.btn_load_inductance.set(697, 25+133 + 74, 45).zIndex(1),
+       Scenes.items.btn_firing_angle.set(697, 35+133 + 74+ 74, 45).zIndex(1)
+     ]
+     
+     let vals = [
+      Scenes.items.val_v.set(697, 38+133 - 70, 45).zIndex(1).hide(), 
+      Scenes.items.val_r.set(697, 15+38+133, 45).zIndex(1).hide(),
+      Scenes.items.val_l.set(697, 25+38+133 + 74, 45).zIndex(1).hide(),
+      Scenes.items.val_a.set(697, 35+38+133 + 74+ 74, 45).zIndex(1).hide()
+     ]
+
+     //* To check if all the btns are clicked or not
+     let optionsClick = [0, 0, 0, 0]
+     let btn_see_waveforms = Scenes.items.bnt_click.set(349, 378, 43).zIndex(1)
+
+     //* onclick for each btn
+     btns.forEach((btn, idx)=>{
+      btn.item.onclick = ()=>{
+        arrows[arrowIdx]()
+        vals[idx].show()
+        optionsClick[idx] = 1
+
+        //* if all btns are clicked then see waveform active
+        if(optionsClick.indexOf(0) == -1){
+          Scenes.items.circle.show()
+          btn_see_waveforms.item.classList.add("btn-img")
+          anime({
+           targets: Scenes.items.bnt_click.item,
+           scale: [1, 1.1],
+           duration: 1000,
+           easing: "linear",
+           loop: true
+          })
+          btn_see_waveforms.item.onclick = waveformShow
+        } 
+
+      }
+     })
   
-    //     for(let i=0;i<n;i++){
-    //       for(let j=1;j<m;j++){
-    //         rows[i].cells[j].innerHTML = "";
-    //       }
-    //     }
+     let scenes = [
+       Scenes.items.rl_load_click_1.set(10, -25, 453).hide(),
+       Scenes.items.rl_load_click_2.set(10, -25, 453).hide(),
+       Scenes.items.rl_load_click_3.set(10, -25, 453).hide(),
+       Scenes.items.rl_load_click_4.set(10, -25, 453).hide(),
+     ]
 
-    //     // reset all the parameters
-    //     // so just simply call this step again
-    //     sliders.reset()
-    //     Scenes.steps[7]()        
-        
-    //   }
+     let waveformShow = ()=>{
+      vals.forEach((_, idx)=>{
+        btns[idx].hide()
+        vals[idx].hide()
+      })
+     Scenes.items.circle.set(580, 346, 93).hide()
+      Scenes.items.bnt_click.hide()
+      Scenes.items.components_rl_load.hide()
 
-    //   // ! onclick for record
-    //   Scenes.items.record_btn.item.onclick = function(){ 
-    //      // for arrow system
-    //      if(recordBtnClickIdx < 6){
-    //         Dom.setBlinkArrowRed(true,560,75).play()
-    //         setCC("Change the value of R and Record it")
-
-    //         sliders.r.onclick = ()=>{
-    //           Dom.setBlinkArrowRed(true,894,226).play()
-    //           setCC("Press Record")
-
-    //           sliders.clearOnclick()
-    //         }
-    //     }else{
-    //       Dom.setBlinkArrowRed(-1)
-    //     }
-        
-    //     let vInValue = Number(sliders.v.value)
-    //     let dutyRatioValue = Number(sliders.d.value)
-    //     let resistanceValue = Number(sliders.r.value)
-    //     updateValues(vInValue,dutyRatioValue,resistanceValue)
-
-    //     // ! Can't select same values
-    //     if(recordBtnClickIdx < 7 && valuesToMatch.indexOf(resistanceValue)!=-1){
-    //       setCC("Please select different value.")
-    //       return
-    //     }else{
-    //       valuesToMatch.push(resistanceValue)
-    //     }
-
-    //     // ! sort the data
-    //     if(recordBtnClickIdx==7){
-
-    //       function sortTable(){
-    //         var rows = table.tBodies[0].rows
-
-    //         let n=7
-    //         for(let i=0;i<n;i++){
-    //             for(let j=0;j<n-i-1;j++){
-    //                 let val1 = Number(rows[j].cells[9].innerHTML)
-    //                 let val2 = Number(rows[j+1].cells[9].innerHTML)
-    //                 if(val1 > val2){
-    //                     let temp = rows[j].innerHTML
-    //                     rows[j].innerHTML = rows[j+1].innerHTML
-    //                     rows[j+1].innerHTML = temp
-    //                 }
-    //             }
-    //         }
-    //         for(let i=0;i<n;i++){
-    //             rows[i].cells[0].innerHTML = i+1
-    //         }
-    //       }
-    //       sortTable()
-
-    //       // * plot the graph
-    //       // adding parameter to x,y graph
-    //       // var rows = table.tBodies[0].rows
-    //       // let n = 7
-    //       // for(let i=0;i<n;i++){
-    //       //   graph.addData(0,
-    //       //     {
-    //       //       x: rows[i].cells[9].innerHTML,
-    //       //       y: rows[i].cells[10].innerHTML
-    //       //     }
-    //       //   )
-    //       // }
-    //       setDataToGraph()
-
-    //       // after complete
-    //       Dom.setBlinkArrow(true, 790, 408).play()
-    //       setCC("Click 'Next' to go to next step")
-    //       setIsProcessRunning(false)
-    //       Scenes.currentStep = 4
-    //     }
-
-
-        
-
-    //     // deactivate the sliders after first value  done
-    //     // todo
-    //     if(recordBtnClickIdx == 0){
-    //       disableSlider("v")
-    //       disableSlider("d")
-    //     }
-    //     let tableRow = table.tBodies[0].rows[recordBtnClickIdx++]
-    //     tableRow.cells[1].innerHTML = vInValue
-    //     tableRow.cells[2].innerHTML = dutyRatioValue
-    //     tableRow.cells[3].innerHTML = resistanceValue
-    //     tableRow.cells[4].innerHTML = Number(Formulas.efficiencyPlot.v0(values)).toFixed(2)
-    //     tableRow.cells[5].innerHTML = Number(Formulas.efficiencyPlot.M(values)).toFixed(2)
-    //     tableRow.cells[6].innerHTML = Number(Formulas.efficiencyPlot.iIn(values)).toFixed(2)
-    //     tableRow.cells[7].innerHTML = Number(Formulas.efficiencyPlot.i0(values)).toFixed(2)
-    //     tableRow.cells[8].innerHTML = Number(Formulas.efficiencyPlot.pIn(values)).toFixed(2)
-    //     tableRow.cells[9].innerHTML = Number(Formulas.efficiencyPlot.p0(values)).toFixed(2)
-    //     tableRow.cells[10].innerHTML = Number(Formulas.efficiencyPlot.eff(values)).toFixed(2)
-
-    //     // let x = tableRow.cells[9].innerHTML
-    //     // let y = tableRow.cells[10].innerHTML
-    //     // // ! addData to graph
-    //     // graph.addData(0,{x:x,y:y})
-
-    //     // if(recordBtnClickIdx>6){
-    //     //   // after complete
-    //     //   Dom.setBlinkArrow(true, 790, 408).play();
-    //     //   setCC("Click 'Next' to go to next step");
-    //     //   setIsProcessRunning(false); 
-    //     //   Scenes.currentStep = 4
-    //     // }
-    //     // warning for sorting the data
-    //     if(recordBtnClickIdx==7){
-    //       setCC("Click 'Record' to sort the table according to D and plot the graph.")
-    //     }
-    //   }    
-       
+      Dom.setBlinkArrowRed(true, 555, 10+80,30,null,0).play();
       
+      scenes[0].show()
+      // Scenes.items.beta_line_blinking.show()
+      // anime({
+      //   targets: Scenes.items.beta_line_blinking.item,
+      //   scale: [1, 1.1],
+      //   easing: "easeInOutQuad",
+      //   duration: 2000,
+      //   loop: true  
+      //  })
+      
+      setCC("AC supply voltage of 100 Volt (RMS value) is given to the AC voltage controller.")
+
+      setTimeout(()=>{
+        // setCC("Click 'Next' to go to next step");
+        Dom.setBlinkArrow(true, 790, 415).play();
+        setIsProcessRunning(false);
+      }, 4000)
+     }
+
+      return true
+    }),
+
+    //! RL LOAD  CLICK 2
+    (step12 = function () {
+      setIsProcessRunning(true);
+
+     //! Required Items
+     Scenes.items.btn_next.show()
+     Scenes.items.slider_box.hide()
+
+     Scenes.items.rl_load_click_2.set(10, -25, 453)
+     Scenes.items.beta_line_blinking.set(104, 134, 196).zIndex(1)
+
+     anime({
+      targets: Scenes.items.beta_line_blinking.item,
+      scale: [1, 1.1],
+      easing: "easeInOutQuad",
+      duration: 2000,
+      loop: true
+
+     })
+
+      // to hide previous step
+      Dom.setBlinkArrowRed(true, 555,10+ 80 + 80,30,null,0).play();
+
+      setCC("Due to high inductance at load, the load current continue to flow even after complete half cycle," )
+      setCC("hence the voltage across the load is non zero after half cycle.")
+
+      setTimeout(()=>{
+        // setCC("Click 'Next' to go to next step");
+        Dom.setBlinkArrow(true, 790, 415).play();
+        setIsProcessRunning(false);
+      }, 9000)
+
+     //! Required Items
+
+
+      return true
+    }),
+
+    //! RL LOAD  CLICK 3
+    (step13 = function () {
+      setIsProcessRunning(true);
 
       
-    //   return true
-    // }),
-    // (step7 = function () {
-    //   setIsProcessRunning(true);
+     //! Required Items
+     Scenes.items.btn_next.show()
+     Scenes.items.slider_box.hide()
+
+      // to hide previous step
+
+      Scenes.items.rl_load_click_3.set(10, -25, 453)
+      Scenes.items.beta_line_blinking.set(104, 134, 196).zIndex(1)
  
-    //   Scenes.setStepHeading(
-    //     "",
-    //     "Component Stress"
-    //   )
-    //     // ! show the slider
-    //   Scenes.items.slider_box.set(-70,-60)
-    //   Scenes.items.btn_next.show()
-
-    //   //! Required Items
-    //   // Scenes.items.circuit_full_2.set(270,0,160)
-    //   //  Scenes.items.part_3_option_4.set(-30, 170,100,220)
-    //   // Scenes.items.right_tick_1.set(-12,185)
-    //   Scenes.items.part3_table_four.set(10,170)
-    //   Scenes.items.part3_table_four_2.set(10,240)
-    //   Scenes.items.record_btn.set(465,180,60)
-    //   //  Scenes.items.part_3_option_4_graph.set(295,-60,60)
-
-    //   let styles = {
-    //     color: "black",
-    //     backgroundColor: "white",
-    //     width: "80px",
-    //     rotate: "-90deg"
-    //   }
-    //   Scenes.items.tempTitle1.set(548,25).zIndex(4000).setContent("Switch").styles(styles)
-    //   Scenes.items.tempTitle2.set(548,150).zIndex(4000).setContent("Diode").styles(styles)
-    //   Scenes.items.tempTitle3.set(548,290).zIndex(4000).setContent("Capacitor").styles(styles)
-    //    let graph_box5 = new Dom(".graph_box5")
-    //    // ! graph
-    //   // Scenes.items.graph4.set(null,null,190,290)
-    //   Scenes.items.graph5.set(null,0,390,320).styles({marginLeft: "15px"})
-    //   graph_box5.set(575,-70,475,365)
-    //   let table = Scenes.items.part3_table_four.item
-
-    //   let ctx2 = Scenes.items.graph5.item
-    //   let chart2 = Scenes.items.chart.graph5
-      
-    //   function plotGraph(){
-    //     let data = {
-    //       labels: ['Switch', 'Diode', 'Capacitor'],
-    //       datasets: [
-    //           {
-    //               label: 'Voltage Stress',
-    //               backgroundColor: 'rgba(255, 0, 0, 1)',
-    //               borderColor: 'rgba(255, 0, 0, 1)',
-    //               borderWidth: 1,
-    //               data: []
-    //           },
-    //           {
-    //               label: 'Current Stress',
-    //               backgroundColor: 'rgba(0, 0, 255, 1)',
-    //               borderColor: 'rgba(0, 0, 255, 1)',
-    //               borderWidth: 1,
-    //               data: []
-    //           },
-    //           {
-    //               label: 'Power',
-    //               backgroundColo r: 'rgba(0, 128, 0, 1)',
-    //               borderColor: 'rgba(0, 128, 0, 1)',
-    //               borderWidth: 1,
-    //               data: [],
-    //           }
-    //       ]
-    //   };
-
-    //   let options = {
-    //       maintainAspectRatio: false,
-    //       scales: {
-    //           xAxes: [{
-    //               ticks: {
-    //                   fontSize: 17,
-    //                   fontWeight: 'bold',
-    //                   fontColor: 'black',
-    //                   beginAtZero: true
-    //               }
-    //           }],
-    //           yAxes: [{
-    //               ticks: {
-    //                   display: false,
-    //                   // fontSize: 17,
-    //                   // fontWeight: 'bold',
-    //                   // fontColor: 'black',
-    //                   // beginAtZero: true,
-    //                   // autoSkip: false,
-    //                   // position: "right",
-    //                   // maxRotation: 90, // Rotate labels to 90 degrees
-    //                   // minRotation: 90,
-    //                   // callback: function(value) {
-    //                   //   return value // You can add custom formatting here if needed
-    //                   // }
-    //               }
-    //           }]
-    //       }
-    //   };
-
-    //   chart2 = new Chart(ctx2, {
-    //       type: 'horizontalBar',
-    //       data: data,
-    //       options: options
-    //   });
-    //   Scenes.items.chart.graph5 = chart2
-    //   Scenes.items.graph5.set(0,0,475,345)
-    // }
-
-    //   // let slidersBox = document.querySelectorAll(".slider")
-    //   let slidersBox = document.querySelectorAll(".range-slider__range")
-    //   function stepTutorial2(){
-
-        
-    //     Dom.setBlinkArrowRed(true,50,-50,30,30,-90).play()
-    //     setCC("Select the value of V<sub>g</sub>")
-
-    //     sliders.vImg.onclick = ()=>{
-    //       sliderV()
-    //       sliders.vImg.click()
-    //       Dom.setBlinkArrowRed(true,215,110,null,null,90).play()
-    //       setCC("Set the value of D",5)
-
-    //       sliders.d.onclick = ()=>{
-    //         Dom.setBlinkArrowRed(true,560,20).play()
-    //         setCC("Set the value of R")
-
-    //         sliders.r.onclick = ()=>{
-    //           Dom.setBlinkArrowRed(true,504,140,30,30,-90).play()
-    //           setCC("Press Record")
-
-    //           sliders.clearOnclick()
-    //         }
-    //       }
-    //     }
-
-    //   }
-    //   if(table.tBodies[0].rows[0].cells[3].innerHTML == ""){
-    //     stepTutorial2()
-    //   }
-    //   const graph = {
-    //     addDataset(chart,label,bgColor,data){
-    //       chart.data.datasets.push(
-    //         {
-    //           label: label,
-    //           fill: true,
-    //           borderColor: bgColor,
-    //           data: data,
-    //         }
-    //       )
-    //       chart.update()
-    //     },
-    //     addData(chart,index,data){
-    //       console.log(data)
-    //       if(data.length > 0){
-    //         chart.data.datasets[index].data = data
-    //       }else{
-    //         chart.data.datasets[index].data.push(data)
-    //       }
-    //       chart.update()
-    //     }
-    //   }
-
-    //    // ! ------------> If data already present plot the graph
-    //     if(table.tBodies[0].rows[0].cells[6].innerHTML !== ""){
-    //       setIsProcessRunning(false)
-    //       Scenes.items.graph5.set(0,0,475,345)
-    //       Scenes.currentStep = 4
-    //     }else{
-    //       plotGraph()
-    //     }   
-
-       
-    //    // ! onclick for record
-    //    Scenes.items.record_btn.item.onclick = function(){
-    //     Dom.setBlinkArrowRed(-1)
-
-    //      let vInValue = Number(sliders.v.value)
-    //      let dutyRatioValue = Number(sliders.d.value)
-    //      let resistanceValue = Number(sliders.r.value)
-
-    //      updateValues(vInValue,dutyRatioValue,resistanceValue)
+      anime({
+       targets: Scenes.items.beta_line_blinking.item,
+       scale: [1, 1.1],
+       easing: "easeInOutQuad",
+       duration: 2000,
+       loop: true 
+      })
  
-    //      let tableRow = table.tBodies[0].rows[0]
-    //      tableRow.cells[1-1].innerHTML = vInValue
-    //      tableRow.cells[2-1].innerHTML = dutyRatioValue
-    //      tableRow.cells[3-1].innerHTML = resistanceValue
-    //      tableRow.cells[4-1].innerHTML = Number(Formulas.stress.v0(values)).toFixed(2)
-    //      tableRow.cells[5-1].innerHTML = Number(Formulas.stress.M(values)).toFixed(2)
-    //      tableRow.cells[6-1].innerHTML = Number(Formulas.stress.i2(values)).toFixed(2)
-    //      tableRow.cells[7-1].innerHTML = Number(Formulas.stress.i0(values)).toFixed(2)
+      Dom.setBlinkArrowRed(true, 555, 10+80+80+80,30,null,0).play();
+
+      setCC("Load current Flow only when load voltage is non-zero.")
+
+      setTimeout(()=>{
+        // setCC("Click 'Next' to go to next step");
+        Dom.setBlinkArrow(true, 790, 415).play();
+        setIsProcessRunning(false);
+      }, 4000)
+
+     //! Required Items
 
 
-    //      let v0 = Number(Formulas.stress.v0(values)).toFixed(2)
-    //      let i2 = Number(Formulas.stress.i2(values)).toFixed(2)
-    //      let ic = Number(Formulas.stress.i2(values) - Formulas.stress.i0(values)).toFixed(2)
-    //      let pSw = Number(Formulas.stress.pSw(values)).toFixed(2)
-    //      let pDi = Number(Formulas.stress.pDi(values)).toFixed(2)
-         
-    //      // table two changes
-    //      let table2Row = Scenes.items.part3_table_four_2.item.tBodies[0].rows
-    //     table2Row[0].cells[1].innerHTML = `> v<sub>0</sub> (${v0})`
-    //     table2Row[1].cells[1].innerHTML = `> v<sub>0</sub> (${v0})`
-    //     table2Row[2].cells[1].innerHTML = `> v<sub>0</sub> (${v0})`
-        
-    //     table2Row[0].cells[2].innerHTML = `> i<sub>2</sub> (${i2})`
-    //     table2Row[1].cells[2].innerHTML = `> i<sub>2</sub> (${i2})`
-    //     table2Row[2].cells[2].innerHTML = `> (i<sub>2</sub>-i<sub>0</sub>)(${ic})`
+      return true
+    }),
 
-    //     table2Row[0].cells[3].innerHTML = `> P<sub>Sw</sub> (${pSw})`
-    //     table2Row[1].cells[3].innerHTML = `> i<sub>2</sub> (${pDi})`
+    //! RL LOAD  CLICK 4
+    (step14 = function () {
+      setIsProcessRunning(true);
+      // to hide previous step
 
-    //     // ! add values to graph
-    //     let graph2_voltageStress = [v0,v0,v0]
-    //     let graph2_currentStress = [i2,i2,ic]
-    //     let graph2_power = [pSw,pDi]
+      
+     //! Required Items
+     Scenes.items.btn_next.show()
+     Scenes.items.slider_box.hide()
 
-    //     // ! destroy and show new graph
-    //     // plotGraph()
-    //     graph.addData(chart2,0,graph2_voltageStress)
-    //     graph.addData(chart2,1,graph2_currentStress)
-    //     graph.addData(chart2,2,graph2_power)
-    //       // after complete
-    //       Dom.setBlinkArrow(true, 790, 408).play();
-    //       // setCC("Click 'Next' to go to next step");
-    //       setIsProcessRunning(false); 
-    //       Scenes.currentStep = 4
+     Scenes.items.rl_load_click_4.set(10, -25, 453)
+     Scenes.items.beta_line_blinking.set(104, 134, 196).zIndex(1)
 
-    //       // ! fix resistance value to its original
-    //       // resistanceSlider.min = 10
-    //       // resistanceSlider.max = 500
-    //       // resistanceSlider.step = 1        
-    //       // resistanceSlider.value = 10
-    //       // resistanceSlider.oninput = ()=>{}
-    //    }    
-    //   return true
-    // }),
+     anime({
+      targets: Scenes.items.beta_line_blinking.item,
+      scale: [1, 1.1],
+      easing: "easeInOutQuad",
+      duration: 2000,
+      loop: true 
+     })
+     
+      Dom.setBlinkArrowRed(true, 555,10+ 80+80+80+80,30,null,0).play();
+
+      setCC("Voltage across thyristor is equal to AC input voltage when thyristors are in OFF-state and it is close to zero when thyristors are in ON-state.")
+
+      setTimeout(()=>{
+        setCC("Simulation Done")
+        Dom.setBlinkArrow(true, 790, 415).play();
+        setIsProcessRunning(false);
+      }, 8000)
+
+     //! Required Items
+
+      return true
+    }),
+  
   ],
+  // ! For adding realcurrentstep in every step
+  // ! For tracking the current step accuratly
+  realCurrentStep: null,
+  setRealCurrentStep(){
+    let count = 0
+    this.steps.forEach((step,idx) => {
+      const constCount = count
+      let newStep = () => {
+        this.realCurrentStep = constCount;
+        console.log(`RealCurrentStep: ${this.realCurrentStep}`)
+        return step();
+      };
+
+      count++;
+      this.steps[idx] = newStep
+    });
+  },
   back() {
     //! animation isRunning
     // if (isRunning) {
@@ -3736,6 +3656,9 @@ concept_development: new Dom(".concept_development"),
     }
   },
   next() {
+    if(!this.realCurrentStep){
+      Scenes.setRealCurrentStep()
+    }
     //! animation isRunning
     if (isRunning) {
       return

@@ -99,6 +99,32 @@ const src = {
       btn_auto: this.allImgsDom[index++],
       btn_manual: this.allImgsDom[index++],
       slider_v_arrow_application_step: this.allImgsDom[index++],
+      btn_hint:this.allImgsDom[index++],
+      hint_box:this.allImgsDom[index++],
+
+      //! new
+      
+      beta_line_blinking:this.allImgsDom[index++],
+      bnt_click:this.allImgsDom[index++],
+      btn_firing_angle:this.allImgsDom[index++],
+      btn_input_voltage:this.allImgsDom[index++],
+      btn_load_inductance:this.allImgsDom[index++],
+      btn_load_resistance:this.allImgsDom[index++],
+      components_rl_load:this.allImgsDom[index++],
+      components_r_load:this.allImgsDom[index++],
+      rl_load_click_1:this.allImgsDom[index++],
+      rl_load_click_2:this.allImgsDom[index++],
+      rl_load_click_3:this.allImgsDom[index++],
+      rl_load_click_4:this.allImgsDom[index++],
+      r_load_click_1:this.allImgsDom[index++],
+      r_load_click_2:this.allImgsDom[index++],
+      r_load_click_3:this.allImgsDom[index++],
+      r_load_click_4:this.allImgsDom[index++],
+      val_a:this.allImgsDom[index++],
+      val_l:this.allImgsDom[index++],
+      val_r:this.allImgsDom[index++],
+      val_v:this.allImgsDom[index++],
+      circle:this.allImgsDom[index++],
       //! EE8 images end here
 
 
