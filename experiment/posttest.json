@@ -10,10 +10,10 @@
         "d": "Output voltage will decrease upto 90 degree then starts increasing."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -29,10 +29,10 @@
         "d": "0.9"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
@@ -48,10 +48,10 @@
         "d": "1.61 A"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -68,10 +68,10 @@
         "d": "90 degree"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -87,10 +87,10 @@
         "d": "Output voltage will be double of input voltage"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -106,10 +106,10 @@
         "d": "216.80 V"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
@@ -125,10 +125,10 @@
         "d": "0.876"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -144,10 +144,10 @@
         "d": "(33.3 to 180) degree"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -163,10 +163,10 @@
         "d": "42.58 A"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -182,10 +182,10 @@
         "d": "6042.5 W"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
