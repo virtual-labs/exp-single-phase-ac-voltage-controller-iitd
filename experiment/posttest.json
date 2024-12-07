@@ -11,7 +11,7 @@
       },
       "explanations": {
         "a": "Explanation 1",
-        "b": "Explanation 2",
+        "b": "Explanation 2: <img src='images/expl1.png' height='60px'>",
         "c": "Explanation 3",
         "d": "Explanation 4"
       },
@@ -32,7 +32,7 @@
         "a": "Explanation 1",
         "b": "Explanation 2",
         "c": "Explanation 3",
-        "d": "Explanation 4"
+        "d": "Explanation 4: <img src='images/expl2.png' height='60px'>"
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
@@ -49,7 +49,7 @@
       },
       "explanations": {
         "a": "Explanation 1",
-        "b": "Explanation 2",
+        "b": "Explanation 2: <img src='images/expl3.png' height='60px'>",
         "c": "Explanation 3",
         "d": "Explanation 4"
       },
@@ -70,7 +70,7 @@
       "explanations": {
         "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 3",
+        "c": "Explanation 3: γ=(β-α)",
         "d": "Explanation 4"
       },
       "correctAnswer": "c",
@@ -89,7 +89,7 @@
       "explanations": {
         "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 3",
+        "c": "Explanation 3: Diodes are uncontrolled devices hence the output voltage will be same as input voltage in ideal case.",
         "d": "Explanation 4"
       },
       "correctAnswer": "c",
@@ -109,7 +109,7 @@
         "a": "Explanation 1",
         "b": "Explanation 2",
         "c": "Explanation 3",
-        "d": "Explanation 4"
+        "d": "Explanation 4: <img src='images/expl4.png' height='60px'>"
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
@@ -125,7 +125,7 @@
         "d": "0.876"
       },
       "explanations": {
-        "a": "Explanation 1",
+        "a": "Explanation 1: <img src='images/expl5.png' height='60px'>",
         "b": "Explanation 2",
         "c": "Explanation 3",
         "d": "Explanation 4"
@@ -145,7 +145,7 @@
       },
       "explanations": {
         "a": "Explanation 1",
-        "b": "Explanation 2",
+        "b": "Explanation 2: The output voltage can be controlled for <img src='images/expl6.png' height='60px'> where <img src='images/expl7.png' height='60px'>",
         "c": "Explanation 3",
         "d": "Explanation 4"
       },
@@ -165,7 +165,7 @@
       "explanations": {
         "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 3",
+        "c": "Explanation 3: <img src='images/expl8.png' height='60px'>",
         "d": "Explanation 4"
       },
       "correctAnswer": "c",
@@ -183,7 +183,7 @@
       },
       "explanations": {
         "a": "Explanation 1",
-        "b": "Explanation 2",
+        "b": "Explanation 2: <img src='images/expl9.png' height='60px'>",
         "c": "Explanation 3",
         "d": "Explanation 4"
       },
