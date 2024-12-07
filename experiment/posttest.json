@@ -145,7 +145,7 @@
       },
       "explanations": {
         "a": "Explanation 1",
-        "b": "Explanation 2: The output voltage can be controlled for <img src='images/expl6.png' height='60px'> where <img src='images/expl7.png' height='60px'>",
+        "b": "Explanation 2: The output voltage can be controlled for <img src='images/expl6.png' height='26px'> where <img src='images/expl7.png' height='60px'>",
         "c": "Explanation 3",
         "d": "Explanation 4"
       },
@@ -165,7 +165,7 @@
       "explanations": {
         "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 3: <img src='images/expl8.png' height='60px'>",
+        "c": "Explanation 3: <img src='images/expl8.png' height='65px'>",
         "d": "Explanation 4"
       },
       "correctAnswer": "c",
@@ -183,7 +183,7 @@
       },
       "explanations": {
         "a": "Explanation 1",
-        "b": "Explanation 2: <img src='images/expl9.png' height='60px'>",
+        "b": "Explanation 2: <img src='images/expl9.png' height='32px'>",
         "c": "Explanation 3",
         "d": "Explanation 4"
       },
