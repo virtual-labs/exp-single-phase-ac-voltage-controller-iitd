@@ -43,7 +43,7 @@
         "a": "I<sub>S</sub>  = 2I<sub>0</sub>",
         "b": "2I<sub>S</sub>  = I<sub>0</sub>",
         "c": "I<sub>S</sub>  = I<sub>0</sub>",
-        "d": "I<sub>S</sub>  = (I<sub>0</sub>)2"
+        "d": "I<sub>S</sub>  = (I<sub>0</sub>)<sup>2</sup>"
       },
       "explanations": {
         "a": "Explanation 1",
