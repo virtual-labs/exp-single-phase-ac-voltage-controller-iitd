@@ -4,6 +4,10 @@
   <img src="images/procedbig1.png">
 </center>
 
+<center>
+  <img src="images/procedbig2.png">
+</center>
+
 a) Circuit formulation:
 <br>
 1. Connect the circuit to form a AC Voltage Controller by selecting one of the two options
@@ -11,10 +15,6 @@ a) Circuit formulation:
 2. 
     a). If all connections are correct then click on “NEXT” button and proceed for experimentation.<br>
     b). If connections are wrong. Press the “RESET” button and reconnect the terminals to create correct circuit.<br>
-
-<center>
-  <img src="images/procedbig2.png">
-</center>
 
 b) Operating the circuit: 
 <br>
