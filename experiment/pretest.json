@@ -59,8 +59,8 @@
       "question": "4. Maximum voltage (V<sub>max</sub>) across SCR at firing angle 30 degree and 150 degree will be (V<sub>m</sub> is the peak source voltage)",
       "answers": {
         "a": "Vmax (at 30 degree) = V<sub>m</sub>,                 V<sub>max</sub> (at 150 degree) = V<sub>m</sub>",
-        "b": "Vmax (at 30 degree) = V<sub>m</sub> sin(30o),        V<sub>max</sub> (at 150 degree) = V<sub>m</sub> sin(150 degree)",
-        "c": "Vmax (at 30 degree) = V<sub>m</sub> sin(30o),        V<sub>max</sub> (at 150 degree) = V<sub>m</sub>",
+        "b": "Vmax (at 30 degree) = V<sub>m</sub> sin(30 degree),        V<sub>max</sub> (at 150 degree) = V<sub>m</sub> sin(150 degree)",
+        "c": "Vmax (at 30 degree) = V<sub>m</sub> sin(30 degree),        V<sub>max</sub> (at 150 degree) = V<sub>m</sub>",
         "d": "Vmax (at 30 degree) = V<sub>m</sub>,                 V<sub>max</sub> (at 150 degree) = V<sub>m</sub>sin(150 degree)"
       },
       "explanations": {
