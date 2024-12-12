@@ -1,4 +1,4 @@
- ### Theory
+### Theory
 
 The circuit configuration of AC voltage controller is given in Fig. 1.
 
@@ -423,4 +423,7 @@ Hence, total harmonic distortion (THD) is given by
       </div>
 <br>
 
+<div style="float: left; width:100%;"><br>
 #### ("For more Information on mathematical analysis, see references")
+<br></div>
+
