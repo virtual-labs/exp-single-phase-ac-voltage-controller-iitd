@@ -1,0 +1,94 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Answer the questions given below (refer Fig.1):<br> <center> <img src='images/pre1.png' height='300px'><br><br>Fig. 1. Circuit configuration of AC voltage controller.</center><br><br> 1. Output voltage of AC voltage controller will not change with",
+      "answers": {        
+        "a": "Source voltage",
+        "b": "Firing angle of thyristors",
+        "c": "Supply frequency.",
+        "d": "Transformer’s turns ratio."
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3: The output of AC voltage controller depends on the source voltage and firing angle of the thyristor.",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+      
+    {
+      "question": "2. If  SCR-T<sub>2</sub> is not conducting even with the gate pulses what will be the effect on output voltage?",
+      "answers": {
+        "a": "Output voltage will be zero",
+        "b": "Output voltage will be controlled in positive half cycle but it will be zero in negative half cycle.",
+        "c": "Output voltage will be controlled in negative half cycle but it will be zero in positive half cycle.",
+        "d": "SCR-T<sub>1</sub> will operate in both positive and negative half cycles."
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2: For the negative half cycle SCR-T<sub></sub>1 will be reverse biased and SCR-T<sub></sub>2 is not conducting hence output voltage will be zero in negative half cycle.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    
+    {
+      "question": "3. An isolation transformer with turns ratio 2:1 is used instead of 1:1. What will be the relation between the source current (I<sub>S</sub>) and load current (I<sub>0</sub>).",
+      "answers": {
+        "a": "I<sub>S</sub>  = 2I<sub>0</sub>",
+        "b": "2I<sub>S</sub>  = I<sub>0</sub>",
+        "c": "I<sub>S</sub>  = I<sub>0</sub>",
+        "d": "I<sub>S</sub>  = (I<sub>0</sub>)<sup>2</sup>"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2: For ideal AC voltage controller I<sub>in</sub> = I<sub>0</sub> and voltage step down transformer will step-up the current. Therefore, the relationship is: I<sub>0</sub> = 2I<sub>S</sub>",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+        
+    {
+      "question": "4. Maximum voltage (V<sub>max</sub>) across SCR at firing angle 30 degree and 150 degree will be (V<sub>m</sub> is the peak source voltage)",
+      "answers": {
+        "a": "Vmax (at 30 degree) = V<sub>m</sub>,                 V<sub>max</sub> (at 150 degree) = V<sub>m</sub>",
+        "b": "Vmax (at 30 degree) = V<sub>m</sub> sin(30 degree),        V<sub>max</sub> (at 150 degree) = V<sub>m</sub> sin(150 degree)",
+        "c": "Vmax (at 30 degree) = V<sub>m</sub> sin(30 degree),        V<sub>max</sub> (at 150 degree) = V<sub>m</sub>",
+        "d": "Vmax (at 30 degree) = V<sub>m</sub>,                 V<sub>max</sub> (at 150 degree) = V<sub>m</sub>sin(150 degree)"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3: At firing angle = 30&#176; SCR starts conducting and hence maximum voltage across it will be V<sub>m</sub> sin(30&#176;). At firing angles = 150&#176; maximum voltage across SCR will be V<sub>m</sub>.",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    
+    {
+      "question": "5. What should be the relation between firing angle (α), extinction angle (β) and conduction angle (γ) for non-zero output current?",
+      "answers": {
+        "a": "β<(π-α)",
+        "b": "β<(π+α)",
+        "c": "β>(π-α)",
+        "d": "β>(π+α)"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3",
+        "d": "Explanation 4: SCR starts conducting from the time instant of firing pulse ('α') and stops conducting when current through inductive load becomes zero at extinction angle (β)."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    }
+  ]
+}
