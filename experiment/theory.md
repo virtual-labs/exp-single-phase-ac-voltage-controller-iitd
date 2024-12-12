@@ -422,3 +422,5 @@ Hence, total harmonic distortion (THD) is given by
   <br>
       </div>
 <br>
+
+#### ("For more Information on mathematical analysis, see references")
