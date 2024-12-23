@@ -2,37 +2,192 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Answer the questions given below (refer Fig.2):<br> <center> <img src='images/pos1.png' height='300px'><br><br>Fig. 2. Circuit configuration of AC voltage controller.</center><br><br> 1. What will be the effect on output voltage (rms) on increasing the firing angle from 0 degree to 180 degree:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Output voltage will increase",
+        "b": "Output voltage will decrease",
+        "c": "Output voltage will increase upto 90 degree then starts decreasing.",
+        "d": "Output voltage will decrease upto 90 degree then starts increasing."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
+        "b": "Explanation 2: <img src='images/expl1.png' height='60px'>",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+
+    {
+
+      "question": "2. An 180 V, 50 Hz supply voltage is given to an AC voltage controller. What will be the power factor If the firing angle is 60 degree?",
+      "answers": {
+        "a": "Zero",
+        "b": "Unity",
+        "c": "0.85",
+        "d": "0.9"
+      },
+      "explanations": {
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4: <img src='images/expl2.png' height='60px'>"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+
+    {
+      
+      "question": "3. An 180 V, 50 Hz supply voltage is given to an AC voltage controller with resistive load of 100 ohms. What will be the rms current through SCR if the firing angle is 60 degree?",
+      "answers": {
+        "a": "0.89 A",
+        "b": "1.14 A",
+        "c": "2.31 A",
+        "d": "1.61 A"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2: <img src='images/expl3.png' height='60px'>",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    
+    {
+
+      "question": "4. If firing angle is 60 degree, and extinction angle is 210 degree what will be the conduction angle?",
+      "answers": {
+        
+        "a": "270 degree",
+        "b": "180 degree",
+        "c": "150 degree",
+        "d": "90 degree"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3: γ=(β-α)",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+            
+    {
+
+      "question": "5. What will be the effect on output voltage if both the thyristors are replaced by diodes?",
+      "answers": {
+        "a": "Output voltage will be zero",
+        "b": "Output voltage will be half of the input voltage",
+        "c": "Output voltage will be equal to input voltage",
+        "d": "Output voltage will be double of input voltage"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3: Diodes are uncontrolled devices hence the output voltage will be same as input voltage in ideal case.",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+            
+    {
+
+      "question": "6. An AC voltage controller is used to control the voltage applied to the resistive load. The supply voltage is 220 V AC and the controller operates with a firing angle of 30 degrees. Calculate the RMS output voltage assuming ideal conditions.",
+      "answers": {
+        "a": "211.30 V",
+        "b": "213.70 V",
+        "c": "205.30 V",
+        "d": "216.80 V"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3",
+        "d": "Explanation 4: <img src='images/expl4.png' height='60px'>"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+            
+    {
+
+      "question": "7. An AC voltage controller is used to control the voltage applied to a resistive load. The supply voltage is 220 V AC, and the controller operates with a firing angle of 30 degrees. Calculate the input power factor assuming ideal conditions.",
+      "answers": {
+        "a": "0.985",
+        "b": "0.953",
+        "c": "0.921",
+        "d": "0.876"
+      },
+      "explanations": {
+        "a": "Explanation 1: <img src='images/expl5.png' height='60px'>",
+        "b": "Explanation 2",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
+            
     {
-      "question": "This is a Sample Question 2?",
+
+      "question": "8. A single phase AC voltage controller is controlling the load power demand (R = 5 Ω and L = 15 mH) from 230 V, 50 Hz source. What is the firing angle control range?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "(33.3 to 150) degree",
+        "b": "(43.3 to 180) degree",
+        "c": "(43.33 to 150) degree",
+        "d": "(33.3 to 180) degree"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
+        "b": "Explanation 2: The output voltage can be controlled for <img src='images/expl6.png' height='26px'> where <img src='images/expl7.png' height='60px'>",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+            
+    {
+
+      "question": "9. A single phase AC voltage controller is controlling the load power demand (R = 5 Ω and L = 15 mH) from 230 V, 50 Hz source. What is the maximum possible value of RMS load current?",
+      "answers": {
+        "a": "30.25 A",
+        "b": "25.24 A",
+        "c": "33.47 A",
+        "d": "42.58 A"
+      },
+      "explanations": {
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3: <img src='images/expl8.png' height='65px'>",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+            
+    {
+
+      "question": "10. A single phase AC voltage controller is controlling the load power demand (R = 5 Ω and L = 15 mH) from 230 V, 50 Hz source. What is the maximum power delivered to the load?",
+      "answers": {
+        "a": "6958.2 W",
+        "b": "5601.2 W",
+        "c": "6472.3 W",
+        "d": "6042.5 W"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2: <img src='images/expl9.png' height='32px'>",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]

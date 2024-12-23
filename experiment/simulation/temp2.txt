@@ -1,0 +1,144 @@
+
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/new/beta_line_blinking.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/new/bnt_click.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/new/btn_firing_angle.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/new/btn_input_voltage.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/new/btn_load_inductance.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/new/btn_load_resistance.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/new/components_rl_load.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/new/components_r_load.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/new/rl_load_click_1.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/new/rl_load_click_2.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/new/rl_load_click_3.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/new/rl_load_click_4.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/new/r_load_click_1.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/new/r_load_click_2.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/new/r_load_click_3.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/new/r_load_click_4.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/new/val_a.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/new/val_l.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/new/val_r.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/EE8/new/val_v.png"
+    />
+    
+
+beta_line_blinking:this.allImgsDom[index++],
+bnt_click:this.allImgsDom[index++],
+btn_firing_angle:this.allImgsDom[index++],
+btn_input_voltage:this.allImgsDom[index++],
+btn_load_inductance:this.allImgsDom[index++],
+btn_load_resistance:this.allImgsDom[index++],
+components_rl_load:this.allImgsDom[index++],
+components_r_load:this.allImgsDom[index++],
+rl_load_click_1:this.allImgsDom[index++],
+rl_load_click_2:this.allImgsDom[index++],
+rl_load_click_3:this.allImgsDom[index++],
+rl_load_click_4:this.allImgsDom[index++],
+r_load_click_1:this.allImgsDom[index++],
+r_load_click_2:this.allImgsDom[index++],
+r_load_click_3:this.allImgsDom[index++],
+r_load_click_4:this.allImgsDom[index++],
+val_a:this.allImgsDom[index++],
+val_l:this.allImgsDom[index++],
+val_r:this.allImgsDom[index++],
+val_v:this.allImgsDom[index++],
+
+
+beta_line_blinking : new Dom("beta_line_blinking"),
+bnt_click : new Dom("bnt_click"),
+btn_firing_angle : new Dom("btn_firing_angle"),
+btn_input_voltage : new Dom("btn_input_voltage"),
+btn_load_inductance : new Dom("btn_load_inductance"),
+btn_load_resistance : new Dom("btn_load_resistance"),
+components_rl_load : new Dom("components_rl_load"),
+components_r_load : new Dom("components_r_load"),
+rl_load_click_1 : new Dom("rl_load_click_1"),
+rl_load_click_2 : new Dom("rl_load_click_2"),
+rl_load_click_3 : new Dom("rl_load_click_3"),
+rl_load_click_4 : new Dom("rl_load_click_4"),
+r_load_click_1 : new Dom("r_load_click_1"),
+r_load_click_2 : new Dom("r_load_click_2"),
+r_load_click_3 : new Dom("r_load_click_3"),
+r_load_click_4 : new Dom("r_load_click_4"),
+val_a : new Dom("val_a"),
+val_l : new Dom("val_l"),
+val_r : new Dom("val_r"),
+val_v : new Dom("val_v"),
